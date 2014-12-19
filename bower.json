@@ -1,0 +1,21 @@
+{
+  "name": "webcolors",
+  "version": "0.0.1",
+  "authors": [
+    "zaim <abuzaim12@gmail.com>"
+  ],
+  "description": "Colors for the web",
+  "keywords": [
+    "colors",
+    "flatui",
+    "material"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "templates",
+    "test"
+  ]
+}
