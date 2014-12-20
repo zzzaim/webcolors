@@ -13,7 +13,7 @@ var colors = {
   red700  : '#d32f2f',
   red800  : '#c62828',
   red900  : '#b71c1c',
-  reda100 : '#ff8a80',
+  redA100 : '#ff8a80',
   redA200 : '#ff5252',
   redA400 : '#ff1744',
   redA700 : '#d50000',
@@ -109,10 +109,10 @@ var colors = {
   lightBlue700  : '#0288d1',
   lightBlue800  : '#0277bd',
   lightBlue900  : '#01579b',
-  lightBluea100 : '#80d8ff',
-  lightBluea200 : '#40c4ff',
-  lightBluea400 : '#00b0ff',
-  lightBluea700 : '#0091ea',
+  lightBlueA100 : '#80d8ff',
+  lightBlueA200 : '#40c4ff',
+  lightBlueA400 : '#00b0ff',
+  lightBlueA700 : '#0091ea',
 
   // CYAN
   cyan50   : '#e0f7fa',
