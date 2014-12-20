@@ -40,9 +40,31 @@ All of them available under the `dist` directory:
 
 Download what you like from the `dist` directory.
 
-### NPM / Bower
+### Bower
 
-Package not yet published.
+```
+bower install webcolors
+```
+
+And use what you like from `bower_components/webcolors/dist`.
+
+### NPM
+
+```
+npm install webcolors
+```
+
+You can then access the colors by `require`-ing webcolors. For example:
+
+```javascript
+var palettes = require('webcolors');
+
+var aqua   = palettes.defaults.aqua;
+var lime   = palettes.defaults.lime;
+var red    = palettes.material.red;
+var red100 = palettes.material.red100;
+var clouds = palettes.flatui.clouds;
+```
 
 ## License
 
