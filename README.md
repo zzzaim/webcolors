@@ -59,8 +59,8 @@ You can then access the colors by `require`-ing webcolors. For example:
 ```javascript
 var palettes = require('webcolors');
 
-var aqua   = palettes.defaults.aqua;
-var lime   = palettes.defaults.lime;
+var aqua   = palettes.mrmrs.aqua;
+var lime   = palettes.mrmrs.lime;
 var red    = palettes.material.red;
 var red100 = palettes.material.red100;
 var clouds = palettes.flatui.clouds;
