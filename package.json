@@ -24,6 +24,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-template": "^1.1.1",
     "merge-stream": "^0.1.6",
-    "mocha": "^1.20.0"
+    "mocha": "^1.20.0",
+    "param-case": "^1.0.1"
   }
 }
