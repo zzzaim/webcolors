@@ -55,6 +55,11 @@ var red100 = palettes.material.red100;
 var clouds = palettes.flatui.clouds;
 ```
 
+## Changelog
+
+**1.0.0** - Breaking change to directory structure. No more `dist` folder,
+individual palettes are available at root directory.
+
 ## License
 
 The MIT License (MIT)
