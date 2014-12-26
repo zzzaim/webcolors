@@ -23,8 +23,8 @@ gulp.task('default', function () {
       .pipe(rename(function (path) {
         path.dirname  = title;
         path.extname  = '.' + path.basename;
-        path.basename = 'colors';
+        path.basename = 'index';
       }));
   });
-  return merge.apply(null, streams).pipe(gulp.dest('dist'));
+  return merge.apply(null, streams).pipe(gulp.dest('.'));
 });

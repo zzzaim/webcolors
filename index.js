@@ -3,7 +3,7 @@ var DEFAULTS = 'mrmrs';
 
 // Require and re-export all palette modules
 PALETTES.forEach(function (title) {
-  exports[title] = require('./palettes/' + title);
+  exports[title] = require('./' + title);
 });
 
 // Set undefined colors to use the default 'mrmrs'

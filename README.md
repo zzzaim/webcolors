@@ -1,7 +1,7 @@
 # Color Me Web
 
-Various color palettes packaged into one, made available to coders via
-JavaScript, JSON, CSS, LESS, SASS, SCSS and Stylus.
+Various color palettes packaged into one, made available to coders as
+JavaScript, JSON, CSS, Less, Sass, SCSS and Stylus.
 
 Inspired by the [material-colors](https://github.com/shuhei/material-colors)
 and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
@@ -21,24 +21,12 @@ and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
 - JSON
 - JavaScript (via NPM)
 
-All of them available under the `dist` directory:
-
-```
-  dist/
-   └── {mrmrs,flatui,material}/
-        ├── colors.css
-        ├── colors.less
-        ├── colors.sass
-        ├── colors.scss
-        ├── colors.styl
-        └── colors.json
-```
-
 ## Installation and Usage
 
 ### Download
 
-Download what you like from the `dist` directory.
+Download whichever format you like from the `mrmrs`, `material` or
+`flatui` directory.
 
 ### Bower
 
@@ -46,7 +34,8 @@ Download what you like from the `dist` directory.
 bower install webcolors
 ```
 
-And use what you like from `bower_components/webcolors/dist`.
+And use what you like from `bower_components/webcolors/{mrmrs,material,flatui}`
+directory.
 
 ### NPM
 
