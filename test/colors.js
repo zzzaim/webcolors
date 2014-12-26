@@ -1,3 +1,5 @@
+/* global describe, it */
+
 var assert   = require('assert');
 var palettes = require('..');
 
@@ -21,6 +23,9 @@ var DEFAULT_COLORS = [
   'silver'
 ];
 
+var HEX = /#([0-9A-F]{2}){3}/;
+
+
 describe('palettes', function () {
 
   it('should have "mrmrs"', function () {
@@ -42,6 +47,18 @@ describe('palettes', function () {
         assert.ok(
           value && value.length,
           'Palette "' + title + '" has no color named "' + name + '"'
+        );
+      });
+    });
+  });
+
+  it('should have full hex values', function () {
+    Object.keys(palettes).forEach(function (title) {
+      Object.keys(palettes[title]).forEach(function (name) {
+        assert.ok(
+          HEX.test(palettes[title][name]),
+          'Palette color ' + title + '.' + name + ' is not a hex value ' +
+          '(' + palettes[title][name] + ')'
         );
       });
     });
