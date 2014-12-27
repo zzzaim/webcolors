@@ -1,5 +1,4 @@
 :root {
-<% _.forEach(colors, function(hex, name) {
+<% _.forEach(paramCased, function(hex, name) {
 %>  --color-<%= name %>: <%= hex %>;
 <% }) %>}
-

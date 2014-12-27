@@ -12,8 +12,8 @@
   "purple": "#B10DC9",
   "yellow": "#FFDC00",
   "fuchsia": "#F012BE",
-  "gray": "#aaa",
-  "white": "#fff",
-  "black": "#111",
-  "silver": "#ddd"
+  "gray": "#AAAAAA",
+  "white": "#FFFFFF",
+  "black": "#111111",
+  "silver": "#DDDDDD"
 }

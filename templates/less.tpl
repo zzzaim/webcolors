@@ -1,2 +1,2 @@
-<% _.forEach(colors, function(hex, name) { %>@color-<%= name %>: <%= hex %>;
+<% _.forEach(paramCased, function(hex, name) { %>@color-<%= name %>: <%= hex %>;
 <% }) %>

@@ -1,7 +1,6 @@
-# Color Me Web
+# webcolors
 
-Various color palettes packaged into one, made available to coders as
-JavaScript, JSON, CSS, Less, Sass, SCSS and Stylus.
+> Various color palettes bundled into one package
 
 Inspired by the [material-colors](https://github.com/shuhei/material-colors)
 and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
@@ -19,7 +18,7 @@ and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
 - Less
 - Stylus
 - JSON
-- JavaScript (via NPM)
+- JavaScript
 
 ## Installation and Usage
 
@@ -31,7 +30,7 @@ Download whichever format you like from the `mrmrs`, `material` or
 ### Bower
 
 ```
-bower install webcolors
+$ bower install webcolors
 ```
 
 And use what you like from `bower_components/webcolors/{mrmrs,material,flatui}`
@@ -40,22 +39,81 @@ directory.
 ### NPM
 
 ```
-npm install webcolors
+$ npm install webcolors
 ```
 
 You can then access the colors by `require`-ing webcolors. For example:
 
 ```javascript
 var palettes = require('webcolors');
+var flatui   = require('webcolors/flatui');
 
 var aqua   = palettes.mrmrs.aqua;
 var lime   = palettes.mrmrs.lime;
 var red    = palettes.material.red;
 var red100 = palettes.material.red100;
 var clouds = palettes.flatui.clouds;
+var green  = flatui.green;
+var carrot = flatui.carrot;
 ```
 
+## PostCSS
+
+Using the [postcss-import](https://github.com/postcss/postcss-import) and
+[postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
+plugins, you can access the palette as CSS variables directly by importing
+webcolors. For example:
+
+```
+$ npm install webcolors postcss postcss-import postcss-custom-properties
+```
+
+```javascript
+// dependencies
+var fs = require('fs');
+var postcss = require('postcss');
+var atImport = require('postcss-import');
+var customProperties = require('postcss-custom-properties');
+
+// css to be processed
+var css = fs.readFileSync('input.css', 'utf8');
+
+// process it
+var output = postcss()
+  .use(atImport())
+  .use(customProperties())
+  .process(css)
+  .css;
+```
+
+Using this `input.css`:
+
+```css
+@import 'webcolors/material';
+
+body {
+  color: var(--color-lime-a100);
+  background: var(--color-indigo);
+}
+```
+
+Will give you:
+
+```css
+body {
+  color: #F4FF81;
+  background: #3F51B5;
+}
+```
+
+Alternatively, the plugin,
+[postcss-color-palette](https://github.com/zaim/postcss-color-palette) uses
+webcolors to transform standard CSS color keywords into any of the available
+color palettes.
+
 ## Changelog
+
+**1.1.0** - All color values are normalized as uppercase hex strings.
 
 **1.0.0** - Breaking change to directory structure. No more `dist` folder,
 individual palettes are available at root directory.

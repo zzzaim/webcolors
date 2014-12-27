@@ -1,1 +1,1 @@
-<%= JSON.stringify(colors, null, 2) %>
+<%= JSON.stringify(paramCased, null, 2) %>

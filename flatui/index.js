@@ -1,46 +1,37 @@
-// Flat-UI color names
-var colors = {
-  turquoise    : '#1abc9c',
-  greenSea     : '#16a085',
-  emerald      : '#2ecc71',
-  nephritis    : '#27ae60',
-  peterRiver   : '#3498db',
-  belizeHole   : '#2980b9',
-  wetAsphalt   : '#34495e',
-  midnightBlue : '#2c3e50',
-  amethyst     : '#9b59b6',
-  wisteria     : '#8e44ad',
-  sunFlower    : '#f1c40f',
-  orange       : '#f39c12',
-  carrot       : '#e67e22',
-  pumpkin      : '#d35400',
-  alizarin     : '#e74c3c',
-  pomegranate  : '#c0392b',
-  clouds       : '#ecf0f1',
-  silver       : '#bdc3c7',
-  concrete     : '#95a5a6',
-  asbestos     : '#7f8c8d'
+module.exports = {
+  "turquoise": "#1ABC9C",
+  "greenSea": "#16A085",
+  "emerald": "#2ECC71",
+  "nephritis": "#27AE60",
+  "peterRiver": "#3498DB",
+  "belizeHole": "#2980B9",
+  "wetAsphalt": "#34495E",
+  "midnightBlue": "#2C3E50",
+  "amethyst": "#9B59B6",
+  "wisteria": "#8E44AD",
+  "sunFlower": "#F1C40F",
+  "orange": "#F39C12",
+  "carrot": "#E67E22",
+  "pumpkin": "#D35400",
+  "alizarin": "#E74C3C",
+  "pomegranate": "#C0392B",
+  "clouds": "#ECF0F1",
+  "silver": "#BDC3C7",
+  "concrete": "#95A5A6",
+  "asbestos": "#7F8C8D",
+  "aqua": "#3498DB",
+  "blue": "#2980B9",
+  "lime": "#2ECC71",
+  "navy": "#2C3E50",
+  "teal": "#16A085",
+  "green": "#27AE60",
+  "red": "#C0392B",
+  "purple": "#8E44AD",
+  "yellow": "#F1C40F",
+  "fuchsia": "#9B59B6",
+  "gray": "#95A5A6",
+  "olive": "#3D9970",
+  "maroon": "#85144B",
+  "white": "#FFFFFF",
+  "black": "#111111"
 };
-
-// CSS color names
-colors.aqua    = colors.peterRiver;
-colors.blue    = colors.belizeHole;
-colors.lime    = colors.emerald;
-colors.navy    = colors.midnightBlue;
-colors.teal    = colors.greenSea;
-colors.green   = colors.nephritis;
-colors.red     = colors.pomegranate;
-colors.orange  = colors.orange;
-colors.purple  = colors.wisteria;
-colors.yellow  = colors.sunFlower;
-colors.fuchsia = colors.amethyst;
-colors.gray    = colors.concrete;
-colors.silver  = colors.silver;
-
-// Not defined, will fall back to "defaults" palette
-//colors.maroon  = null;
-//colors.olive   = null;
-//colors.white   = null;
-//colors.black   = null;
-
-module.exports = colors;
