@@ -1,161 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Webcolors by zaim</title>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <style>body{font-family:sans-serif;}</style>
   </head>
-
-  <body>
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>Webcolors</h1>
-          <h2>Colors for the web</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/zaim/webcolors/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/zaim/webcolors/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/zaim/webcolors" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-<h1>Various color palettes bundled into one package</h1>
-
-<p>Inspired by the <a href="https://github.com/shuhei/material-colors">material-colors</a>
-and <a href="https://github.com/mrmrs/colors">mrmrs-colors</a> packages.</p>
-
-<h2>
-<a id="available-palettes" class="anchor" href="#available-palettes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available palettes</h2>
-
-<ul>
-<li>
-<code>mrmrs</code>: <a href="http://clrs.cc/">clrs.cc</a> / <a href="https://github.com/mrmrs/colors">mrmrs-colors</a>
-</li>
-<li>
-<code>flatui</code>: <a href="http://flatuicolors.co/">FlatUI colors</a>
-</li>
-<li>
-<code>material</code>: <a href="http://www.google.com/design/spec/style/color.html">Google Material Design</a>
-</li>
-</ul>
-
-<h2>
-<a id="available-formats" class="anchor" href="#available-formats" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available formats</h2>
-
-<ul>
-<li>CSS variables</li>
-<li>Sass, Scss</li>
-<li>Less</li>
-<li>Stylus</li>
-<li>JSON</li>
-<li>JavaScript</li>
-</ul>
-
-<h2>
-<a id="installation-and-usage" class="anchor" href="#installation-and-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation and Usage</h2>
-
-<h3>
-<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h3>
-
-<p>Download whichever format you like from the <code>mrmrs</code>, <code>material</code> or
-<code>flatui</code> directory.</p>
-
-<h3>
-<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower</h3>
-
-<pre><code>$ bower install webcolors
-</code></pre>
-
-<p>And use what you like from <code>bower_components/webcolors/{mrmrs,material,flatui}</code>
-directory.</p>
-
-<h3>
-<a id="npm" class="anchor" href="#npm" aria-hidden="true"><span class="octicon octicon-link"></span></a>NPM</h3>
-
-<pre><code>$ npm install webcolors
-</code></pre>
-
-<p>You can then access the colors by <code>require</code>-ing webcolors. For example:</p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> palettes <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>webcolors<span class="pl-pds">'</span></span>);
-<span class="pl-s">var</span> flatui   <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>webcolors/flatui<span class="pl-pds">'</span></span>);
-
-<span class="pl-s">var</span> aqua   <span class="pl-k">=</span> palettes.mrmrs.aqua;
-<span class="pl-s">var</span> lime   <span class="pl-k">=</span> palettes.mrmrs.lime;
-<span class="pl-s">var</span> red    <span class="pl-k">=</span> palettes.material.red;
-<span class="pl-s">var</span> red100 <span class="pl-k">=</span> palettes.material.red100;
-<span class="pl-s">var</span> clouds <span class="pl-k">=</span> palettes.flatui.clouds;
-<span class="pl-s">var</span> green  <span class="pl-k">=</span> flatui.green;
-<span class="pl-s">var</span> carrot <span class="pl-k">=</span> flatui.carrot;</pre></div>
-
-<h2>
-<a id="postcss" class="anchor" href="#postcss" aria-hidden="true"><span class="octicon octicon-link"></span></a>PostCSS</h2>
-
-<p>Using the <a href="https://github.com/postcss/postcss-import">postcss-import</a> and
-<a href="https://github.com/postcss/postcss-custom-properties">postcss-custom-properties</a>
-plugins, you can access the palette as CSS variables directly by importing
-webcolors. For example:</p>
-
-<pre><code>$ npm install webcolors postcss postcss-import postcss-custom-properties
-</code></pre>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// dependencies</span>
-<span class="pl-s">var</span> fs <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>fs<span class="pl-pds">'</span></span>);
-<span class="pl-s">var</span> postcss <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>postcss<span class="pl-pds">'</span></span>);
-<span class="pl-s">var</span> atImport <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>postcss-import<span class="pl-pds">'</span></span>);
-<span class="pl-s">var</span> customProperties <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>postcss-custom-properties<span class="pl-pds">'</span></span>);
-
-<span class="pl-c">// css to be processed</span>
-<span class="pl-s">var</span> css <span class="pl-k">=</span> fs.readFileSync(<span class="pl-s1"><span class="pl-pds">'</span>input.css<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>utf8<span class="pl-pds">'</span></span>);
-
-<span class="pl-c">// process it</span>
-<span class="pl-s">var</span> output <span class="pl-k">=</span> postcss()
-  .use(atImport())
-  .use(customProperties())
-  .process(css)
-  .css;</pre></div>
-
-<p>Using this <code>input.css</code>:</p>
-
-<div class="highlight highlight-css"><pre><span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">'</span>webcolors/material<span class="pl-pds">'</span></span>;
-
-<span class="pl-ent">body</span> {
-  <span class="pl-mp"><span class="pl-s3">color</span></span>: var(--color-<span class="pl-sc">lime</span>-a<span class="pl-c1">100</span>);
-  <span class="pl-mp"><span class="pl-s3">background</span></span>: var(--color-<span class="pl-id">indigo</span>);
-}</pre></div>
-
-<p>Will give you:</p>
-
-<div class="highlight highlight-css"><pre><span class="pl-ent">body</span> {
-  <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-c1">#F4FF81</span>;
-  <span class="pl-mp"><span class="pl-s3">background</span></span>: <span class="pl-c1">#3F51B5</span>;
-}</pre></div>
-
-<p>Alternatively, the plugin,
-<a href="https://github.com/zaim/postcss-color-palette">postcss-color-palette</a> uses
-webcolors to transform standard CSS color keywords into any of the available
-color palettes.</p>
-        </section>
-
-        <footer>
-          Webcolors is maintained by <a href="https://github.com/zaim">zaim</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
+  <body onload="window.location='https://github.com/zaim/webcolors'">
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=https://github.com/zaim/webcolors">
+    </noscript>
+    <h1>Redirecting...</h1>
+    <p>
+      <a href="https://github.com/zaim/webcolors">
+        https://github.com/zaim/webcolors
+      </a>
+    </p>
   </body>
 </html>
