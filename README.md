@@ -22,27 +22,15 @@ and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
 
 ## Installation and Usage
 
-### Download
-
-Download whichever format you like from the `mrmrs`, `material` or
-`flatui` directory.
-
-### Bower
-
-```
-$ bower install webcolors
-```
-
-And use what you like from `bower_components/webcolors/{mrmrs,material,flatui}`
-directory.
-
-### NPM
-
 ```
 $ npm install webcolors
 ```
 
-You can then access the colors by `require`-ing webcolors. For example:
+You can then access the colors by `require`-ing webcolors. Or by using
+a CSS post-processor like [postcss](https://github.com/postcss/postcss), you
+can directly use the variables in your stylesheets.
+
+### As a node module
 
 ```javascript
 var palettes = require('webcolors');
@@ -57,15 +45,16 @@ var green  = flatui.green;
 var carrot = flatui.carrot;
 ```
 
-## PostCSS
+### Using PostCSS
 
 Using the [postcss-import](https://github.com/postcss/postcss-import) and
 [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
-plugins, you can access the palette as CSS variables directly by importing
+plugins (or better yet, just use [cssnext](httpw//cssnext.github.io), a CSS4
+transpiler), you can access the palette as CSS variables directly by importing
 webcolors. For example:
 
 ```
-$ npm install webcolors postcss postcss-import postcss-custom-properties
+$ npm install postcss postcss-import postcss-custom-properties
 ```
 
 ```javascript
@@ -106,10 +95,19 @@ body {
 }
 ```
 
-Alternatively, the plugin,
-[postcss-color-palette](https://github.com/zaim/postcss-color-palette) uses
-webcolors to transform standard CSS color keywords into any of the available
-color palettes.
+### Direct Download
+
+Download whichever format you like from the [mrmrs](mrmrs),
+[material](material) or [flatui](flatui) directories on GitHub.
+
+### Bower
+
+```
+$ bower install webcolors
+```
+
+And use what you like from `bower_components/webcolors/{mrmrs,material,flatui}`
+directory.
 
 ## Changelog
 
@@ -120,24 +118,4 @@ individual palettes are available at root directory.
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) 2014 Zaim Bakar
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
+MIT - see [LICENSE](LICENSE) file.
