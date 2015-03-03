@@ -111,6 +111,9 @@ directory.
 
 ## Changelog
 
+**1.2.0** - Add plain, non-number-prefixed Material color aliases, e.g.
+`cyan` => `cyan500`, `indigo` => `indigo500`, etc.
+
 **1.1.0** - All color values are normalized as uppercase hex strings.
 
 **1.0.0** - Breaking change to directory structure. No more `dist` folder,
