@@ -9,6 +9,7 @@ var colors = {
   red300  : '#e57373',
   red400  : '#ef5350',
   red500  : '#f44336',
+  red     : '#f44336',
   red600  : '#e53935',
   red700  : '#d32f2f',
   red800  : '#c62828',
@@ -25,6 +26,7 @@ var colors = {
   pink300  : '#f06292',
   pink400  : '#ec407a',
   pink500  : '#e91e63',
+  pink     : '#e91e63',
   pink600  : '#d81b60',
   pink700  : '#c2185b',
   pink800  : '#ad1457',
@@ -41,6 +43,7 @@ var colors = {
   purple300  : '#ba68c8',
   purple400  : '#ab47bc',
   purple500  : '#9c27b0',
+  purple     : '#9c27b0',
   purple600  : '#8e24aa',
   purple700  : '#7b1fa2',
   purple800  : '#6a1b9a',
@@ -57,6 +60,7 @@ var colors = {
   deepPurple300  : '#9575cd',
   deepPurple400  : '#7e57c2',
   deepPurple500  : '#673ab7',
+  deepPurple     : '#673ab7',
   deepPurple600  : '#5e35b1',
   deepPurple700  : '#512da8',
   deepPurple800  : '#4527a0',
@@ -73,6 +77,7 @@ var colors = {
   indigo300  : '#7986cb',
   indigo400  : '#5c6bc0',
   indigo500  : '#3f51b5',
+  indigo     : '#3f51b5',
   indigo600  : '#3949ab',
   indigo700  : '#303f9f',
   indigo800  : '#283593',
@@ -89,6 +94,7 @@ var colors = {
   blue300  : '#64b5f6',
   blue400  : '#42a5f5',
   blue500  : '#2196f3',
+  blue     : '#2196f3',
   blue600  : '#1e88e5',
   blue700  : '#1976d2',
   blue800  : '#1565c0',
@@ -105,6 +111,7 @@ var colors = {
   lightBlue300  : '#4fc3f7',
   lightBlue400  : '#29b6f6',
   lightBlue500  : '#03a9f4',
+  lightBlue     : '#03a9f4',
   lightBlue600  : '#039be5',
   lightBlue700  : '#0288d1',
   lightBlue800  : '#0277bd',
@@ -121,6 +128,7 @@ var colors = {
   cyan300  : '#4dd0e1',
   cyan400  : '#26c6da',
   cyan500  : '#00bcd4',
+  cyan     : '#00bcd4',
   cyan600  : '#00acc1',
   cyan700  : '#0097a7',
   cyan800  : '#00838f',
@@ -137,6 +145,7 @@ var colors = {
   teal300  : '#4db6ac',
   teal400  : '#26a69a',
   teal500  : '#009688',
+  teal     : '#009688',
   teal600  : '#00897b',
   teal700  : '#00796b',
   teal800  : '#00695c',
@@ -153,6 +162,7 @@ var colors = {
   green300  : '#81c784',
   green400  : '#66bb6a',
   green500  : '#4caf50',
+  green     : '#4caf50',
   green600  : '#43a047',
   green700  : '#388e3c',
   green800  : '#2e7d32',
@@ -169,6 +179,7 @@ var colors = {
   lightGreen300  : '#aed581',
   lightGreen400  : '#9ccc65',
   lightGreen500  : '#8bc34a',
+  lightGreen     : '#8bc34a',
   lightGreen600  : '#7cb342',
   lightGreen700  : '#689f38',
   lightGreen800  : '#558b2f',
@@ -185,6 +196,7 @@ var colors = {
   lime300  : '#dce775',
   lime400  : '#d4e157',
   lime500  : '#cddc39',
+  lime     : '#cddc39',
   lime600  : '#c0ca33',
   lime700  : '#afb42b',
   lime800  : '#9e9d24',
@@ -201,6 +213,7 @@ var colors = {
   yellow300  : '#fff176',
   yellow400  : '#ffee58',
   yellow500  : '#ffeb3b',
+  yellow     : '#ffeb3b',
   yellow600  : '#fdd835',
   yellow700  : '#fbc02d',
   yellow800  : '#f9a825',
@@ -217,6 +230,7 @@ var colors = {
   amber300  : '#ffd54f',
   amber400  : '#ffca28',
   amber500  : '#ffc107',
+  amber     : '#ffc107',
   amber600  : '#ffb300',
   amber700  : '#ffa000',
   amber800  : '#ff8f00',
@@ -233,6 +247,7 @@ var colors = {
   orange300  : '#ffb74d',
   orange400  : '#ffa726',
   orange500  : '#ff9800',
+  orange     : '#ff9800',
   orange600  : '#fb8c00',
   orange700  : '#f57c00',
   orange800  : '#ef6c00',
@@ -249,6 +264,7 @@ var colors = {
   deepOrange300  : '#ff8a65',
   deepOrange400  : '#ff7043',
   deepOrange500  : '#ff5722',
+  deepOrange     : '#ff5722',
   deepOrange600  : '#f4511e',
   deepOrange700  : '#e64a19',
   deepOrange800  : '#d84315',
@@ -265,6 +281,7 @@ var colors = {
   brown300 : '#a1887f',
   brown400 : '#8d6e63',
   brown500 : '#795548',
+  brown    : '#795548',
   brown600 : '#6d4c41',
   brown700 : '#5d4037',
   brown800 : '#4e342e',
@@ -277,6 +294,7 @@ var colors = {
   grey300 : '#e0e0e0',
   grey400 : '#bdbdbd',
   grey500 : '#9e9e9e',
+  grey    : '#9e9e9e',
   grey600 : '#757575',
   grey700 : '#616161',
   grey800 : '#424242',
@@ -289,6 +307,7 @@ var colors = {
   blueGrey300 : '#90a4ae',
   blueGrey400 : '#78909c',
   blueGrey500 : '#607d8b',
+  blueGrey    : '#607d8b',
   blueGrey600 : '#546e7a',
   blueGrey700 : '#455a64',
   blueGrey800 : '#37474f',
@@ -300,16 +319,7 @@ var colors = {
 
 // CSS color names
 colors.aqua    = colors.cyan500;
-colors.blue    = colors.blue500;
-colors.lime    = colors.lime500;
-colors.teal    = colors.teal500;
 colors.olive   = colors.lightgreen500;
-colors.green   = colors.green500;
-colors.red     = colors.red500;
-colors.orange  = colors.orange500;
-colors.purple  = colors.purple500;
-colors.yellow  = colors.yellow500;
-colors.gray    = colors.grey500;
 colors.silver  = colors.grey300;
 colors.maroon  = colors.pink500;
 colors.navy    = colors.indigo900;
