@@ -1,0 +1,47 @@
+mixin icon(size)
+  - var url = '/assets/img/touch/icon-' + size + '.png'
+  link(rel='apple-touch-icon-precomposed', sizes=size+'x'+size, href=url)
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf8')
+    title webcolors
+    meta(name='description', value=pkg.description)
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='cleartype', content='on')
+    meta(name='msapplication-TileImage',
+      content='/assets/img/touch/touch/icon-144.png')
+    meta(name='msapplication-TileColor', content='#607D8B')
+    each size in iconSizes
+      +icon(size)
+    link(rel='shortcut icon', href='/assets/img/touch/icon-72.png')
+    link(rel='icon', sizes='192x192', href='/assets/img/touch/icon-192.png')
+    link(rel='icon', sizes='128x128', href='/assets/img/touch/icon-128.png')
+    link(href='/assets/style/main.css', rel='stylesheet')
+  body
+    header
+      div#header-logo
+        h1 webcolors
+        p colors for the web
+      nav#header-nav
+        ul
+          li.nav-npm
+            a(href='https://www.npmjs.com/package/webcolors')
+              | npm install webcolors
+          li.nav-bower
+            a(href='https://www.github.com/zaim/webcolors#via-bower')
+              | bower install webcolors
+          li.nav-github
+            a(href='https://www.github.com/zaim/webcolors')
+              | git clone
+    section#main-body
+      table
+        each palette in palettes
+          tr(class='palette-' + palette.name)
+            th
+              a.title(href=palette.href)= palette.title
+            each c in cssColorKeywords
+              td(style=palette.colors[c].style)= palette.colors[c].name
