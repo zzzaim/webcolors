@@ -136,7 +136,7 @@ Download whichever format you like from the [mrmrs](./mrmrs),
 
 ## Changelog
 
-**1.2.1** - Fix typo in Material palette for "olive" color.
+**1.2.2** - Fix typo in Material palette for "olive" color.
 
 **1.2.0** - Add plain, non-number-prefixed Material color aliases, e.g.
 `cyan` => `cyan500`, `indigo` => `indigo500`, etc.

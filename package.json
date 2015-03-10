@@ -1,6 +1,6 @@
 {
   "name": "webcolors",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Colors for the web",
   "keywords": [
     "colors",
@@ -17,7 +17,8 @@
     "url": "https://github.com/zaim/webcolors.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "gulp"
   },
   "devDependencies": {
     "camel-case": "^1.0.2",
