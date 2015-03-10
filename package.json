@@ -1,0 +1,32 @@
+{
+  "name": "webcolors",
+  "version": "1.2.0",
+  "description": "Colors for the web",
+  "keywords": [
+    "colors",
+    "flatui",
+    "material"
+  ],
+  "homepage": "https://github.com/zaim/webcolors",
+  "bugs": "https://github.com/zaim/webcolors/issues",
+  "license": "MIT",
+  "author": "zaim <abuzaim12@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaim/webcolors.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "camel-case": "^1.0.2",
+    "color": "^0.7.3",
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^1.1.1",
+    "merge-stream": "^0.1.6",
+    "mocha": "^1.20.0",
+    "param-case": "^1.0.1"
+  }
+}
