@@ -45,10 +45,8 @@ PALETTES.forEach(function (info) {
 // CSS color keywords
 var CSS_COLORS = [
   'aqua',
-  'black',
   'blue',
   'fuchsia',
-  'gray',
   'green',
   'lime',
   'maroon',
@@ -57,10 +55,12 @@ var CSS_COLORS = [
   'orange',
   'purple',
   'red',
-  'silver',
   'teal',
-  'white',
-  'yellow'
+  'yellow',
+  'black',
+  'gray',
+  'silver',
+  'white'
 ];
 
 // Insert the default CSS2 palette
