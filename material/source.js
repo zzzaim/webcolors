@@ -319,7 +319,7 @@ var colors = {
 
 // CSS color names
 colors.aqua    = colors.cyan500;
-colors.olive   = colors.lightgreen500;
+colors.olive   = colors.lightGreen500;
 colors.silver  = colors.grey300;
 colors.maroon  = colors.pink500;
 colors.navy    = colors.indigo900;
