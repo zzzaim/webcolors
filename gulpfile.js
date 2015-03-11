@@ -1,26 +1,46 @@
-var es     = require('event-stream');
-var gulp   = require('gulp');
-var rename = require('gulp-rename');
-var gm     = require('gm');
-var jade   = require('jade');
-var merge  = require('merge-stream');
-var source = require('vinyl-source-stream');
+var color   = require('color');
+var cssnext = require('cssnext');
+var es      = require('event-stream');
+var gulp    = require('gulp');
+var rename  = require('gulp-rename');
+var gm      = require('gm');
+var jade    = require('jade');
+var merge   = require('merge-stream');
+var source  = require('vinyl-source-stream');
+
+
+// Build a color info object for the template
+function colorInfo (name, value) {
+  var c = color(value);
+  return {
+    name: name,
+    value: value,
+    style: {
+      'background-color': value,
+      color: c.light() ? '#000000' : '#FFFFFF'
+    }
+  };
+}
+
 
 // All available palettes
 var PALETTES = [
   {
     name: 'mrmrs',
-    title: 'mrmrs',
+    title: 'clrs.cc',
+    subtitle: '<a href="https://github.com/mrmrs/colors">@mrmrs</a>',
     href: 'http://clrs.cc/'
   },
   {
     name: 'material',
     title: 'Material',
+    subtitle: 'by <a href="http://www.google.com/design/">Google</a>',
     href: 'http://www.google.com/design/spec/style/color.html'
   },
   {
     name: 'flatui',
     title: 'FlatUI',
+    subtitle: 'is flat',
     href: 'http://flatuicolors.co/'
   }
 ];
@@ -30,14 +50,7 @@ PALETTES.forEach(function (info) {
   var name = info.name;
   var palette = require('./' + name + '/index.js');
   info.colors = Object.keys(palette).reduce(function (colors, key) {
-    colors[key] = {
-      name: key,
-      value: palette[key],
-      style: {
-        'background-color': palette[key],
-        color: '#FFFFFF'
-      }
-    };
+    colors[key] = colorInfo(key, palette[key]);
     return colors;
   }, {});
 });
@@ -59,24 +72,17 @@ var CSS_COLORS = [
   'yellow',
   'black',
   'gray',
-  'silver',
-  'white'
+  'silver'
 ];
 
 // Insert the default CSS2 palette
 PALETTES.unshift({
   name: 'css',
   title: 'CSS2',
+  subtitle: 'defaults',
   href: 'http://www.w3.org/wiki/CSS/Properties/color/keywords#Basic_Colors',
   colors: CSS_COLORS.reduce(function (colors, key) {
-    colors[key] = {
-      name: key,
-      value: key,
-      style: {
-        'background-color': key,
-        color: '#FFFFFF'
-      }
-    };
+    colors[key] = colorInfo(key, key);
     return colors;
   }, {})
 });
@@ -123,4 +129,32 @@ gulp.task('index', function () {
 });
 
 
-gulp.task('default', ['icons', 'index']);
+gulp.task('style', function () {
+  var options = {
+    from: './index.css',
+    features: {
+      customProperties: {
+        variables: {
+          '--columns': '' + CSS_COLORS.length + 1
+        }
+      }
+    }
+  };
+  return gulp.src('index.css')
+    .pipe(es.map(function (file, callback) {
+      var css = cssnext(file.contents.toString(), options);
+      file = file.clone();
+      file.contents = new Buffer(css);
+      callback(null, file);
+    }))
+    .pipe(gulp.dest('assets/style'));
+});
+
+
+gulp.task('watch', function () {
+  gulp.watch('index.css', ['style']);
+  gulp.watch('index.jade', ['index']);
+});
+
+
+gulp.task('default', ['style', 'index']);

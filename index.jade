@@ -4,9 +4,15 @@ mixin icon(size)
 
 doctype html
 html(lang='en')
+  //               _               _                 !
+  //              | |             | |                !
+  // __      _____| |__   ___ ___ | | ___  _ __ ___  !
+  // \ \ /\ / / _ \ '_ \ / __/ _ \| |/ _ \| '__/ __| !
+  //  \ V  V /  __/ |_) | (_| (_) | | (_) | |  \__ \ !
+  //   \_/\_/ \___|_.__/ \___\___/|_|\___/|_|  |___/ !
   head
     meta(charset='utf8')
-    title webcolors
+    title #{pkg.name} - #{pkg.description}
     meta(name='description', value=pkg.description)
     meta(name='HandheldFriendly', content='True')
     meta(name='MobileOptimized', content='320')
@@ -20,28 +26,39 @@ html(lang='en')
     link(rel='shortcut icon', href='/assets/img/touch/icon-72.png')
     link(rel='icon', sizes='192x192', href='/assets/img/touch/icon-192.png')
     link(rel='icon', sizes='128x128', href='/assets/img/touch/icon-128.png')
-    link(href='/assets/style/main.css', rel='stylesheet')
+    link(rel='stylesheet',
+      href='http://fonts.googleapis.com/css?family=Roboto:300,400,500')
+    link(rel='stylesheet',
+      href='http://fonts.googleapis.com/css?family=Inconsolata')
+    link(rel='stylesheet', href='/assets/style/index.css')
   body
-    header
-      div#header-logo
-        h1 webcolors
-        p colors for the web
-      nav#header-nav
-        ul
-          li.nav-npm
-            a(href='https://www.npmjs.com/package/webcolors')
-              | npm install webcolors
-          li.nav-bower
-            a(href='https://www.github.com/zaim/webcolors#via-bower')
-              | bower install webcolors
-          li.nav-github
-            a(href='https://www.github.com/zaim/webcolors')
-              | git clone
-    section#main-body
-      table
+    div.Container
+      header.Header
+        section.Title
+          h1.Title-name: a(href="https://github.com/zaim/webcolors")= pkg.name
+          p.Title-description
+            | modern color palettes bundled into one package 
+            a(href="https://github.com/zaim/webcolors#readme") README.md
+        section.Install
+          a(href="https://www.npmjs.com/package/webcolors").Install-item.Install-item--npm
+            code npm install webcolors
+          a(href="https://github.com/zaim/webcolors#via-bower").Install-item.Install-item--bower
+            code bower install webcolors
+          a(href="https://github.com/zaim/webcolors").Install-item.Install-item--github
+            code git clone &hellip;/zaim/webcolors
+      section.Colors
         each palette in palettes
-          tr(class='palette-' + palette.name)
-            th
-              a.title(href=palette.href)= palette.title
+          div(class='Palette Palette--' + palette.name)
+            div.Palette-heading
+              span
+                a.Palette-title(href=palette.href)= palette.title
+                br
+                span.Palette-subtitle!= palette.subtitle
             each c in cssColorKeywords
-              td(style=palette.colors[c].style)= palette.colors[c].name
+              div(style=palette.colors[c].style).Palette-color
+                code.Color= palette.colors[c].value
+      footer.Footer
+        p
+          | made with &hearts; by 
+          | <a href="https://twitter.com/zzzaim">@zzzaim</a> |
+          | <a href="https://gratipay.com/zaim/">gratipay</a>
