@@ -44,41 +44,47 @@ code,pre {
   display: flex;
   justify-content: space-between;
   flex: 0 1 auto;
-  margin-left: 5.8823529%;
+  margin: 0 5.8823529%;
   padding: 4rem 0;
 }
 
-.Title-name {
-  background-image: url('../img/touch/icon-72.png');
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: auto 2rem;
-  display: inline-block;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  padding-right: 2.8rem;
-  text-transform: uppercase;
+.Title {
+  flex: 0 1 auto;
 }
 
-  .Title-name a {
-    color: #FFF;
+  .Title-name {
+    background-image: url('../img/touch/icon-72.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: auto 2rem;
+    display: inline-block;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    padding-right: 2.8rem;
+    text-transform: uppercase;
   }
 
-.Title-description a {
-  font-variant-caps: all-small-caps;
-}
+    .Title-name a {
+      color: #FFF;
+    }
+
+  .Title-description a {
+    font-variant-caps: all-small-caps;
+  }
 
 .Install {
   display: flex;
+  flex: 0 1 auto;
 }
 
   .Install-item {
     background-repeat: no-repeat;
-    background-position: 3rem .6rem;
+    background-position: 0 .6rem;
     background-size: auto 2rem;
     color: var(--color-blue-grey-300);
     display: block;
-    padding: 2.88rem 3rem 0 3rem;
+    padding-top: 2.88rem;
+    margin-left: 5rem;
   }
 
   .Install-item--npm {
@@ -93,10 +99,6 @@ code,pre {
     background-image: url('../src/github/GitHub-Mark-Light-64px.png');
   }
 
-.Color {
-  opacity: 0.6;
-}
-
 .Colors {
   border-collapse: separate;
   border-spacing: 0 1rem;
@@ -105,6 +107,11 @@ code,pre {
   flex: 1 1 auto;
   width: 100%;
   table-layout: fixed;
+}
+
+.Color {
+  display: block;
+  padding: 1rem 0.5rem;
 }
 
 .Palette {
@@ -125,14 +132,21 @@ code,pre {
 
   .Palette-heading {
     background-color: var(--color-blue-grey-700);
-    font-weight: 500;
   }
 
   .Palette:nth-child(even) .Palette-heading {
     background-color: var(--color-blue-grey-600);
   }
 
+  .Palette-title {
+    font-weight: 500;
+  }
+
   .Palette-subtitle {
+    opacity: 0.6;
+  }
+
+  .Palette-color .Color {
     opacity: 0.6;
   }
 
@@ -141,9 +155,96 @@ code,pre {
   }
 
 .Footer {
+  display: flex;
   flex: 0 1 auto;
   font-size: 85%;
-  margin-left: 5.8823529%;
-  padding: 1rem;
+  justify-content: space-between;
+  margin: 0 5.8823529%;
+  padding: 1rem 0 2rem;
   text-align: right;
+}
+
+.Share-item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.Author-item {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+  .Share-item > i {
+    font-size: 115%;
+  }
+
+
+@media (max-width: 1000px) {
+  .Header {
+    flex: 0 0 auto;
+    order: 1;
+    padding: 4rem 0 2rem 0;
+  }
+  .Footer {
+    flex: 0 0 auto;
+    order: 2;
+    padding: 1rem 0 4rem;
+    text-align: left;
+  }
+  .Colors {
+    flex: 1 0 auto;
+    flex-flow: row;
+    order: 3;
+  }
+  .Palette {
+    flex-flow: column;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  .Palette:first-child {
+    margin-left: 0
+  }
+}
+
+@media (max-width: 800px) {
+  .Install-item > code {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 560px) {
+  .Title {
+    flex-basis: 50%;
+  }
+  .Install {
+    flex-flow: column;
+  }
+  .Install-item {
+    background-size: 2.4rem auto;
+    background-position: 0 50%;
+    line-height: 3.6rem;
+    margin-left: 0;
+    padding-top: 0;
+    padding-left: 3.28rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .Install-item {
+    background-image: none !important;
+    line-height: inherit;
+  }
+}
+
+@media (max-width: 460px) {
+  .Header {
+    flex-flow: column;
+  }
+  .Install {
+    flex-flow: row;
+    padding-top: 1rem;
+  }
+  .Install-item {
+    padding: 0;
+  }
 }

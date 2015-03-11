@@ -27,14 +27,15 @@ html(lang='en')
     link(rel='stylesheet',
       href='http://fonts.googleapis.com/css?family=Inconsolata')
     link(rel='stylesheet', href='/assets/css/index.css')
+    link(rel='stylesheet', href='/assets/ico/style.css')
   body
     div.Container
       header.Header
         section.Title
-          h1.Title-name: a(href="https://github.com/zaim/webcolors")= pkg.name
+          h1.Title-name: a(href='https://github.com/zaim/webcolors')= pkg.name
           p.Title-description
             | modern color palettes bundled into one package 
-            a(href="https://github.com/zaim/webcolors#readme") README.md
+            a(href='https://github.com/zaim/webcolors#readme') README.md
         section.Install
           each install in installations
             a(href=install.href, class='Install-item Install-item--' + install.name)
@@ -43,7 +44,7 @@ html(lang='en')
         each palette in palettes
           div(class='Palette Palette--' + palette.name)
             div.Palette-heading
-              span
+              span.Color
                 a.Palette-title(href=palette.href)= palette.title
                 br
                 span.Palette-subtitle!= palette.subtitle
@@ -51,7 +52,16 @@ html(lang='en')
               div(style=palette.colors[c].style).Palette-color
                 code.Color= palette.colors[c].value
       footer.Footer
-        p
-          | made with &hearts; by 
-          | <a href="https://twitter.com/zzzaim">@zzzaim</a> |
-          | <a href="https://gratipay.com/zaim/">gratipay</a>
+        div.Share
+          a(href='#').Share-item
+            i.icon-tw &nbsp;
+            span Tweet
+          a(href='#').Share-item
+            i.icon-fb &nbsp;
+            span Share
+        div.Author
+          span.Author-item
+            | made with &hearts; by 
+            a(href='https://twitter.com/zzzaim') @zzzaim
+          span.Author-item
+            a(href='https://gratipay.com/zaim/') gratipay
