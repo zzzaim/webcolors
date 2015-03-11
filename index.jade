@@ -1,7 +1,3 @@
-mixin icon(size)
-  - var url = '/assets/img/touch/icon-' + size + '.png'
-  link(rel='apple-touch-icon-precomposed', sizes=size+'x'+size, href=url)
-
 doctype html
 html(lang='en')
   //               _               _                 !
@@ -21,8 +17,8 @@ html(lang='en')
     meta(name='msapplication-TileImage',
       content='/assets/img/touch/touch/icon-144.png')
     meta(name='msapplication-TileColor', content='#607D8B')
-    each size in iconSizes
-      +icon(size)
+    each icon in icons
+      link(rel='apple-touch-icon-precomposed')&attributes(icon)
     link(rel='shortcut icon', href='/assets/img/touch/icon-72.png')
     link(rel='icon', sizes='192x192', href='/assets/img/touch/icon-192.png')
     link(rel='icon', sizes='128x128', href='/assets/img/touch/icon-128.png')
@@ -30,7 +26,7 @@ html(lang='en')
       href='http://fonts.googleapis.com/css?family=Roboto:300,400,500')
     link(rel='stylesheet',
       href='http://fonts.googleapis.com/css?family=Inconsolata')
-    link(rel='stylesheet', href='/assets/style/index.css')
+    link(rel='stylesheet', href='/assets/css/index.css')
   body
     div.Container
       header.Header
@@ -40,12 +36,9 @@ html(lang='en')
             | modern color palettes bundled into one package 
             a(href="https://github.com/zaim/webcolors#readme") README.md
         section.Install
-          a(href="https://www.npmjs.com/package/webcolors").Install-item.Install-item--npm
-            code npm install webcolors
-          a(href="https://github.com/zaim/webcolors#via-bower").Install-item.Install-item--bower
-            code bower install webcolors
-          a(href="https://github.com/zaim/webcolors").Install-item.Install-item--github
-            code git clone &hellip;/zaim/webcolors
+          each install in installations
+            a(href=install.href, class='Install-item Install-item--' + install.name)
+              code!= install.code
       section.Colors
         each palette in palettes
           div(class='Palette Palette--' + palette.name)
