@@ -1,7 +1,7 @@
 {
   "name": "webcolors",
   "version": "1.2.2",
-  "description": "Colors for the web",
+  "description": "Modern color palettes bundled into one package",
   "keywords": [
     "colors",
     "flatui",
