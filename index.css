@@ -1,6 +1,9 @@
 @import 'suitcss-base';
 @import './material';
 
+@custom-media --medium-viewport (min-width: 820px);
+@custom-media --large-viewport (min-width: 1000px);
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -35,21 +38,22 @@ code,pre {
 }
 
 .Container {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
+  height: 100%
 }
 
 .Header {
-  display: flex;
-  justify-content: space-between;
-  flex: 0 1 auto;
   margin: 0 5.8823529%;
-  padding: 4rem 0;
+  overflow: hidden !important;
 }
 
 .Title {
-  flex: 0 1 auto;
+  padding: 4.32rem 0 1.44rem;
+}
+
+@media (--large-viewport) {
+  .Title {
+    float: left;
+  }
 }
 
   .Title-name {
@@ -73,178 +77,211 @@ code,pre {
   }
 
 .Install {
-  display: flex;
-  flex: 0 1 auto;
+  overflow: hidden !important;
 }
 
   .Install-item {
-    background-repeat: no-repeat;
-    background-position: 0 .6rem;
-    background-size: auto 2rem;
     color: var(--color-blue-grey-300);
     display: block;
-    padding-top: 2.88rem;
-    margin-left: 5rem;
-  }
-
-  .Install-item--npm {
-    background-image: url('../src/npm-logo.svg');
-  }
-
-  .Install-item--bower {
-    background-image: url('../src/bower-logo.svg');
-  }
-
-  .Install-item--git {
-    background-image: url('../src/github/GitHub-Mark-Light-64px.png');
-  }
-
-.Colors {
-  border-collapse: separate;
-  border-spacing: 0 1rem;
-  display: flex;
-  flex-flow: column;
-  flex: 1 1 auto;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.Color {
-  display: block;
-  padding: 1rem 0.5rem;
-}
-
-.Palette {
-  display: flex;
-  flex: 1 1 auto;
-  margin-bottom: 1rem;
-}
-
-  .Palette-heading,
-  .Palette-color {
-    display: flex;
-    flex-flow: column;
-    flex: 1 1 calc(100 / var(--columns))%;
-    font-size: 85%;
-    justify-content: center;
+    float: left;
+    width: 33.333%;
+    padding: 1.44rem 0.72rem;
     text-align: center;
   }
 
-  .Palette-heading {
-    background-color: var(--color-blue-grey-700);
-  }
-
-  .Palette:nth-child(even) .Palette-heading {
-    background-color: var(--color-blue-grey-600);
-  }
-
-  .Palette-title {
-    font-weight: 500;
-  }
-
-  .Palette-subtitle {
-    opacity: 0.6;
-  }
-
-  .Palette-color .Color {
-    opacity: 0.6;
-  }
-
-  .Palette--css .Color {
-    font-family: inherit;
-  }
-
-.Footer {
-  display: flex;
-  flex: 0 1 auto;
-  font-size: 85%;
-  justify-content: space-between;
-  margin: 0 5.8823529%;
-  padding: 1rem 0 2rem;
-  text-align: right;
-}
-
-.Share-item {
-  display: inline-block;
-  margin-right: 2rem;
-}
-
-.Author-item {
-  display: inline-block;
-  margin-left: 2rem;
-}
-
-  .Share-item > i {
-    font-size: 115%;
-  }
-
-
-@media (max-width: 1000px) {
-  .Header {
-    flex: 0 0 auto;
-    order: 1;
-    padding: 4rem 0 2rem 0;
-  }
-  .Footer {
-    flex: 0 0 auto;
-    order: 2;
-    padding: 1rem 0 4rem;
+  .Install-item:first-child {
+    padding-left: 0;
     text-align: left;
   }
-  .Colors {
-    flex: 1 0 auto;
-    flex-flow: row;
-    order: 3;
-  }
-  .Palette {
-    flex-flow: column;
-    margin-bottom: 0;
-    margin-left: 1rem;
-  }
-  .Palette:first-child {
-    margin-left: 0
-  }
-}
 
-@media (max-width: 800px) {
-  .Install-item > code {
-    font-size: 85%;
+  .Install-item:last-child {
+    padding-right: 0;
+    text-align: right;
   }
-}
 
-@media (max-width: 560px) {
-  .Title {
-    flex-basis: 50%;
-  }
-  .Install {
-    flex-flow: column;
-  }
+@media (--medium-viewport) {
   .Install-item {
-    background-size: 2.4rem auto;
+    background-repeat: no-repeat;
     background-position: 0 50%;
-    line-height: 3.6rem;
-    margin-left: 0;
-    padding-top: 0;
-    padding-left: 3.28rem;
+    background-size: 3rem auto;
+  }
+  .Install-item,
+  .Install-item:first-child,
+  .Install-item:last-child {
+    padding-left: 4rem;
+    text-align: left;
+  }
+  .Install-item--npm {
+    background-image: url('../src/npm-logo.svg');
+  }
+  .Install-item--bower {
+    background-image: url('../src/bower-logo.svg');
+  }
+  .Install-item--git {
+    background-image: url('../src/github/GitHub-Mark-Light-120px-plus.png');
   }
 }
 
-@media (max-width: 490px) {
-  .Install-item {
-    background-image: none !important;
-    line-height: inherit;
-  }
-}
-
-@media (max-width: 460px) {
-  .Header {
-    flex-flow: column;
-  }
+@media (--large-viewport) {
   .Install {
-    flex-flow: row;
-    padding-top: 1rem;
+    padding: 4.32rem 0 1.44rem 4.32rem;
   }
-  .Install-item {
-    padding: 0;
+  .Install-item,
+  .Install-item:first-child {
+    background-position: 0 0;
+    background-size: auto 2.44rem;
+    padding: 2.88rem 1.44rem 0 0;
+    text-align: left;
+  }
+  .Install-item:last-child {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
+
+.Social {
+  font-size: 85%;
+  margin: 0 5.8823529%;
+  overflow: hidden !important;
+}
+
+  .Share,
+  .Author {
+    float: left;
+    width: 50%;
+    padding: 1.44rem 0.72rem;
+  }
+
+  .Share {
+    padding-left: 0;
+  }
+
+  .Author {
+    padding-right: 0;
+    text-align: right;
+  }
+
+    .Share-item,
+    .Author-item {
+      margin-right: 1.5rem;
+    }
+
+    .Share-item:last-child,
+    .Author-item:last-child {
+      margin-right: 0;
+    }
+
+.Colors {
+  overflow: hidden !important;
+}
+
+  .Color {
+    display: block;
+    padding: 1rem 0.5rem;
+  }
+
+  .Palette {
+    float: left;
+    width: 25%;
+    margin: 1.44rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .Palette:first-child {
+    padding-left: 0;
+  }
+
+  .Palette:last-child {
+    padding-right: 0;
+  }
+
+    .Palette-heading,
+    .Palette-color {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .Palette-heading {
+      background-color: var(--color-blue-grey-600);
+    }
+
+    .Palette-title {
+      font-weight: 500;
+    }
+
+    .Palette-subtitle {
+      opacity: 0.6;
+      font-size: 85%;
+    }
+
+    .Palette-color .Color {
+      opacity: 0.6;
+    }
+
+    .Palette:first-child .Palette-heading {
+      background-color: var(--color-blue-grey-700);
+    }
+
+    .Palette:first-child .Color {
+      font-family: inherit;
+    }
+
+  @media (--large-viewport) {
+    .Palette {
+      float: none;
+      width: auto;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+    }
+    .Palette-heading,
+    .Palette-color {
+      float: left;
+      width: calc(100 / var(--columns))%;
+      height: 8rem;
+    }
+    .Palette-heading .Color {
+      padding: 2.335rem 0;
+    }
+    .Palette-color .Color {
+      padding: 3.1rem 0;
+    }
+
+    .got-flex-box .Container {
+      display: flex;
+      flex-flow: column;
+    }
+    .got-flex-box .Header,
+    .got-flex-box .Social {
+      flex: 0 0 auto;
+    }
+    .got-flex-box .Header {
+      order: 1;
+      padding-bottom: 1.44rem;
+    }
+    .got-flex-box .Social {
+      order: 3;
+    }
+    .got-flex-box .Colors {
+      display: flex;
+      flex-flow: column;
+      flex: 1 0 auto;
+      order: 2;
+    }
+    .got-flex-box .Palette {
+      display: flex;
+      flex: 1 1 auto;
+      margin-bottom: 0;
+    }
+    .got-flex-box .Palette-heading,
+    .got-flex-box .Palette-color {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      height: auto;
+    }
+    .got-flex-box .Palette-heading .Color,
+    .got-flex-box .Palette-color .Color {
+      padding: 0;
+    }
+  }

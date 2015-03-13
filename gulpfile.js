@@ -56,7 +56,7 @@ gulp.task('style', function () {
     features: {
       customProperties: {
         variables: {
-          '--columns': '' + site.cssColorKeywords.length + 1
+          '--columns': '' + (site.cssColorKeywords.length + 1)
         }
       }
     }

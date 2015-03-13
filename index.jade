@@ -44,19 +44,7 @@ html(lang='en')
             a(href=install.href, class='Install-item Install-item--' + install.name)
               code!= install.code
 
-      section.Colors
-        each palette in palettes
-          div(class='Palette Palette--' + palette.name)
-            div.Palette-heading
-              span.Color
-                a.Palette-title(href=palette.href)= palette.title
-                br
-                span.Palette-subtitle!= palette.subtitle
-            each c in cssColorKeywords
-              div(style=palette.colors[c].style).Palette-color
-                code.Color= palette.colors[c].value
-
-      footer.Footer
+      section.Social
         div.Share
           a(href=twt.shareURL, target='_blank').Share-item#share-on-twitter
             i.icon-tw &nbsp;
@@ -70,6 +58,19 @@ html(lang='en')
             a(href='https://twitter.com/#{twt.via}') @#{twt.via}
           span.Author-item
             a(href='https://gratipay.com/zaim/') gratipay
+
+
+      section.Colors
+        each palette in palettes
+          div(class='Palette Palette--' + palette.name)
+            div.Palette-heading
+              span.Color
+                a.Palette-title(href=palette.href)= palette.title
+                br
+                span.Palette-subtitle!= palette.subtitle
+            each c in cssColorKeywords
+              div(style=palette.colors[c].style).Palette-color
+                code.Color= palette.colors[c].value
 
     script(type='text/javascript', src='/assets/js/main.js')
 
