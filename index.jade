@@ -1,14 +1,14 @@
 doctype html
 html(lang='en')
-  //               _               _                 !
-  //              | |             | |                !
-  // __      _____| |__   ___ ___ | | ___  _ __ ___  !
-  // \ \ /\ / / _ \ '_ \ / __/ _ \| |/ _ \| '__/ __| !
-  //  \ V  V /  __/ |_) | (_| (_) | | (_) | |  \__ \ !
-  //   \_/\_/ \___|_.__/ \___\___/|_|\___/|_|  |___/ !
+  //
+    .               _               _                 .
+    .              | |             | |                .
+    . __      _____| |__   ___ ___ | | ___  _ __ ___  .
+    . \ \ /\ / / _ \ '_ \ / __/ _ \| |/ _ \| '__/ __| .
+    .  \ V  V /  __/ |_) | (_| (_) | | (_) | |  \__ \ .
+    .   \_/\_/ \___|_.__/ \___\___/|_|\___/|_|  |___/ .
   head
     meta(charset='utf8')
-    title #{pkg.name} - #{pkg.description}
     meta(name='description', value=pkg.description)
     meta(name='HandheldFriendly', content='True')
     meta(name='MobileOptimized', content='320')
@@ -17,6 +17,8 @@ html(lang='en')
     meta(name='msapplication-TileImage',
       content='/assets/img/touch/touch/icon-144.png')
     meta(name='msapplication-TileColor', content='#607D8B')
+    each meta in metas
+      meta&attributes(meta)
     each icon in icons
       link(rel='apple-touch-icon-precomposed')&attributes(icon)
     link(rel='shortcut icon', href='/assets/img/touch/icon-72.png')
@@ -26,8 +28,11 @@ html(lang='en')
       href='http://fonts.googleapis.com/css?family=Roboto:300,400,500|Inconsolata')
     link(rel='stylesheet', href='/assets/css/index.css')
     link(rel='stylesheet', href='/assets/ico/style.css')
+    title #{pkg.name} - #{pkg.description}
+
   body
     div.Container
+
       header.Header
         section.Title
           h1.Title-name: a(href='https://github.com/zaim/webcolors')= pkg.name
@@ -38,6 +43,7 @@ html(lang='en')
           each install in installations
             a(href=install.href, class='Install-item Install-item--' + install.name)
               code!= install.code
+
       section.Colors
         each palette in palettes
           div(class='Palette Palette--' + palette.name)
@@ -49,17 +55,51 @@ html(lang='en')
             each c in cssColorKeywords
               div(style=palette.colors[c].style).Palette-color
                 code.Color= palette.colors[c].value
+
       footer.Footer
         div.Share
-          a(href='#').Share-item
+          a(href=twt.shareURL, target='_blank').Share-item#share-on-twitter
             i.icon-tw &nbsp;
             span Tweet
-          a(href='#').Share-item
+          a(href='#').Share-item#share-on-facebook
             i.icon-fb &nbsp;
             span Share
         div.Author
           span.Author-item
             | made with &hearts; by 
-            a(href='https://twitter.com/zzzaim') @zzzaim
+            a(href='https://twitter.com/#{twt.via}') @#{twt.via}
           span.Author-item
             a(href='https://gratipay.com/zaim/') gratipay
+
+    script(type='text/javascript', src='/assets/js/main.js')
+
+    script(type='text/javascript').
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId   : '#{fb.appId}',
+          xfbml   : true,
+          version : 'v2.2'
+        });
+      };
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    script(type='text/javascript').
+      window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+        return t;
+      }(document, "script", "twitter-wjs"));

@@ -1,5 +1,7 @@
+var qs = require('querystring');
 var color = require('color');
 var webcolors = require('./index');
+var pkg = require('./package.json');
 
 
 function buildColorInfo (palette) {
@@ -72,7 +74,32 @@ var palettes = [
 ];
 
 
+var siteURL = 'https://zaim.github.io/webcolors/';
+
+var fb = {
+  appId: '1644488129118520'
+};
+
+var twt = {
+  text: 'Check out ' + pkg.name + ': modern color palettes bundled into ' +
+    'one package via npm and bower',
+  url: siteURL,
+  via: 'zzzaim'
+};
+
+var len = twt.text.length + twt.url.length + twt.via.length + 8;
+
+if (len > 140) {
+  throw new Error('Twitter share text > 140 characters');
+}
+
+twt.shareURL = 'https://twitter.com/intent/tweet?' + qs.stringify(twt);
+
+
 module.exports = {
+  fb: fb,
+  twt: twt,
+  pkg: pkg,
   palettes: palettes,
   cssColorKeywords: Object.keys(cssColors),
   installations: [
@@ -90,6 +117,36 @@ module.exports = {
       name: 'git',
       code: 'git clone &hellip;/zaim/webcolors',
       href: 'https://github.com/zaim/webcolors'
+    }
+  ],
+  metas: [
+    {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      name: 'twitter:site',
+      content: '@' + twt.user
+    },
+    {
+      property: 'og:url',
+      content: siteURL,
+    },
+    {
+      property: 'og:title',
+      content: pkg.name
+    },
+    {
+      property: 'og:description',
+      content: pkg.description
+    },
+    {
+      property: 'og:site_name',
+      content: pkg.name
+    },
+    {
+      property: 'fb:app_id',
+      content: fb.appId
     }
   ]
 };

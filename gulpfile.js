@@ -6,11 +6,9 @@ var gm      = require('gm');
 var jade    = require('jade');
 var merge   = require('merge-stream');
 var source  = require('vinyl-source-stream');
-var pkg     = require('./package.json');
 var site    = require('./site');
 
-site.pkg = pkg;
-site.pretty = true;
+site.pretty = '\t';
 site.iconSizes = [192, 180, 152, 144, 120, 128, 114, 76, 72];
 site.icons = site.iconSizes.map(function (size) {
   return {
