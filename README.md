@@ -1,6 +1,6 @@
 # webcolors
 
-> Various color palettes bundled into one package
+> Modern color palettes bundled into one package
 
 Inspired by the [material-colors](https://github.com/shuhei/material-colors)
 and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
