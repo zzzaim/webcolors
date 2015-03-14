@@ -15,19 +15,19 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='cleartype', content='on')
     meta(name='msapplication-TileImage',
-      content='/assets/img/touch/touch/icon-144.png')
+      content='assets/img/touch/touch/icon-144.png')
     meta(name='msapplication-TileColor', content='#607D8B')
     each meta in metas
       meta&attributes(meta)
     each icon in icons
       link(rel='apple-touch-icon-precomposed')&attributes(icon)
-    link(rel='shortcut icon', href='/assets/img/touch/icon-72.png')
-    link(rel='icon', sizes='192x192', href='/assets/img/touch/icon-192.png')
-    link(rel='icon', sizes='128x128', href='/assets/img/touch/icon-128.png')
+    link(rel='shortcut icon', href='assets/img/touch/icon-72.png')
+    link(rel='icon', sizes='192x192', href='assets/img/touch/icon-192.png')
+    link(rel='icon', sizes='128x128', href='assets/img/touch/icon-128.png')
     link(rel='stylesheet',
       href='http://fonts.googleapis.com/css?family=Roboto:300,400,500|Inconsolata')
-    link(rel='stylesheet', href='/assets/css/index.css')
-    link(rel='stylesheet', href='/assets/ico/style.css')
+    link(rel='stylesheet', href='assets/css/index.css')
+    link(rel='stylesheet', href='assets/ico/style.css')
     title #{pkg.name} - #{pkg.description}
 
   body
@@ -72,7 +72,7 @@ html(lang='en')
               div(style=palette.colors[c].style).Palette-color
                 code.Color= palette.colors[c].value
 
-    script(type='text/javascript', src='/assets/js/main.js')
+    script(type='text/javascript', src='assets/js/main.js')
 
     script(type='text/javascript').
       window.fbAsyncInit = function () {
