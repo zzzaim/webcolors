@@ -25,7 +25,7 @@ html(lang='en')
     link(rel='icon', sizes='192x192', href='assets/img/touch/icon-192.png')
     link(rel='icon', sizes='128x128', href='assets/img/touch/icon-128.png')
     link(rel='stylesheet',
-      href='http://fonts.googleapis.com/css?family=Roboto:300,400,500|Inconsolata')
+      href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Inconsolata')
     link(rel='stylesheet', href='assets/css/index.css')
     link(rel='stylesheet', href='assets/ico/style.css')
     title #{pkg.name} - #{pkg.description}
@@ -86,7 +86,7 @@ html(lang='en')
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
+        js.src = 'https://connect.facebook.net/en_US/sdk.js';
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
 
@@ -96,11 +96,11 @@ html(lang='en')
         if (d.getElementById(id)) return;
         js = d.createElement(s);
         js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
+        js.src = 'https://platform.twitter.com/widgets.js';
         fjs.parentNode.insertBefore(js, fjs);
         t._e = [];
         t.ready = function(f) {
           t._e.push(f);
         };
         return t;
-      }(document, "script", "twitter-wjs"));
+      }(document, 'script', 'twitter-wjs'));
