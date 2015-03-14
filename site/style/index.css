@@ -1,5 +1,5 @@
 @import 'suitcss-base';
-@import './material';
+@import '../../material';
 
 @custom-media --medium-viewport (min-width: 820px);
 @custom-media --large-viewport (min-width: 1000px);
@@ -112,13 +112,13 @@ code,pre {
     text-align: left;
   }
   .Install-item--npm {
-    background-image: url('../src/npm-logo.svg');
+    background-image: url('../img/npm-logo.svg');
   }
   .Install-item--bower {
-    background-image: url('../src/bower-logo.svg');
+    background-image: url('../img/bower-logo.svg');
   }
   .Install-item--git {
-    background-image: url('../src/github/GitHub-Mark-Light-120px-plus.png');
+    background-image: url('../img/github-logo.png');
   }
 }
 

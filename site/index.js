@@ -1,7 +1,7 @@
 var qs = require('querystring');
 var color = require('color');
-var webcolors = require('./index');
-var pkg = require('./package.json');
+var webcolors = require('../index');
+var pkg = require('../package.json');
 
 
 function buildColorInfo (palette) {

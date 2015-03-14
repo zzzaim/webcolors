@@ -4,7 +4,6 @@ var gulp    = require('gulp');
 var rename  = require('gulp-rename');
 var gm      = require('gm');
 var jade    = require('jade');
-var merge   = require('merge-stream');
 var source  = require('vinyl-source-stream');
 var site    = require('./site');
 
@@ -34,12 +33,12 @@ gulp.task('icons', function () {
       .stream('png')
       .pipe(source('icon-' + size + '.png'));
   });
-  return merge.apply(null, icons).pipe(gulp.dest('assets/img/touch'));
+  return es.merge(icons).pipe(gulp.dest('assets/img/touch'));
 });
 
 
 gulp.task('index', function () {
-  return gulp.src('index.jade', { read: false })
+  return gulp.src('site/index.jade', { read: false })
     .pipe(es.map(function (file, callback) {
       file = file.clone();
       file.contents = new Buffer(jade.renderFile(file.path, site));
@@ -52,7 +51,7 @@ gulp.task('index', function () {
 
 gulp.task('style', function () {
   var options = {
-    from: './index.css',
+    from: './site/style/index.css',
     features: {
       customProperties: {
         variables: {
@@ -61,7 +60,7 @@ gulp.task('style', function () {
       }
     }
   };
-  return gulp.src('index.css')
+  return gulp.src(options.from)
     .pipe(es.map(function (file, callback) {
       var css = cssnext(file.contents.toString(), options);
       file = file.clone();
@@ -72,10 +71,26 @@ gulp.task('style', function () {
 });
 
 
-gulp.task('watch', function () {
-  gulp.watch('index.css', ['style']);
-  gulp.watch('index.jade', ['index']);
+gulp.task('js', function () {
+  var buffers = [];
+  var concat = function (file) { buffers.push(file.contents); };
+  return gulp.src('site/js/*.js')
+    .pipe(es.through(concat, function () {
+      var contents = buffers.map(function (buff) {
+        return buff.toString();
+      }).join('\n');
+      this.emit('data', new Buffer(';(function(){\n' + contents + '}());'));
+      this.emit('end');
+    }))
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('assets/js'));
 });
 
 
-gulp.task('default', ['style', 'index']);
+gulp.task('watch', function () {
+  gulp.watch('site/style/**/*.css', ['style']);
+  gulp.watch('site/**/*.jade', ['index']);
+});
+
+
+gulp.task('default', ['style', 'js', 'index']);
