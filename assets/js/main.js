@@ -20,6 +20,9 @@ if (fbShare) {
   });
 }
 
+}());
+
+;(function(){
 /**
  * Adapted from https://github.com/doctyper/reflexie/
  * @copyright Richard Herrera <rich@doctyper.com>
@@ -53,4 +56,5 @@ var testProp = function (prop) {
 if (testProp('flexWrap')) {
   document.body.className = (bclss ? ' ' : '') + 'got-flex-box';
 }
+
 }());

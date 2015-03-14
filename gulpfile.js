@@ -72,14 +72,16 @@ gulp.task('style', function () {
 
 
 gulp.task('js', function () {
+  var head = ';(function(){\n';
+  var tail = '\n}());\n';
   var buffers = [];
   var concat = function (file) { buffers.push(file.contents); };
   return gulp.src('site/js/*.js')
     .pipe(es.through(concat, function () {
       var contents = buffers.map(function (buff) {
-        return buff.toString();
+        return head + buff.toString() + tail;
       }).join('\n');
-      this.emit('data', new Buffer(';(function(){\n' + contents + '}());'));
+      this.emit('data', new Buffer(contents));
       this.emit('end');
     }))
     .pipe(source('main.js'))
