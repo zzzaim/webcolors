@@ -26,11 +26,15 @@
   "devDependencies": {
     "camel-case": "^1.0.2",
     "color": "^0.7.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "gulp": "^3.8.10",
     "gulp-rename": "^1.2.0",
     "gulp-template": "^1.1.1",
     "merge-stream": "^0.1.6",
     "mocha": "^1.20.0",
-    "param-case": "^1.0.1"
+    "param-case": "^1.0.1",
+    "prettier": "^1.19.1"
   }
 }
