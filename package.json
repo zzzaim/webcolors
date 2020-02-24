@@ -1,7 +1,7 @@
 {
   "name": "webcolors",
   "version": "1.2.2",
-  "description": "Modern color palettes bundled into one package",
+  "description": "All the colors of the web",
   "keywords": [
     "colors",
     "colours",
@@ -10,14 +10,14 @@
     "flatui",
     "material"
   ],
-  "homepage": "https://github.com/zaim/webcolors",
-  "bugs": "https://github.com/zaim/webcolors/issues",
+  "homepage": "https://github.com/zzzaim/webcolors",
+  "bugs": "https://github.com/zzzaim/webcolors/issues",
   "license": "MIT",
-  "author": "zaim <abuzaim12@gmail.com>",
+  "author": "Zaim Bakar (https://zbr.works)",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaim/webcolors.git"
+    "url": "https://github.com/zzzaim/webcolors.git"
   },
   "scripts": {
     "test": "mocha",
