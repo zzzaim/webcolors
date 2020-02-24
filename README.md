@@ -24,7 +24,6 @@ and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
 
 1. [Via npm module](#via-npm-module)
 2. [Via CSS `@import`](#via-css-import)
-3. [Via Bower](#via-bower)
 4. [Direct download](#direct-download)
 
 ### Via npm module
@@ -38,15 +37,15 @@ $ npm install webcolors
 Then, you can then access the webcolors by `require`-ing webcolors:
 
 ```javascript
-var palettes = require('webcolors');
-var flatui   = require('webcolors/flatui');
+var palettes = require("webcolors");
+var flatui = require("webcolors/flatui");
 
-var aqua   = palettes.mrmrs.aqua;
-var lime   = palettes.mrmrs.lime;
-var red    = palettes.material.red;
+var aqua = palettes.mrmrs.aqua;
+var lime = palettes.mrmrs.lime;
+var red = palettes.material.red;
 var red100 = palettes.material.red100;
 var clouds = palettes.flatui.clouds;
-var green  = flatui.green;
+var green = flatui.green;
 var carrot = flatui.carrot;
 ```
 
@@ -58,7 +57,7 @@ By using a CSS processor with support of `@import`-ing npm modules like
 `webcolors` and use the variables in your stylesheets, like so:
 
 ```css
-@import 'webcolors/material';
+@import "webcolors/material";
 
 body {
   color: var(--color-lime-a100);
@@ -83,18 +82,17 @@ $ npm install postcss postcss-import postcss-custom-properties
 ```
 
 ```javascript
-var fs = require('fs');
-var postcss = require('postcss');
-var atImport = require('postcss-import');
-var customProperties = require('postcss-custom-properties');
+var fs = require("fs");
+var postcss = require("postcss");
+var atImport = require("postcss-import");
+var customProperties = require("postcss-custom-properties");
 
-var css = fs.readFileSync('input.css', 'utf8');
+var css = fs.readFileSync("input.css", "utf8");
 
 var output = postcss()
   .use(atImport())
   .use(customProperties())
-  .process(css)
-  .css;
+  .process(css).css;
 ```
 
 #### Rework example
@@ -107,27 +105,18 @@ $ npm install rework rework-npm rework-vars
 ```
 
 ```javascript
-var fs = require('fs');
-var rework = require('rework');
-var reworkNPM = require('rework-npm');
-var reworkVars = require('rework-vars');
+var fs = require("fs");
+var rework = require("rework");
+var reworkNPM = require("rework-npm");
+var reworkVars = require("rework-vars");
 
-var css = fs.readFileSync('input.css', 'utf8');
+var css = fs.readFileSync("input.css", "utf8");
 
 var output = rework(css)
   .use(reworkNPM())
   .use(reworkVars())
   .toString();
 ```
-
-### Via Bower
-
-```
-$ bower install webcolors
-```
-
-And use what you like from `bower_components/webcolors/{mrmrs,material,flatui}`
-directory.
 
 ### Direct Download
 
