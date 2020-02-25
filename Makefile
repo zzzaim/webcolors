@@ -18,14 +18,14 @@ targets += $(targets:.js=.json)
 
 # Output recipe template
 define tpl-recipe=
-%.$(1): %.js $(src)/template/$(1).mustache $(src)/view.js
+%.$(1): %.js $(src)/template/$(1).mustache $(src)/render.js
 	$$(render)
 endef
 
 # Template render command
 define render=
 	@mkdir -p $(@D)
-	$(src)/render.sh $^ > $@
+	node $(src)/render $(wordlist 1, 2, $^) > $@
 endef
 
 all: $(targets)
@@ -33,23 +33,23 @@ all: $(targets)
 clean:
 	rm -rf $(targets)
 
-index.js: $(src)/view.js $(src)/template/index.js.mustache
+index.js: $(src)/render.js $(src)/template/index.js.mustache
 	npx mustache $^ > $@
 
 # Special handling of _index.scss files
 %/_index.scss: \
 	%/index.js \
 	$(src)/template/scss.mustache \
-	$(src)/view.js
+	$(src)/render.js
 	$(render)
 
 %/index.json: %/index.js
 	@mkdir -p $(@D)
-	node -p 'JSON.stringify(require("./$^"), null, 2)' > $@
+	node src/render --json $< > $@
 
-%/index.js: $(src)/palettes/%/index.js
+%/index.js: $(src)/palettes/%/index.js $(src)/render.js
 	@mkdir -p $(@D)
-	cp $^ $@
+	node src/render --js $< > $@
 
 # Auto-generate output recipes
 $(foreach t,$(templates),$(eval $(call tpl-recipe,$(t))))
