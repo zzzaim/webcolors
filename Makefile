@@ -28,13 +28,16 @@ define render=
 	node $(src)/render $(wordlist 1, 2, $^) > $@
 endef
 
-all: $(targets)
+all: $(targets) package.json
 
 clean:
 	rm -rf $(targets)
 
 index.js: $(src)/render.js $(src)/template/index.js.mustache
 	npx mustache $^ > $@
+
+package.json: $(palettes)
+	node $(src)/contributors
 
 # Special handling of _index.scss files
 %/_index.scss: \

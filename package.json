@@ -13,7 +13,17 @@
   "homepage": "https://github.com/zzzaim/webcolors",
   "bugs": "https://github.com/zzzaim/webcolors/issues",
   "license": "MIT",
-  "author": "Zaim Bakar (https://zbr.works)",
+  "author": {
+    "name": "Zaim Bakar",
+    "url": "https://zbr.works"
+  },
+  "contributors": [
+    {
+      "name": "@mrmrs",
+      "email": "hi@mrmrs.cc",
+      "url": "http://mrmrs.cc"
+    }
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -35,6 +45,7 @@
     "minimist": "^1.2.0",
     "mocha": "^7.0.1",
     "mustache": "^4.0.0",
+    "parse-author": "^2.0.0",
     "prettier": "^1.19.1"
   },
   "husky": {
