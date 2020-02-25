@@ -1,0 +1,6 @@
+src
+docs
+test
+Makefile
+.editorconfig
+.eslintrc.js
