@@ -1,0 +1,7 @@
+module.exports = {
+  {{#palettes}}
+  {{name}}: require("./{{name}}"),
+  {{/palettes}}
+};
+
+{{! vim: set ft=javascript.mustache: }}
