@@ -23,12 +23,20 @@
     "test": "mocha"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "color": "^0.7.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
     "mocha": "^7.0.1",
     "mustache": "^4.0.0",
     "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   }
 }

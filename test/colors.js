@@ -1,9 +1,9 @@
 /* global describe, it */
 
-var assert = require("assert");
+var assert = require("chai").assert;
 var palettes = require("..");
 
-var DEFAULT_COLORS = [
+var CSS2_COLORS = [
   "aqua",
   "blue",
   "lime",
@@ -18,40 +18,25 @@ var DEFAULT_COLORS = [
   "yellow",
   "fuchsia",
   "gray",
+  "grey",
   "white",
   "black",
   "silver"
 ];
 
-var HEX = /#([0-9A-F]{2}){3}/;
+var HEX = /#[0-9A-F]{3,6}/i;
 
-describe("palettes", function() {
-  it("should have all default colors", function() {
-    Object.keys(palettes).forEach(function(title) {
-      DEFAULT_COLORS.forEach(function(name) {
-        var value = palettes[title][name];
-        assert.ok(
-          value && value.length,
-          'Palette "' + title + '" has no color named "' + name + '"'
-        );
-      });
+Object.keys(palettes).forEach(title => {
+  const palette = palettes[title];
+
+  describe(title, () => {
+    it("should export at least one CSS2 color", () => {
+      assert.hasAnyKeys(palette, CSS2_COLORS, palette);
     });
-  });
 
-  it("should have full hex values", function() {
-    Object.keys(palettes).forEach(function(title) {
-      Object.keys(palettes[title]).forEach(function(name) {
-        assert.ok(
-          HEX.test(palettes[title][name]),
-          "Palette color " +
-            title +
-            "." +
-            name +
-            " is not a hex value " +
-            "(" +
-            palettes[title][name] +
-            ")"
-        );
+    it("should export #FFF hex colors", () => {
+      Object.keys(palette).forEach(name => {
+        assert.match(palette[name], HEX, `${title}.${name}`);
       });
     });
   });
