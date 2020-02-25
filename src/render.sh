@@ -7,4 +7,4 @@ tpl=${2?$help}
 
 export PALETTE=$src
 
-npx mustache build/view.js "$tpl"
+npx mustache src/view.js "$tpl"
