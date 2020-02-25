@@ -1,67 +1,64 @@
-# Generate list of available output templates
-templates  = $(wildcard src/template/*.mustache)
-templates := $(notdir $(basename $(templates)))
-templates := $(filter-out %.js,$(templates))
+# Find all palette source .js files in "src/palettes/*" directories
+palette-js = $(shell find src/palettes -type f -name '*.js')
+palette-dirs = $(shell find src/palettes -mindepth 1 -maxdepth 1 -type d)
+pals = $(notdir $(palette-dirs))
 
-# Generate list of all templated targets
-palettes = $(shell find src/palettes -type f -name '*.js')
-targets  = $(palettes)
-targets += $(foreach t,$(templates),$(palettes:.js=.$(t)))
-targets := $(targets:index.scss=_index.scss)
-targets := $(targets:src/palettes/%=%)
+# Find all available output templates (css, less, scss, style, etc.)
+templates = $(wildcard src/template/*.mustache)
+tpls  = $(notdir $(basename $(templates)))
+tpls := $(filter-out %.js,$(tpls))
 
-# Generate list of all index.js and index.json targets
-palette-dirs = $(shell find src/palettes -maxdepth 1 -mindepth 1 -type d)
-palette-ids  = $(notdir $(palette-dirs))
-targets += $(foreach p,$(palette-ids),$(p)/index.js)
-targets += $(targets:.js=.json)
+# Generate all target filenames
+target-js   = $(palette-js:src/palettes/%=%)
+target-json = $(palette-js:src/palettes/%.js=%.json)
+target-tpl  = $(foreach t,$(tpls),$(target-js:%.js=%.$(t)))
+target-tpl := $(target-tpl:%/index.scss=%/_index.scss)
+target-all  = $(pals) $(target-js) $(target-json) $(target-tpl)
 
-# Add palette root directories to targets
-targets := $(palette-ids) $(targets)
+# [1] Recipe for <palette>/_index.scss files
+define sass-recipe=
+$(1)/_index.scss: src/palettes/$(1)/index.js src/template/scss.mustache
+	node src/render $$^ > $$@
+endef
 
-# Tell make to look for .js files here
-vpath %.js src/palettes
-
-# Output recipe template
+# [2] Recipe for <pallete>/*.{css,less,scss,styl} files
 define tpl-recipe=
-%.$(1): %.js src/template/$(1).mustache
-	$$(render)
+$(1)/%.$(2): src/palettes/$(1)/%.js src/template/$(2).mustache
+	node src/render $$^ > $$@
 endef
 
-# Template render command
-define render=
-	node src/render $(wordlist 1, 2, $^) > $@
+# [3] Recipe <palette>/*.js files
+define js-recipe=
+$(1)/%.js: src/palettes/$(1)/%.js
+	node src/render --js $$^ > $$@
 endef
 
-all: $(targets) package.json
+# [4] Recipe for <palette>/*.json files
+define json-recipe=
+$(1)/%.json: src/palettes/$(1)/%.js
+	node src/render --json $$^ > $$@
+endef
+
+all: $(target-all)
 
 clean:
-	rm -rf $(palette-ids)
-
-index.js: src/template/index.js.mustache
-	npx mustache src/index.js $^ > $@
-
-package.json: $(palettes)
-	node src/contributors
-
-# Special handling of _index.scss files
-%/_index.scss: \
-	%/index.js \
-	src/template/scss.mustache
-	$(render)
-
-%.json: %.js
-	node src/render --json $< > $@
-
-%.js:
-	node src/render --js src/palettes/$*.js > $@
+	rm -rf $(pals)
 
 # Palette directories
-$(palette-ids):
+$(pals):
 	mkdir -p $@
 
-# Auto-generate output recipes
-$(foreach t,$(templates),$(eval $(call tpl-recipe,$(t))))
+# [1] Generate <palette>/_index.scss receipes
+$(foreach p,$(pals),$(eval $(call sass-recipe,$(p))))
+
+# [2] Generate <pallete>/*.{css,less,scss,styl} recipes
+$(foreach p,$(pals),$(foreach t,$(tpls),$(eval $(call tpl-recipe,$(p),$(t)))))
+
+# [3] Generate <palette>/*.js recipes
+$(foreach p,$(pals),$(eval $(call js-recipe,$(p))))
+
+# [4] Generate <palette>/*.json recipes
+$(foreach p,$(pals),$(eval $(call json-recipe,$(p))))
 
 print-%:
 	@echo "$* = $($*)"
