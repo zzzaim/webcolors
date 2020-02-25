@@ -1,5 +1,6 @@
 module.exports = {
-  mrmrs: require("./mrmrs"),
+  flatui: require("./flatui"),
   material: require("./material"),
-  flatui: require("./flatui")
+  mrmrs: require("./mrmrs"),
 };
+

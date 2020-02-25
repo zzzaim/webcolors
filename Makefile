@@ -39,10 +39,16 @@ $(1)/%.json: src/palettes/$(1)/%.js
 	node src/render --json $$^ > $$@
 endef
 
-all: $(target-all)
+all: $(target-all) index.js package.json
 
 clean:
 	rm -rf $(pals)
+
+index.js: src/index.js src/template/index.js.mustache
+	npx mustache $^ > $@
+
+package.json: $(palette-js)
+	node src/contributors
 
 # Palette directories
 $(pals):
