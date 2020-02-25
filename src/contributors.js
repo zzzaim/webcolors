@@ -12,14 +12,25 @@ const palettes = Fs.readdirSync(Path.resolve(__dirname, "palettes"));
 const contributors = [];
 
 palettes.forEach(name => {
-  const palette = require(`./palettes/${name}`);
-  const author = palette.meta && palette.meta.author;
+  const paletteFiles = Fs.readdirSync(
+    Path.resolve(__dirname, "palettes", name)
+  );
 
-  if (author) {
-    contributors.push(
-      typeof author === "string" ? parseAuthor(author) : author
-    );
-  }
+  paletteFiles.forEach(file => {
+    if (!file.endsWith(".js")) {
+      return;
+    }
+
+    const path = Path.resolve(__dirname, "palettes", name, file);
+    const palette = require(path);
+    const author = palette.meta && palette.meta.author;
+
+    if (author) {
+      contributors.push(
+        typeof author === "string" ? parseAuthor(author) : author
+      );
+    }
+  });
 });
 
 // Also normalize main 'author' field to object
@@ -27,8 +38,11 @@ if (typeof pkg.author === "string") {
   pkg.author = parseAuthor(pkg.author);
 }
 
-Fs.writeFileSync(
-  require.resolve("../package.json"),
-  JSON.stringify(Object.assign(pkg, { contributors }), null, 2) + "\n",
-  "utf-8"
-);
+const json = JSON.stringify({ ...pkg, contributors }, null, 2) + "\n";
+
+if (process.argv[2] === "-n") {
+  console.log(json);
+  process.exit();
+}
+
+Fs.writeFileSync(require.resolve("../package.json"), json, "utf-8");
