@@ -1,127 +1,102 @@
 # webcolors
 
-> Modern color palettes bundled into one package
+> All the colors of the web
 
-Inspired by the [material-colors](https://github.com/shuhei/material-colors)
-and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
+## Palettes
 
-## Available palettes
+- **bootstrap**: [getbootstrap.com](https://getbootstrap.com/)
+- **bulma**: [bulma.io](https://bulma.io)
+- **flatui**: [FlatUI colors](http://flatuicolors.com/)
+- **material**: [Google Material Design](https://material.io/design/color/the-color-system.html)
+- **mrmrs**: [clrs.cc](http://clrs.cc/) / [mrmrs-colors](https://github.com/mrmrs/colors)
 
-- `mrmrs`: [clrs.cc](http://clrs.cc/) / [mrmrs-colors](https://github.com/mrmrs/colors)
-- `flatui`: [FlatUI colors](http://flatuicolors.co/)
-- `material`: [Google Material Design](http://www.google.com/design/spec/style/color.html)
+## Formats
 
-## Available formats
+- [CSS (custom properties)](#with-css-custom-properties)
+- [SCSS](#with-scss)
+- [Less](#with-less)
+- [Stylus](#with-stylus)
+- [JavaScript/JSON](#with-javascript-or-json)
 
-- CSS variables
-- Sass, Scss
-- Less
-- Stylus
-- JSON
-- JavaScript
+## Installation
 
-## Installation and Usage
-
-1. [Via npm module](#via-npm-module)
-2. [Via CSS `@import`](#via-css-import)
-4. [Direct download](#direct-download)
-
-### Via npm module
-
-Install `webcolors` using `npm`:
-
-```sh
+```shell
 $ npm install webcolors
 ```
 
-Then, you can then access the webcolors by `require`-ing webcolors:
+### With CSS custom properties
 
-```javascript
-var palettes = require("webcolors");
-var flatui = require("webcolors/flatui");
-
-var aqua = palettes.mrmrs.aqua;
-var lime = palettes.mrmrs.lime;
-var red = palettes.material.red;
-var red100 = palettes.material.red100;
-var clouds = palettes.flatui.clouds;
-var green = flatui.green;
-var carrot = flatui.carrot;
-```
-
-### Via CSS `@import`
-
-By using a CSS processor with support of `@import`-ing npm modules like
-[postcss](https://github.com/postcss/postcss) or
-[rework](https://github.com/reworkcss/rework), you can directly import
-`webcolors` and use the variables in your stylesheets, like so:
+Use a CSS preprocessor such ass [PostCSS](https://postcss.org) to handle
+`@import` syntax.
 
 ```css
-@import "webcolors/material";
+@import "webcolors/material/index.css";
 
 body {
-  color: var(--color-lime-a100);
-  background: var(--color-indigo);
+  color: --red;
+  background: --yellow;
 }
 ```
 
-First off, install `webcolors` using `npm`:
+### With SCSS
 
-```sh
-$ npm install webcolors
+Use [sass](https://sass-lang.com) to handle `@import` syntax. The format of
+the import file path depends on your configuration.
+
+```scss
+@import "~webcolors/material/index.css";
+
+body {
+  color: $red;
+  background: $yellow;
+}
 ```
 
-#### PostCSS example
+### With LESS
 
-Requires the [postcss-import](https://www.npmjs.com/package/postcss-import)
-and [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties)
-plugins:
+Install and configure [Less.js](http://lesscss.org/).
 
-```sh
-$ npm install postcss postcss-import postcss-custom-properties
+```less
+@import "node_modules/webcolors/flatui/index";
+
+body {
+  color: @red;
+  background: @blue;
+}
 ```
+
+### With Stylus
+
+Install and configure [Stylus](https://stylus-lang.com/).
+
+```styl
+@import "node_modules/webcolors/mrmrs";
+
+body {
+  color: orange;
+  background: white;
+}
+```
+
+### With JavaScript or JSON
+
+Colors can be imported directly from Node.js scripts or modules.
 
 ```javascript
-var fs = require("fs");
-var postcss = require("postcss");
-var atImport = require("postcss-import");
-var customProperties = require("postcss-custom-properties");
+// All palettes:
+const webcolors = require("webcolors");
 
-var css = fs.readFileSync("input.css", "utf8");
+// Specific palettes:
+const bootstrap = require("webcolors/bootstrap");
+const material = require("webcolors/material");
 
-var output = postcss()
-  .use(atImport())
-  .use(customProperties())
-  .process(css).css;
+console.log(`FlatUI yellow: ${webcolors.flatui.yellow}`);
+console.log(`Bootstrap red: ${bootstrap.red}`);
+console.log(`Material blue: ${material.blue}`);
 ```
 
-#### Rework example
-
-Requires the [rework-npm](https://www.npmjs.com/package/rework-npm) and
-[rework-vars](https://www.npmjs.com/package/rework-vars) plugins:
-
-```sh
-$ npm install rework rework-npm rework-vars
-```
-
-```javascript
-var fs = require("fs");
-var rework = require("rework");
-var reworkNPM = require("rework-npm");
-var reworkVars = require("rework-vars");
-
-var css = fs.readFileSync("input.css", "utf8");
-
-var output = rework(css)
-  .use(reworkNPM())
-  .use(reworkVars())
-  .toString();
-```
-
-### Direct Download
-
-Download whichever format you like from the [mrmrs](./mrmrs),
-[material](./material) or [flatui](./flatui) directories on GitHub.
+Palettes pre-exported as JSON files can be found in the package's palette
+directories.
 
 ## Changelog
 
@@ -134,6 +109,11 @@ Download whichever format you like from the [mrmrs](./mrmrs),
 
 **1.0.0** - Breaking change to directory structure. No more `dist` folder,
 individual palettes are available at root directory.
+
+## Inspiration
+
+Inspired by the [material-colors](https://github.com/shuhei/material-colors)
+and [mrmrs-colors](https://github.com/mrmrs/colors) packages.
 
 ## License
 
