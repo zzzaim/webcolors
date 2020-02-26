@@ -1,28 +1,8 @@
 /* global describe, it */
 
-var assert = require("chai").assert;
-var palettes = require("..");
-
-var CSS2_COLORS = [
-  "aqua",
-  "blue",
-  "lime",
-  "navy",
-  "teal",
-  "olive",
-  "green",
-  "red",
-  "maroon",
-  "orange",
-  "purple",
-  "yellow",
-  "fuchsia",
-  "gray",
-  "grey",
-  "white",
-  "black",
-  "silver"
-];
+const assert = require("chai").assert;
+const palettes = require("..");
+const colors = require("../src/colors");
 
 var HEX = /#[0-9A-F]{3,6}/i;
 
@@ -31,7 +11,7 @@ Object.keys(palettes).forEach(title => {
 
   describe(title, () => {
     it("should export at least one CSS2 color", () => {
-      assert.hasAnyKeys(palette, CSS2_COLORS, palette);
+      assert.hasAnyKeys(palette, colors, palette);
     });
 
     it("should export #FFF hex colors", () => {

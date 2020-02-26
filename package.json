@@ -19,6 +19,10 @@
   },
   "contributors": [
     {
+      "name": "The Bootstrap Authors",
+      "url": "https://github.com/twbs/bootstrap/graphs/contributors"
+    },
+    {
       "name": "Kevin Yang",
       "url": "http://dribbble.com/eatsleepvector"
     },
@@ -85,6 +89,7 @@
     "test": "mocha"
   },
   "devDependencies": {
+    "bootstrap": "^4.4.1",
     "chai": "^4.2.0",
     "color-parse": "^1.3.8",
     "color-stringify": "^1.2.1",
@@ -97,7 +102,10 @@
     "minimist": "^1.2.0",
     "mocha": "^7.0.1",
     "mustache": "^4.0.0",
+    "node-sass": "^4.13.1",
     "parse-author": "^2.0.0",
+    "postcss": "^7.0.27",
+    "postcss-export-custom-variables": "^1.0.0",
     "prettier": "^1.19.1"
   },
   "husky": {

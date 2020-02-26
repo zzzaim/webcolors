@@ -44,8 +44,8 @@ all: $(target-all) index.js package.json
 clean:
 	rm -rf $(pals)
 
-index.js: src/index.js src/template/index.js.mustache
-	npx mustache $^ > $@
+index.js: src/index.js src/template/index.js.mustache $(palette-js)
+	npx mustache $(wordlist 1,2,$^) > $@
 
 package.json: $(palette-js)
 	node src/contributors
