@@ -1,4 +1,4 @@
-const sass = require("node-sass");
+const sass = require("sass");
 const exportVariables = require("postcss-export-custom-variables");
 const bootstrapPkg = require("bootstrap/package.json");
 const onlyColors = require("../../colors");

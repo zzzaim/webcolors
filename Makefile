@@ -20,9 +20,6 @@ target-docs  = $(shell find src/docs -type f -name '*.pug')
 target-docs := $(target-docs:src/%.pug=%.html)
 target-docs += docs/css/main.css
 
-# SASS options
-sass-importer = $(shell node -p 'require.resolve("node-sass-package-importer")')
-
 # [1] Recipe for <palette>/_index.scss files
 define sass-recipe=
 $(1)/_index.scss: src/palettes/$(1)/index.js src/template/scss.mustache
@@ -66,7 +63,7 @@ docs/%.html: src/docs/%.pug
 
 docs/css/main.css: src/docs/sass/main.scss
 	@mkdir -p $(@D)
-	npx node-sass --importer $(sass-importer) $< | npx postcss > $@
+	npx sass -I"$(PWD)" -Inode_modules $< | npx postcss > $@
 
 # Palette directories
 $(pals):
