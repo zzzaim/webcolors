@@ -15,6 +15,14 @@ target-tpl  = $(foreach t,$(tpls),$(target-js:%.js=%.$(t)))
 target-tpl := $(target-tpl:%/index.scss=%/_index.scss)
 target-all  = $(pals) $(target-js) $(target-json) $(target-tpl)
 
+# Generate all doc targets
+target-docs  = $(shell find src/docs -type f -name '*.pug')
+target-docs := $(target-docs:src/%.pug=%.html)
+target-docs += docs/css/main.css
+
+# SASS options
+sass-importer = $(shell node -p 'require.resolve("node-sass-package-importer")')
+
 # [1] Recipe for <palette>/_index.scss files
 define sass-recipe=
 $(1)/_index.scss: src/palettes/$(1)/index.js src/template/scss.mustache
@@ -41,14 +49,24 @@ endef
 
 all: $(target-all) index.js package.json
 
+docs: $(target-docs)
+
 clean:
-	rm -rf $(pals)
+	rm -rf $(pals) docs
 
 index.js: src/index.js src/template/index.js.mustache $(palette-js)
 	npx mustache $(wordlist 1,2,$^) > $@
 
 package.json: $(palette-js)
 	node src/contributors
+
+docs/%.html: src/docs/%.pug
+	@mkdir -p $(@D)
+	npx posthtml $< -o $@
+
+docs/css/main.css: src/docs/sass/main.scss
+	@mkdir -p $(@D)
+	npx node-sass --importer $(sass-importer) $< | npx postcss > $@
 
 # Palette directories
 $(pals):
@@ -69,4 +87,4 @@ $(foreach p,$(pals),$(eval $(call json-recipe,$(p))))
 print-%:
 	@echo "$* = $($*)"
 
-.PHONY: all clean
+.PHONY: all docs clean
