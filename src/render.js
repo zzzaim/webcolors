@@ -21,7 +21,7 @@ function exit() {
 // Options:
 //   --js    Outputs a javascript module
 //   --json  Outputs a JSON object
-function render() {
+async function render() {
   const args = parseArgs(process.argv.slice(2), {
     boolean: true
   });
@@ -33,7 +33,7 @@ function render() {
     exit();
   }
 
-  const colorMap = loadColors(viewFile);
+  const colorMap = await loadColors(viewFile);
 
   const colorList = Object.keys(colorMap)
     .map(name => ({
@@ -64,8 +64,12 @@ function render() {
 
 // Load the color palette module `viewFile`.
 // Normalizes all color values to #FFFFFF or #FFF hex format.
-function loadColors(viewFile) {
-  const colors = require(Path.resolve(process.cwd(), viewFile));
+async function loadColors(viewFile) {
+  let colors = require(Path.resolve(process.cwd(), viewFile));
+
+  if (typeof colors === "function") {
+    colors = await colors();
+  }
 
   return Object.keys(colors).reduce((map, key) => {
     map[key] = normalizeColor(colors[key]);
@@ -98,5 +102,8 @@ function toJSON(obj) {
 }
 
 if (require.main === module) {
-  render();
+  render().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 }
