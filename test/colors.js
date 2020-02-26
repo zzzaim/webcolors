@@ -2,7 +2,7 @@
 
 const assert = require("chai").assert;
 const palettes = require("..");
-const colors = require("../src/colors");
+const { colors } = require("../src/colors");
 
 var HEX = /#[0-9A-F]{3,6}/i;
 

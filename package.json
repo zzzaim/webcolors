@@ -23,6 +23,11 @@
       "url": "https://github.com/twbs/bootstrap/graphs/contributors"
     },
     {
+      "name": "Jeremy Thomas",
+      "email": "bbxdesign@gmail.com",
+      "url": "https://jgthms.com"
+    },
+    {
       "name": "Kevin Yang",
       "url": "http://dribbble.com/eatsleepvector"
     },
@@ -90,6 +95,7 @@
   },
   "devDependencies": {
     "bootstrap": "^4.4.1",
+    "bulma": "^0.8.0",
     "chai": "^4.2.0",
     "color-parse": "^1.3.8",
     "color-stringify": "^1.2.1",
@@ -106,6 +112,8 @@
     "parse-author": "^2.0.0",
     "postcss": "^7.0.27",
     "postcss-export-custom-variables": "^1.0.0",
+    "postcss-get-sass-variables": "^1.1.0",
+    "postcss-sass": "^0.4.2",
     "prettier": "^1.19.1"
   },
   "husky": {

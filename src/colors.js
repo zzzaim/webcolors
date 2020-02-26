@@ -1,4 +1,4 @@
-module.exports = [
+const keywords = [
   "aqua",
   "blue",
   "lime",
@@ -18,3 +18,16 @@ module.exports = [
   "black",
   "silver"
 ];
+
+module.exports = function onlyColors(vars) {
+  return Object.keys(vars).reduce((acc, key) => {
+    if (keywords.includes(key)) {
+      acc[key] = vars[key];
+    }
+    return acc;
+  }, {});
+};
+
+Object.defineProperty(module.exports, "colors", {
+  value: keywords
+});

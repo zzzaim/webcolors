@@ -1,7 +1,7 @@
 const sass = require("node-sass");
 const exportVariables = require("postcss-export-custom-variables");
 const bootstrapPkg = require("bootstrap/package.json");
-const keywords = require("../../colors");
+const onlyColors = require("../../colors");
 
 const options = {
   from: require.resolve("bootstrap/scss/bootstrap.scss"),
@@ -22,15 +22,6 @@ module.exports = function() {
 
 function exporter() {
   return Promise.resolve();
-}
-
-function onlyColors(vars) {
-  return Object.keys(vars).reduce((acc, key) => {
-    if (keywords.includes(key)) {
-      acc[key] = vars[key];
-    }
-    return acc;
-  }, {});
 }
 
 // For debugging: run this script to output variables
