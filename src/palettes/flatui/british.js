@@ -3,7 +3,7 @@ const named = {
   blueNights: "#273c75",
   blueberrySoda: "#f5f6fa",
   chainGangGrey: "#dcdde1",
-  downloadProgress: "#fbc531#fbc531",
+  downloadProgress: "#fbc531",
   electromagnetic: "#192a56",
   harleyDavidsonOrange: "#353b48",
   hintOfPensive: "#c23616",

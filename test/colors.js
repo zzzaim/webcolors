@@ -2,7 +2,7 @@
 
 const assert = require("chai").assert;
 const palettes = require("..");
-const { colors } = require("../src/colors");
+const { keywords } = require("../src/util");
 
 var HEX = /#[0-9A-F]{3,6}/i;
 
@@ -11,12 +11,16 @@ Object.keys(palettes).forEach(title => {
 
   describe(title, () => {
     it("should export at least one CSS2 color", () => {
-      assert.hasAnyKeys(palette, colors, palette);
+      assert.hasAnyKeys(palette, Array.from(keywords), palette);
     });
 
-    it("should export #FFF hex colors", () => {
+    it("should export #FFF hex colors or null", () => {
       Object.keys(palette).forEach(name => {
-        assert.match(palette[name], HEX, `${title}.${name}`);
+        if (palette[name]) {
+          assert.match(palette[name], HEX, `${title}.${name}`);
+        } else {
+          assert.isNull(palette[name], `${title}.${name}`);
+        }
       });
     });
   });

@@ -3,9 +3,8 @@
 const Fs = require("fs");
 const Path = require("path");
 const Mustache = require("mustache");
-const parseColor = require("color-parse");
-const stringifyColor = require("color-stringify");
 const parseArgs = require("minimist");
+const { normalizePalette, mapToObject } = require("./util");
 
 function exit() {
   const prog = Path.basename(__filename);
@@ -33,29 +32,25 @@ async function render() {
     exit();
   }
 
-  const colorMap = await loadColors(viewFile);
-
-  const colorList = Object.keys(colorMap)
-    .map(name => ({
-      name,
-      value: colorMap[name]
-    }))
-    .filter(o => o.value)
-    .sort(sortByName);
+  const palette = await loadPalette(viewFile);
 
   let output;
 
-  if (args.json) {
-    output = toJSON(colorMap) + "\n";
-  } else if (args.js) {
-    output = "module.exports = " + toJSON(colorMap) + ";\n";
+  if (args.json || args.js) {
+    const json = toJSON(palette);
+    output = args.js ? `module.exports = ${json};\n` : `${json}\n`;
   } else {
     if (!templateFile) {
       return exit();
     }
 
+    const colors = Array.from(palette)
+      .map(([name, value]) => ({ name, value }))
+      .filter(o => o.value)
+      .sort(sortByName);
+
     output = Mustache.render(Fs.readFileSync(templateFile, "utf-8"), {
-      colors: colorList
+      colors
     });
   }
 
@@ -64,22 +59,14 @@ async function render() {
 
 // Load the color palette module `viewFile`.
 // Normalizes all color values to #FFFFFF or #FFF hex format.
-async function loadColors(viewFile) {
-  let colors = require(Path.resolve(process.cwd(), viewFile));
+async function loadPalette(viewFile) {
+  let palette = require(Path.resolve(process.cwd(), viewFile));
 
-  if (typeof colors === "function") {
-    colors = await colors();
+  if (typeof palette === "function") {
+    palette = await palette();
   }
 
-  return Object.keys(colors).reduce((map, key) => {
-    map[key] = normalizeColor(colors[key]);
-    return map;
-  }, {});
-}
-
-// Normalize any color value to #FFFFFF or #FFF hex format.
-function normalizeColor(value) {
-  return stringifyColor(parseColor(value), "hex");
+  return normalizePalette(palette);
 }
 
 function sortByName(a, b) {
@@ -97,8 +84,8 @@ function sortByName(a, b) {
   return 0;
 }
 
-function toJSON(obj) {
-  return JSON.stringify(obj, null, 2);
+function toJSON(map) {
+  return JSON.stringify(mapToObject(map), null, 2);
 }
 
 if (require.main === module) {
