@@ -9,6 +9,7 @@
 - **flatui**: [FlatUI colors](http://flatuicolors.com/)
 - **material**: [Google Material Design](https://material.io/design/color/the-color-system.html)
 - **mrmrs**: [clrs.cc](http://clrs.cc/) / [mrmrs-colors](https://github.com/mrmrs/colors)
+- **tailwind**: [tailwindcss.com](https://tailwindcss.com)
 
 ## Formats
 
