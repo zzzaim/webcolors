@@ -286,7 +286,7 @@ module.exports = {
   "blueGreyA700": "#455a64",
   "aqua": "#00bcd4",
   "black": "#000",
-  "fuchsia": "#f0f",
+  "fuchsia": "#d500f9",
   "gray": "#9e9e9e",
   "maroon": "#e91e63",
   "navy": "#3f51b5",

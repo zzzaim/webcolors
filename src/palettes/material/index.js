@@ -29,7 +29,7 @@ const css = {
   aqua: colors.cyan,
   black: material.common.black,
   blue: colors.blue,
-  fuchsia: "#ff00ff",
+  fuchsia: material.purple.A400,
   gray: colors.grey,
   green: colors.green,
   lime: colors.lime,
@@ -48,3 +48,8 @@ module.exports = {
   ...colors,
   ...css
 };
+
+// For debugging: run this script to output variables
+if (require.main === module) {
+  console.log(module.exports);
+}

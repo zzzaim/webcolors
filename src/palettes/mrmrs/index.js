@@ -11,3 +11,8 @@ Object.defineProperty(colors, "meta", {
 });
 
 module.exports = colors;
+
+// For debugging: run this script to output variables
+if (require.main === module) {
+  console.log(module.exports);
+}
