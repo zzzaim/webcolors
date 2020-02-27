@@ -13,10 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018
   },
-  ignorePatters: {
-    "!.*rc.js",
-    "!.*rc.js",
-    "!.*rc.js"
-  },
+  ignorePatterns: ["!.*rc.js", "!.*rc.js", "!.*rc.js"],
   rules: {}
 };
