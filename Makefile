@@ -18,7 +18,11 @@ target-all  = $(pals) $(target-js) $(target-json) $(target-tpl)
 # Generate all doc targets
 target-docs  = $(shell find src/docs -type f -name '*.pug')
 target-docs := $(target-docs:src/%.pug=%.html)
-target-docs += docs/css/main.css
+target-docs += docs/styles.css
+
+# Tailwind CSS
+tailwind-pkg = $(shell node -p 'require.resolve("tailwindcss/package.json")')
+tailwind-css = $(shell node -p 'require.resolve("tailwindcss/tailwind.css")')
 
 # [1] Recipe for <palette>/_index.scss files
 define sass-recipe=
@@ -61,9 +65,9 @@ docs/%.html: src/docs/%.pug
 	@mkdir -p $(@D)
 	npx posthtml $< -o $@
 
-docs/css/main.css: src/docs/sass/main.scss
+docs/styles.css: $(tailwind-css) $(tailwind-pkg)
 	@mkdir -p $(@D)
-	npx sass -I"$(PWD)" -Inode_modules $< | npx postcss > $@
+	npx postcss $< -o $@
 
 # Palette directories
 $(pals):
