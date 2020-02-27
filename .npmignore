@@ -3,4 +3,4 @@ docs
 test
 Makefile
 .editorconfig
-.eslintrc.js
+.*rc.js

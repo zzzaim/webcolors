@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require("tailwindcss"),
+    require("tailwindcss")("./.tailwindrc.js"),
     require("autoprefixer")({
       flexbox: "no-2009"
     })
