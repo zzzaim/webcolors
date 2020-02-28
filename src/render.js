@@ -4,7 +4,7 @@ const Fs = require("fs");
 const Path = require("path");
 const Mustache = require("mustache");
 const parseArgs = require("minimist");
-const { normalizePalette, mapToObject } = require("./util");
+const { keywords, normalizePalette, mapToObject } = require("./util");
 
 function exit() {
   const prog = Path.basename(__filename);
@@ -45,7 +45,10 @@ async function render() {
     }
 
     const colors = Array.from(palette)
-      .map(([name, value]) => ({ name, value }))
+      .map(([name, value]) => ({
+        name,
+        value: value || (keywords.has(name) ? name : null)
+      }))
       .filter(o => o.value)
       .sort(sortByName);
 

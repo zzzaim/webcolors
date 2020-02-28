@@ -1,10 +1,18 @@
 :root {
+  --aqua: aqua;
+  --black: black;
   --blue: #007BFF;
+  --fuchsia: fuchsia;
   --gray: #6C757D;
   --green: #28A745;
+  --lime: lime;
+  --maroon: maroon;
+  --navy: navy;
+  --olive: olive;
   --orange: #FD7E14;
   --purple: #6F42C1;
   --red: #DC3545;
+  --silver: silver;
   --teal: #20C997;
   --white: #FFFFFF;
   --yellow: #FFC107;
