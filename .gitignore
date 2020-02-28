@@ -1,11 +1,12 @@
 # Palette files are auto-generated during pre-pack/publish,
 # so they are not checked into the git repo.
-packages/*/index.js
-packages/*/index.json
-packages/*/*.css
-packages/*/*.less
-packages/*/*.scss
-packages/*/*.styl
+packages/**/*.js
+packages/**/*.json
+packages/**/*.css
+packages/**/*.less
+packages/**/*.scss
+packages/**/*.styl
+!packages/**/src/*.js
 
 .cache/
 node_modules/
