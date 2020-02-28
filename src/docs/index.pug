@@ -6,6 +6,16 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title webcolors | all the colors of the web
     link(rel="stylesheet" href="styles.css")
-  body
-    section.container.mx-auto
-      h1.text-4xl.font-bold Under Construction
+  body.bg-purple-800.text-white
+    div.container.mx-auto.my-8
+      header.mb-8
+        h1.font-bold.text-xl.ml-4 webcolors
+      section.grid.grid-cols-3.gap-12
+        each paletteColors, palette in palettes
+          div.p-4.bg-white.text-black.rounded.shadow-xl
+            h2.font-bold.mb-3= palette
+            div.grid.grid-cols-5
+              each color in colors
+                - var key = paletteColors[color] ? palette : defaultPalette
+                span(class=`block h-12 bg-${key}-${color}` title=color).
+                  &nbsp;

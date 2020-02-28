@@ -1,6 +1,5 @@
 module.exports = [
   ["aqua"],
-  ["black"],
   ["blue"],
   ["fuchsia"],
   ["gray", "grey"],
@@ -14,6 +13,7 @@ module.exports = [
   ["red"],
   ["silver"],
   ["teal"],
-  ["white"],
-  ["yellow"]
+  ["yellow"],
+  ["black"],
+  ["white"]
 ];
