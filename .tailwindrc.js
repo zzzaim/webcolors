@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     extend: {
-      colors: require(".")
+      colors: require("./packages/webcolors")
     }
   }
 };

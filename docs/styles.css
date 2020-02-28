@@ -1100,9 +1100,6 @@ video {
 .bg-bootstrap-aqua{
 }
 
-.bg-bootstrap-black{
-}
-
 .bg-bootstrap-fuchsia{
 }
 
@@ -1119,6 +1116,9 @@ video {
 }
 
 .bg-bootstrap-silver{
+}
+
+.bg-bootstrap-black{
 }
 
 .bg-bulma-black{
@@ -1309,13 +1309,13 @@ video {
   background-color: #95A5A6;
 }
 
-.bg-flatui-black{
-}
-
 .bg-flatui-maroon{
 }
 
 .bg-flatui-olive{
+}
+
+.bg-flatui-black{
 }
 
 .bg-flatui-white{
@@ -3051,9 +3051,6 @@ video {
 .hover\:bg-bootstrap-aqua:hover{
 }
 
-.hover\:bg-bootstrap-black:hover{
-}
-
 .hover\:bg-bootstrap-fuchsia:hover{
 }
 
@@ -3070,6 +3067,9 @@ video {
 }
 
 .hover\:bg-bootstrap-silver:hover{
+}
+
+.hover\:bg-bootstrap-black:hover{
 }
 
 .hover\:bg-bulma-black:hover{
@@ -3260,13 +3260,13 @@ video {
   background-color: #95A5A6;
 }
 
-.hover\:bg-flatui-black:hover{
-}
-
 .hover\:bg-flatui-maroon:hover{
 }
 
 .hover\:bg-flatui-olive:hover{
+}
+
+.hover\:bg-flatui-black:hover{
 }
 
 .hover\:bg-flatui-white:hover{
@@ -5002,9 +5002,6 @@ video {
 .focus\:bg-bootstrap-aqua:focus{
 }
 
-.focus\:bg-bootstrap-black:focus{
-}
-
 .focus\:bg-bootstrap-fuchsia:focus{
 }
 
@@ -5021,6 +5018,9 @@ video {
 }
 
 .focus\:bg-bootstrap-silver:focus{
+}
+
+.focus\:bg-bootstrap-black:focus{
 }
 
 .focus\:bg-bulma-black:focus{
@@ -5211,13 +5211,13 @@ video {
   background-color: #95A5A6;
 }
 
-.focus\:bg-flatui-black:focus{
-}
-
 .focus\:bg-flatui-maroon:focus{
 }
 
 .focus\:bg-flatui-olive:focus{
+}
+
+.focus\:bg-flatui-black:focus{
 }
 
 .focus\:bg-flatui-white:focus{
@@ -7033,9 +7033,6 @@ video {
 .border-bootstrap-aqua{
 }
 
-.border-bootstrap-black{
-}
-
 .border-bootstrap-fuchsia{
 }
 
@@ -7052,6 +7049,9 @@ video {
 }
 
 .border-bootstrap-silver{
+}
+
+.border-bootstrap-black{
 }
 
 .border-bulma-black{
@@ -7242,13 +7242,13 @@ video {
   border-color: #95A5A6;
 }
 
-.border-flatui-black{
-}
-
 .border-flatui-maroon{
 }
 
 .border-flatui-olive{
+}
+
+.border-flatui-black{
 }
 
 .border-flatui-white{
@@ -8984,9 +8984,6 @@ video {
 .hover\:border-bootstrap-aqua:hover{
 }
 
-.hover\:border-bootstrap-black:hover{
-}
-
 .hover\:border-bootstrap-fuchsia:hover{
 }
 
@@ -9003,6 +9000,9 @@ video {
 }
 
 .hover\:border-bootstrap-silver:hover{
+}
+
+.hover\:border-bootstrap-black:hover{
 }
 
 .hover\:border-bulma-black:hover{
@@ -9193,13 +9193,13 @@ video {
   border-color: #95A5A6;
 }
 
-.hover\:border-flatui-black:hover{
-}
-
 .hover\:border-flatui-maroon:hover{
 }
 
 .hover\:border-flatui-olive:hover{
+}
+
+.hover\:border-flatui-black:hover{
 }
 
 .hover\:border-flatui-white:hover{
@@ -10935,9 +10935,6 @@ video {
 .focus\:border-bootstrap-aqua:focus{
 }
 
-.focus\:border-bootstrap-black:focus{
-}
-
 .focus\:border-bootstrap-fuchsia:focus{
 }
 
@@ -10954,6 +10951,9 @@ video {
 }
 
 .focus\:border-bootstrap-silver:focus{
+}
+
+.focus\:border-bootstrap-black:focus{
 }
 
 .focus\:border-bulma-black:focus{
@@ -11144,13 +11144,13 @@ video {
   border-color: #95A5A6;
 }
 
-.focus\:border-flatui-black:focus{
-}
-
 .focus\:border-flatui-maroon:focus{
 }
 
 .focus\:border-flatui-olive:focus{
+}
+
+.focus\:border-flatui-black:focus{
 }
 
 .focus\:border-flatui-white:focus{
@@ -17504,21 +17504,6 @@ video {
 .placeholder-bootstrap-aqua::placeholder{
 }
 
-.placeholder-bootstrap-black::-webkit-input-placeholder{
-}
-
-.placeholder-bootstrap-black::-moz-placeholder{
-}
-
-.placeholder-bootstrap-black:-ms-input-placeholder{
-}
-
-.placeholder-bootstrap-black::-ms-input-placeholder{
-}
-
-.placeholder-bootstrap-black::placeholder{
-}
-
 .placeholder-bootstrap-fuchsia::-webkit-input-placeholder{
 }
 
@@ -17607,6 +17592,21 @@ video {
 }
 
 .placeholder-bootstrap-silver::placeholder{
+}
+
+.placeholder-bootstrap-black::-webkit-input-placeholder{
+}
+
+.placeholder-bootstrap-black::-moz-placeholder{
+}
+
+.placeholder-bootstrap-black:-ms-input-placeholder{
+}
+
+.placeholder-bootstrap-black::-ms-input-placeholder{
+}
+
+.placeholder-bootstrap-black::placeholder{
 }
 
 .placeholder-bulma-black::-webkit-input-placeholder{
@@ -18549,21 +18549,6 @@ video {
   color: #95A5A6;
 }
 
-.placeholder-flatui-black::-webkit-input-placeholder{
-}
-
-.placeholder-flatui-black::-moz-placeholder{
-}
-
-.placeholder-flatui-black:-ms-input-placeholder{
-}
-
-.placeholder-flatui-black::-ms-input-placeholder{
-}
-
-.placeholder-flatui-black::placeholder{
-}
-
 .placeholder-flatui-maroon::-webkit-input-placeholder{
 }
 
@@ -18592,6 +18577,21 @@ video {
 }
 
 .placeholder-flatui-olive::placeholder{
+}
+
+.placeholder-flatui-black::-webkit-input-placeholder{
+}
+
+.placeholder-flatui-black::-moz-placeholder{
+}
+
+.placeholder-flatui-black:-ms-input-placeholder{
+}
+
+.placeholder-flatui-black::-ms-input-placeholder{
+}
+
+.placeholder-flatui-black::placeholder{
 }
 
 .placeholder-flatui-white::-webkit-input-placeholder{
@@ -27259,21 +27259,6 @@ video {
 .focus\:placeholder-bootstrap-aqua:focus::placeholder{
 }
 
-.focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
-}
-
-.focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
-}
-
-.focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
-}
-
-.focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
-}
-
-.focus\:placeholder-bootstrap-black:focus::placeholder{
-}
-
 .focus\:placeholder-bootstrap-fuchsia:focus::-webkit-input-placeholder{
 }
 
@@ -27362,6 +27347,21 @@ video {
 }
 
 .focus\:placeholder-bootstrap-silver:focus::placeholder{
+}
+
+.focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
+}
+
+.focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
+}
+
+.focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
+}
+
+.focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
+}
+
+.focus\:placeholder-bootstrap-black:focus::placeholder{
 }
 
 .focus\:placeholder-bulma-black:focus::-webkit-input-placeholder{
@@ -28304,21 +28304,6 @@ video {
   color: #95A5A6;
 }
 
-.focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
-}
-
-.focus\:placeholder-flatui-black:focus::-moz-placeholder{
-}
-
-.focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
-}
-
-.focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
-}
-
-.focus\:placeholder-flatui-black:focus::placeholder{
-}
-
 .focus\:placeholder-flatui-maroon:focus::-webkit-input-placeholder{
 }
 
@@ -28347,6 +28332,21 @@ video {
 }
 
 .focus\:placeholder-flatui-olive:focus::placeholder{
+}
+
+.focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
+}
+
+.focus\:placeholder-flatui-black:focus::-moz-placeholder{
+}
+
+.focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
+}
+
+.focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
+}
+
+.focus\:placeholder-flatui-black:focus::placeholder{
 }
 
 .focus\:placeholder-flatui-white:focus::-webkit-input-placeholder{
@@ -35645,9 +35645,6 @@ video {
 .text-bootstrap-aqua{
 }
 
-.text-bootstrap-black{
-}
-
 .text-bootstrap-fuchsia{
 }
 
@@ -35664,6 +35661,9 @@ video {
 }
 
 .text-bootstrap-silver{
+}
+
+.text-bootstrap-black{
 }
 
 .text-bulma-black{
@@ -35854,13 +35854,13 @@ video {
   color: #95A5A6;
 }
 
-.text-flatui-black{
-}
-
 .text-flatui-maroon{
 }
 
 .text-flatui-olive{
+}
+
+.text-flatui-black{
 }
 
 .text-flatui-white{
@@ -37596,9 +37596,6 @@ video {
 .hover\:text-bootstrap-aqua:hover{
 }
 
-.hover\:text-bootstrap-black:hover{
-}
-
 .hover\:text-bootstrap-fuchsia:hover{
 }
 
@@ -37615,6 +37612,9 @@ video {
 }
 
 .hover\:text-bootstrap-silver:hover{
+}
+
+.hover\:text-bootstrap-black:hover{
 }
 
 .hover\:text-bulma-black:hover{
@@ -37805,13 +37805,13 @@ video {
   color: #95A5A6;
 }
 
-.hover\:text-flatui-black:hover{
-}
-
 .hover\:text-flatui-maroon:hover{
 }
 
 .hover\:text-flatui-olive:hover{
+}
+
+.hover\:text-flatui-black:hover{
 }
 
 .hover\:text-flatui-white:hover{
@@ -39547,9 +39547,6 @@ video {
 .focus\:text-bootstrap-aqua:focus{
 }
 
-.focus\:text-bootstrap-black:focus{
-}
-
 .focus\:text-bootstrap-fuchsia:focus{
 }
 
@@ -39566,6 +39563,9 @@ video {
 }
 
 .focus\:text-bootstrap-silver:focus{
+}
+
+.focus\:text-bootstrap-black:focus{
 }
 
 .focus\:text-bulma-black:focus{
@@ -39756,13 +39756,13 @@ video {
   color: #95A5A6;
 }
 
-.focus\:text-flatui-black:focus{
-}
-
 .focus\:text-flatui-maroon:focus{
 }
 
 .focus\:text-flatui-olive:focus{
+}
+
+.focus\:text-flatui-black:focus{
 }
 
 .focus\:text-flatui-white:focus{
@@ -44448,9 +44448,6 @@ html {
   .sm\:bg-bootstrap-aqua{
   }
 
-  .sm\:bg-bootstrap-black{
-  }
-
   .sm\:bg-bootstrap-fuchsia{
   }
 
@@ -44467,6 +44464,9 @@ html {
   }
 
   .sm\:bg-bootstrap-silver{
+  }
+
+  .sm\:bg-bootstrap-black{
   }
 
   .sm\:bg-bulma-black{
@@ -44657,13 +44657,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .sm\:bg-flatui-black{
-  }
-
   .sm\:bg-flatui-maroon{
   }
 
   .sm\:bg-flatui-olive{
+  }
+
+  .sm\:bg-flatui-black{
   }
 
   .sm\:bg-flatui-white{
@@ -46399,9 +46399,6 @@ html {
   .sm\:hover\:bg-bootstrap-aqua:hover{
   }
 
-  .sm\:hover\:bg-bootstrap-black:hover{
-  }
-
   .sm\:hover\:bg-bootstrap-fuchsia:hover{
   }
 
@@ -46418,6 +46415,9 @@ html {
   }
 
   .sm\:hover\:bg-bootstrap-silver:hover{
+  }
+
+  .sm\:hover\:bg-bootstrap-black:hover{
   }
 
   .sm\:hover\:bg-bulma-black:hover{
@@ -46608,13 +46608,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .sm\:hover\:bg-flatui-black:hover{
-  }
-
   .sm\:hover\:bg-flatui-maroon:hover{
   }
 
   .sm\:hover\:bg-flatui-olive:hover{
+  }
+
+  .sm\:hover\:bg-flatui-black:hover{
   }
 
   .sm\:hover\:bg-flatui-white:hover{
@@ -48350,9 +48350,6 @@ html {
   .sm\:focus\:bg-bootstrap-aqua:focus{
   }
 
-  .sm\:focus\:bg-bootstrap-black:focus{
-  }
-
   .sm\:focus\:bg-bootstrap-fuchsia:focus{
   }
 
@@ -48369,6 +48366,9 @@ html {
   }
 
   .sm\:focus\:bg-bootstrap-silver:focus{
+  }
+
+  .sm\:focus\:bg-bootstrap-black:focus{
   }
 
   .sm\:focus\:bg-bulma-black:focus{
@@ -48559,13 +48559,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .sm\:focus\:bg-flatui-black:focus{
-  }
-
   .sm\:focus\:bg-flatui-maroon:focus{
   }
 
   .sm\:focus\:bg-flatui-olive:focus{
+  }
+
+  .sm\:focus\:bg-flatui-black:focus{
   }
 
   .sm\:focus\:bg-flatui-white:focus{
@@ -50381,9 +50381,6 @@ html {
   .sm\:border-bootstrap-aqua{
   }
 
-  .sm\:border-bootstrap-black{
-  }
-
   .sm\:border-bootstrap-fuchsia{
   }
 
@@ -50400,6 +50397,9 @@ html {
   }
 
   .sm\:border-bootstrap-silver{
+  }
+
+  .sm\:border-bootstrap-black{
   }
 
   .sm\:border-bulma-black{
@@ -50590,13 +50590,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .sm\:border-flatui-black{
-  }
-
   .sm\:border-flatui-maroon{
   }
 
   .sm\:border-flatui-olive{
+  }
+
+  .sm\:border-flatui-black{
   }
 
   .sm\:border-flatui-white{
@@ -52332,9 +52332,6 @@ html {
   .sm\:hover\:border-bootstrap-aqua:hover{
   }
 
-  .sm\:hover\:border-bootstrap-black:hover{
-  }
-
   .sm\:hover\:border-bootstrap-fuchsia:hover{
   }
 
@@ -52351,6 +52348,9 @@ html {
   }
 
   .sm\:hover\:border-bootstrap-silver:hover{
+  }
+
+  .sm\:hover\:border-bootstrap-black:hover{
   }
 
   .sm\:hover\:border-bulma-black:hover{
@@ -52541,13 +52541,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .sm\:hover\:border-flatui-black:hover{
-  }
-
   .sm\:hover\:border-flatui-maroon:hover{
   }
 
   .sm\:hover\:border-flatui-olive:hover{
+  }
+
+  .sm\:hover\:border-flatui-black:hover{
   }
 
   .sm\:hover\:border-flatui-white:hover{
@@ -54283,9 +54283,6 @@ html {
   .sm\:focus\:border-bootstrap-aqua:focus{
   }
 
-  .sm\:focus\:border-bootstrap-black:focus{
-  }
-
   .sm\:focus\:border-bootstrap-fuchsia:focus{
   }
 
@@ -54302,6 +54299,9 @@ html {
   }
 
   .sm\:focus\:border-bootstrap-silver:focus{
+  }
+
+  .sm\:focus\:border-bootstrap-black:focus{
   }
 
   .sm\:focus\:border-bulma-black:focus{
@@ -54492,13 +54492,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .sm\:focus\:border-flatui-black:focus{
-  }
-
   .sm\:focus\:border-flatui-maroon:focus{
   }
 
   .sm\:focus\:border-flatui-olive:focus{
+  }
+
+  .sm\:focus\:border-flatui-black:focus{
   }
 
   .sm\:focus\:border-flatui-white:focus{
@@ -60852,21 +60852,6 @@ html {
   .sm\:placeholder-bootstrap-aqua::placeholder{
   }
 
-  .sm\:placeholder-bootstrap-black::-webkit-input-placeholder{
-  }
-
-  .sm\:placeholder-bootstrap-black::-moz-placeholder{
-  }
-
-  .sm\:placeholder-bootstrap-black:-ms-input-placeholder{
-  }
-
-  .sm\:placeholder-bootstrap-black::-ms-input-placeholder{
-  }
-
-  .sm\:placeholder-bootstrap-black::placeholder{
-  }
-
   .sm\:placeholder-bootstrap-fuchsia::-webkit-input-placeholder{
   }
 
@@ -60955,6 +60940,21 @@ html {
   }
 
   .sm\:placeholder-bootstrap-silver::placeholder{
+  }
+
+  .sm\:placeholder-bootstrap-black::-webkit-input-placeholder{
+  }
+
+  .sm\:placeholder-bootstrap-black::-moz-placeholder{
+  }
+
+  .sm\:placeholder-bootstrap-black:-ms-input-placeholder{
+  }
+
+  .sm\:placeholder-bootstrap-black::-ms-input-placeholder{
+  }
+
+  .sm\:placeholder-bootstrap-black::placeholder{
   }
 
   .sm\:placeholder-bulma-black::-webkit-input-placeholder{
@@ -61897,21 +61897,6 @@ html {
     color: #95A5A6;
   }
 
-  .sm\:placeholder-flatui-black::-webkit-input-placeholder{
-  }
-
-  .sm\:placeholder-flatui-black::-moz-placeholder{
-  }
-
-  .sm\:placeholder-flatui-black:-ms-input-placeholder{
-  }
-
-  .sm\:placeholder-flatui-black::-ms-input-placeholder{
-  }
-
-  .sm\:placeholder-flatui-black::placeholder{
-  }
-
   .sm\:placeholder-flatui-maroon::-webkit-input-placeholder{
   }
 
@@ -61940,6 +61925,21 @@ html {
   }
 
   .sm\:placeholder-flatui-olive::placeholder{
+  }
+
+  .sm\:placeholder-flatui-black::-webkit-input-placeholder{
+  }
+
+  .sm\:placeholder-flatui-black::-moz-placeholder{
+  }
+
+  .sm\:placeholder-flatui-black:-ms-input-placeholder{
+  }
+
+  .sm\:placeholder-flatui-black::-ms-input-placeholder{
+  }
+
+  .sm\:placeholder-flatui-black::placeholder{
   }
 
   .sm\:placeholder-flatui-white::-webkit-input-placeholder{
@@ -70607,21 +70607,6 @@ html {
   .sm\:focus\:placeholder-bootstrap-aqua:focus::placeholder{
   }
 
-  .sm\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
-  }
-
-  .sm\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-bootstrap-black:focus::placeholder{
-  }
-
   .sm\:focus\:placeholder-bootstrap-fuchsia:focus::-webkit-input-placeholder{
   }
 
@@ -70710,6 +70695,21 @@ html {
   }
 
   .sm\:focus\:placeholder-bootstrap-silver:focus::placeholder{
+  }
+
+  .sm\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
+  }
+
+  .sm\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-bootstrap-black:focus::placeholder{
   }
 
   .sm\:focus\:placeholder-bulma-black:focus::-webkit-input-placeholder{
@@ -71652,21 +71652,6 @@ html {
     color: #95A5A6;
   }
 
-  .sm\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
-  }
-
-  .sm\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
-  }
-
-  .sm\:focus\:placeholder-flatui-black:focus::placeholder{
-  }
-
   .sm\:focus\:placeholder-flatui-maroon:focus::-webkit-input-placeholder{
   }
 
@@ -71695,6 +71680,21 @@ html {
   }
 
   .sm\:focus\:placeholder-flatui-olive:focus::placeholder{
+  }
+
+  .sm\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
+  }
+
+  .sm\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
+  }
+
+  .sm\:focus\:placeholder-flatui-black:focus::placeholder{
   }
 
   .sm\:focus\:placeholder-flatui-white:focus::-webkit-input-placeholder{
@@ -78993,9 +78993,6 @@ html {
   .sm\:text-bootstrap-aqua{
   }
 
-  .sm\:text-bootstrap-black{
-  }
-
   .sm\:text-bootstrap-fuchsia{
   }
 
@@ -79012,6 +79009,9 @@ html {
   }
 
   .sm\:text-bootstrap-silver{
+  }
+
+  .sm\:text-bootstrap-black{
   }
 
   .sm\:text-bulma-black{
@@ -79202,13 +79202,13 @@ html {
     color: #95A5A6;
   }
 
-  .sm\:text-flatui-black{
-  }
-
   .sm\:text-flatui-maroon{
   }
 
   .sm\:text-flatui-olive{
+  }
+
+  .sm\:text-flatui-black{
   }
 
   .sm\:text-flatui-white{
@@ -80944,9 +80944,6 @@ html {
   .sm\:hover\:text-bootstrap-aqua:hover{
   }
 
-  .sm\:hover\:text-bootstrap-black:hover{
-  }
-
   .sm\:hover\:text-bootstrap-fuchsia:hover{
   }
 
@@ -80963,6 +80960,9 @@ html {
   }
 
   .sm\:hover\:text-bootstrap-silver:hover{
+  }
+
+  .sm\:hover\:text-bootstrap-black:hover{
   }
 
   .sm\:hover\:text-bulma-black:hover{
@@ -81153,13 +81153,13 @@ html {
     color: #95A5A6;
   }
 
-  .sm\:hover\:text-flatui-black:hover{
-  }
-
   .sm\:hover\:text-flatui-maroon:hover{
   }
 
   .sm\:hover\:text-flatui-olive:hover{
+  }
+
+  .sm\:hover\:text-flatui-black:hover{
   }
 
   .sm\:hover\:text-flatui-white:hover{
@@ -82895,9 +82895,6 @@ html {
   .sm\:focus\:text-bootstrap-aqua:focus{
   }
 
-  .sm\:focus\:text-bootstrap-black:focus{
-  }
-
   .sm\:focus\:text-bootstrap-fuchsia:focus{
   }
 
@@ -82914,6 +82911,9 @@ html {
   }
 
   .sm\:focus\:text-bootstrap-silver:focus{
+  }
+
+  .sm\:focus\:text-bootstrap-black:focus{
   }
 
   .sm\:focus\:text-bulma-black:focus{
@@ -83104,13 +83104,13 @@ html {
     color: #95A5A6;
   }
 
-  .sm\:focus\:text-flatui-black:focus{
-  }
-
   .sm\:focus\:text-flatui-maroon:focus{
   }
 
   .sm\:focus\:text-flatui-olive:focus{
+  }
+
+  .sm\:focus\:text-flatui-black:focus{
   }
 
   .sm\:focus\:text-flatui-white:focus{
@@ -87793,9 +87793,6 @@ html {
   .md\:bg-bootstrap-aqua{
   }
 
-  .md\:bg-bootstrap-black{
-  }
-
   .md\:bg-bootstrap-fuchsia{
   }
 
@@ -87812,6 +87809,9 @@ html {
   }
 
   .md\:bg-bootstrap-silver{
+  }
+
+  .md\:bg-bootstrap-black{
   }
 
   .md\:bg-bulma-black{
@@ -88002,13 +88002,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .md\:bg-flatui-black{
-  }
-
   .md\:bg-flatui-maroon{
   }
 
   .md\:bg-flatui-olive{
+  }
+
+  .md\:bg-flatui-black{
   }
 
   .md\:bg-flatui-white{
@@ -89744,9 +89744,6 @@ html {
   .md\:hover\:bg-bootstrap-aqua:hover{
   }
 
-  .md\:hover\:bg-bootstrap-black:hover{
-  }
-
   .md\:hover\:bg-bootstrap-fuchsia:hover{
   }
 
@@ -89763,6 +89760,9 @@ html {
   }
 
   .md\:hover\:bg-bootstrap-silver:hover{
+  }
+
+  .md\:hover\:bg-bootstrap-black:hover{
   }
 
   .md\:hover\:bg-bulma-black:hover{
@@ -89953,13 +89953,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .md\:hover\:bg-flatui-black:hover{
-  }
-
   .md\:hover\:bg-flatui-maroon:hover{
   }
 
   .md\:hover\:bg-flatui-olive:hover{
+  }
+
+  .md\:hover\:bg-flatui-black:hover{
   }
 
   .md\:hover\:bg-flatui-white:hover{
@@ -91695,9 +91695,6 @@ html {
   .md\:focus\:bg-bootstrap-aqua:focus{
   }
 
-  .md\:focus\:bg-bootstrap-black:focus{
-  }
-
   .md\:focus\:bg-bootstrap-fuchsia:focus{
   }
 
@@ -91714,6 +91711,9 @@ html {
   }
 
   .md\:focus\:bg-bootstrap-silver:focus{
+  }
+
+  .md\:focus\:bg-bootstrap-black:focus{
   }
 
   .md\:focus\:bg-bulma-black:focus{
@@ -91904,13 +91904,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .md\:focus\:bg-flatui-black:focus{
-  }
-
   .md\:focus\:bg-flatui-maroon:focus{
   }
 
   .md\:focus\:bg-flatui-olive:focus{
+  }
+
+  .md\:focus\:bg-flatui-black:focus{
   }
 
   .md\:focus\:bg-flatui-white:focus{
@@ -93726,9 +93726,6 @@ html {
   .md\:border-bootstrap-aqua{
   }
 
-  .md\:border-bootstrap-black{
-  }
-
   .md\:border-bootstrap-fuchsia{
   }
 
@@ -93745,6 +93742,9 @@ html {
   }
 
   .md\:border-bootstrap-silver{
+  }
+
+  .md\:border-bootstrap-black{
   }
 
   .md\:border-bulma-black{
@@ -93935,13 +93935,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .md\:border-flatui-black{
-  }
-
   .md\:border-flatui-maroon{
   }
 
   .md\:border-flatui-olive{
+  }
+
+  .md\:border-flatui-black{
   }
 
   .md\:border-flatui-white{
@@ -95677,9 +95677,6 @@ html {
   .md\:hover\:border-bootstrap-aqua:hover{
   }
 
-  .md\:hover\:border-bootstrap-black:hover{
-  }
-
   .md\:hover\:border-bootstrap-fuchsia:hover{
   }
 
@@ -95696,6 +95693,9 @@ html {
   }
 
   .md\:hover\:border-bootstrap-silver:hover{
+  }
+
+  .md\:hover\:border-bootstrap-black:hover{
   }
 
   .md\:hover\:border-bulma-black:hover{
@@ -95886,13 +95886,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .md\:hover\:border-flatui-black:hover{
-  }
-
   .md\:hover\:border-flatui-maroon:hover{
   }
 
   .md\:hover\:border-flatui-olive:hover{
+  }
+
+  .md\:hover\:border-flatui-black:hover{
   }
 
   .md\:hover\:border-flatui-white:hover{
@@ -97628,9 +97628,6 @@ html {
   .md\:focus\:border-bootstrap-aqua:focus{
   }
 
-  .md\:focus\:border-bootstrap-black:focus{
-  }
-
   .md\:focus\:border-bootstrap-fuchsia:focus{
   }
 
@@ -97647,6 +97644,9 @@ html {
   }
 
   .md\:focus\:border-bootstrap-silver:focus{
+  }
+
+  .md\:focus\:border-bootstrap-black:focus{
   }
 
   .md\:focus\:border-bulma-black:focus{
@@ -97837,13 +97837,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .md\:focus\:border-flatui-black:focus{
-  }
-
   .md\:focus\:border-flatui-maroon:focus{
   }
 
   .md\:focus\:border-flatui-olive:focus{
+  }
+
+  .md\:focus\:border-flatui-black:focus{
   }
 
   .md\:focus\:border-flatui-white:focus{
@@ -104197,21 +104197,6 @@ html {
   .md\:placeholder-bootstrap-aqua::placeholder{
   }
 
-  .md\:placeholder-bootstrap-black::-webkit-input-placeholder{
-  }
-
-  .md\:placeholder-bootstrap-black::-moz-placeholder{
-  }
-
-  .md\:placeholder-bootstrap-black:-ms-input-placeholder{
-  }
-
-  .md\:placeholder-bootstrap-black::-ms-input-placeholder{
-  }
-
-  .md\:placeholder-bootstrap-black::placeholder{
-  }
-
   .md\:placeholder-bootstrap-fuchsia::-webkit-input-placeholder{
   }
 
@@ -104300,6 +104285,21 @@ html {
   }
 
   .md\:placeholder-bootstrap-silver::placeholder{
+  }
+
+  .md\:placeholder-bootstrap-black::-webkit-input-placeholder{
+  }
+
+  .md\:placeholder-bootstrap-black::-moz-placeholder{
+  }
+
+  .md\:placeholder-bootstrap-black:-ms-input-placeholder{
+  }
+
+  .md\:placeholder-bootstrap-black::-ms-input-placeholder{
+  }
+
+  .md\:placeholder-bootstrap-black::placeholder{
   }
 
   .md\:placeholder-bulma-black::-webkit-input-placeholder{
@@ -105242,21 +105242,6 @@ html {
     color: #95A5A6;
   }
 
-  .md\:placeholder-flatui-black::-webkit-input-placeholder{
-  }
-
-  .md\:placeholder-flatui-black::-moz-placeholder{
-  }
-
-  .md\:placeholder-flatui-black:-ms-input-placeholder{
-  }
-
-  .md\:placeholder-flatui-black::-ms-input-placeholder{
-  }
-
-  .md\:placeholder-flatui-black::placeholder{
-  }
-
   .md\:placeholder-flatui-maroon::-webkit-input-placeholder{
   }
 
@@ -105285,6 +105270,21 @@ html {
   }
 
   .md\:placeholder-flatui-olive::placeholder{
+  }
+
+  .md\:placeholder-flatui-black::-webkit-input-placeholder{
+  }
+
+  .md\:placeholder-flatui-black::-moz-placeholder{
+  }
+
+  .md\:placeholder-flatui-black:-ms-input-placeholder{
+  }
+
+  .md\:placeholder-flatui-black::-ms-input-placeholder{
+  }
+
+  .md\:placeholder-flatui-black::placeholder{
   }
 
   .md\:placeholder-flatui-white::-webkit-input-placeholder{
@@ -113952,21 +113952,6 @@ html {
   .md\:focus\:placeholder-bootstrap-aqua:focus::placeholder{
   }
 
-  .md\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
-  }
-
-  .md\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-bootstrap-black:focus::placeholder{
-  }
-
   .md\:focus\:placeholder-bootstrap-fuchsia:focus::-webkit-input-placeholder{
   }
 
@@ -114055,6 +114040,21 @@ html {
   }
 
   .md\:focus\:placeholder-bootstrap-silver:focus::placeholder{
+  }
+
+  .md\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
+  }
+
+  .md\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-bootstrap-black:focus::placeholder{
   }
 
   .md\:focus\:placeholder-bulma-black:focus::-webkit-input-placeholder{
@@ -114997,21 +114997,6 @@ html {
     color: #95A5A6;
   }
 
-  .md\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
-  }
-
-  .md\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
-  }
-
-  .md\:focus\:placeholder-flatui-black:focus::placeholder{
-  }
-
   .md\:focus\:placeholder-flatui-maroon:focus::-webkit-input-placeholder{
   }
 
@@ -115040,6 +115025,21 @@ html {
   }
 
   .md\:focus\:placeholder-flatui-olive:focus::placeholder{
+  }
+
+  .md\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
+  }
+
+  .md\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
+  }
+
+  .md\:focus\:placeholder-flatui-black:focus::placeholder{
   }
 
   .md\:focus\:placeholder-flatui-white:focus::-webkit-input-placeholder{
@@ -122338,9 +122338,6 @@ html {
   .md\:text-bootstrap-aqua{
   }
 
-  .md\:text-bootstrap-black{
-  }
-
   .md\:text-bootstrap-fuchsia{
   }
 
@@ -122357,6 +122354,9 @@ html {
   }
 
   .md\:text-bootstrap-silver{
+  }
+
+  .md\:text-bootstrap-black{
   }
 
   .md\:text-bulma-black{
@@ -122547,13 +122547,13 @@ html {
     color: #95A5A6;
   }
 
-  .md\:text-flatui-black{
-  }
-
   .md\:text-flatui-maroon{
   }
 
   .md\:text-flatui-olive{
+  }
+
+  .md\:text-flatui-black{
   }
 
   .md\:text-flatui-white{
@@ -124289,9 +124289,6 @@ html {
   .md\:hover\:text-bootstrap-aqua:hover{
   }
 
-  .md\:hover\:text-bootstrap-black:hover{
-  }
-
   .md\:hover\:text-bootstrap-fuchsia:hover{
   }
 
@@ -124308,6 +124305,9 @@ html {
   }
 
   .md\:hover\:text-bootstrap-silver:hover{
+  }
+
+  .md\:hover\:text-bootstrap-black:hover{
   }
 
   .md\:hover\:text-bulma-black:hover{
@@ -124498,13 +124498,13 @@ html {
     color: #95A5A6;
   }
 
-  .md\:hover\:text-flatui-black:hover{
-  }
-
   .md\:hover\:text-flatui-maroon:hover{
   }
 
   .md\:hover\:text-flatui-olive:hover{
+  }
+
+  .md\:hover\:text-flatui-black:hover{
   }
 
   .md\:hover\:text-flatui-white:hover{
@@ -126240,9 +126240,6 @@ html {
   .md\:focus\:text-bootstrap-aqua:focus{
   }
 
-  .md\:focus\:text-bootstrap-black:focus{
-  }
-
   .md\:focus\:text-bootstrap-fuchsia:focus{
   }
 
@@ -126259,6 +126256,9 @@ html {
   }
 
   .md\:focus\:text-bootstrap-silver:focus{
+  }
+
+  .md\:focus\:text-bootstrap-black:focus{
   }
 
   .md\:focus\:text-bulma-black:focus{
@@ -126449,13 +126449,13 @@ html {
     color: #95A5A6;
   }
 
-  .md\:focus\:text-flatui-black:focus{
-  }
-
   .md\:focus\:text-flatui-maroon:focus{
   }
 
   .md\:focus\:text-flatui-olive:focus{
+  }
+
+  .md\:focus\:text-flatui-black:focus{
   }
 
   .md\:focus\:text-flatui-white:focus{
@@ -131138,9 +131138,6 @@ html {
   .lg\:bg-bootstrap-aqua{
   }
 
-  .lg\:bg-bootstrap-black{
-  }
-
   .lg\:bg-bootstrap-fuchsia{
   }
 
@@ -131157,6 +131154,9 @@ html {
   }
 
   .lg\:bg-bootstrap-silver{
+  }
+
+  .lg\:bg-bootstrap-black{
   }
 
   .lg\:bg-bulma-black{
@@ -131347,13 +131347,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .lg\:bg-flatui-black{
-  }
-
   .lg\:bg-flatui-maroon{
   }
 
   .lg\:bg-flatui-olive{
+  }
+
+  .lg\:bg-flatui-black{
   }
 
   .lg\:bg-flatui-white{
@@ -133089,9 +133089,6 @@ html {
   .lg\:hover\:bg-bootstrap-aqua:hover{
   }
 
-  .lg\:hover\:bg-bootstrap-black:hover{
-  }
-
   .lg\:hover\:bg-bootstrap-fuchsia:hover{
   }
 
@@ -133108,6 +133105,9 @@ html {
   }
 
   .lg\:hover\:bg-bootstrap-silver:hover{
+  }
+
+  .lg\:hover\:bg-bootstrap-black:hover{
   }
 
   .lg\:hover\:bg-bulma-black:hover{
@@ -133298,13 +133298,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .lg\:hover\:bg-flatui-black:hover{
-  }
-
   .lg\:hover\:bg-flatui-maroon:hover{
   }
 
   .lg\:hover\:bg-flatui-olive:hover{
+  }
+
+  .lg\:hover\:bg-flatui-black:hover{
   }
 
   .lg\:hover\:bg-flatui-white:hover{
@@ -135040,9 +135040,6 @@ html {
   .lg\:focus\:bg-bootstrap-aqua:focus{
   }
 
-  .lg\:focus\:bg-bootstrap-black:focus{
-  }
-
   .lg\:focus\:bg-bootstrap-fuchsia:focus{
   }
 
@@ -135059,6 +135056,9 @@ html {
   }
 
   .lg\:focus\:bg-bootstrap-silver:focus{
+  }
+
+  .lg\:focus\:bg-bootstrap-black:focus{
   }
 
   .lg\:focus\:bg-bulma-black:focus{
@@ -135249,13 +135249,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .lg\:focus\:bg-flatui-black:focus{
-  }
-
   .lg\:focus\:bg-flatui-maroon:focus{
   }
 
   .lg\:focus\:bg-flatui-olive:focus{
+  }
+
+  .lg\:focus\:bg-flatui-black:focus{
   }
 
   .lg\:focus\:bg-flatui-white:focus{
@@ -137071,9 +137071,6 @@ html {
   .lg\:border-bootstrap-aqua{
   }
 
-  .lg\:border-bootstrap-black{
-  }
-
   .lg\:border-bootstrap-fuchsia{
   }
 
@@ -137090,6 +137087,9 @@ html {
   }
 
   .lg\:border-bootstrap-silver{
+  }
+
+  .lg\:border-bootstrap-black{
   }
 
   .lg\:border-bulma-black{
@@ -137280,13 +137280,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .lg\:border-flatui-black{
-  }
-
   .lg\:border-flatui-maroon{
   }
 
   .lg\:border-flatui-olive{
+  }
+
+  .lg\:border-flatui-black{
   }
 
   .lg\:border-flatui-white{
@@ -139022,9 +139022,6 @@ html {
   .lg\:hover\:border-bootstrap-aqua:hover{
   }
 
-  .lg\:hover\:border-bootstrap-black:hover{
-  }
-
   .lg\:hover\:border-bootstrap-fuchsia:hover{
   }
 
@@ -139041,6 +139038,9 @@ html {
   }
 
   .lg\:hover\:border-bootstrap-silver:hover{
+  }
+
+  .lg\:hover\:border-bootstrap-black:hover{
   }
 
   .lg\:hover\:border-bulma-black:hover{
@@ -139231,13 +139231,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .lg\:hover\:border-flatui-black:hover{
-  }
-
   .lg\:hover\:border-flatui-maroon:hover{
   }
 
   .lg\:hover\:border-flatui-olive:hover{
+  }
+
+  .lg\:hover\:border-flatui-black:hover{
   }
 
   .lg\:hover\:border-flatui-white:hover{
@@ -140973,9 +140973,6 @@ html {
   .lg\:focus\:border-bootstrap-aqua:focus{
   }
 
-  .lg\:focus\:border-bootstrap-black:focus{
-  }
-
   .lg\:focus\:border-bootstrap-fuchsia:focus{
   }
 
@@ -140992,6 +140989,9 @@ html {
   }
 
   .lg\:focus\:border-bootstrap-silver:focus{
+  }
+
+  .lg\:focus\:border-bootstrap-black:focus{
   }
 
   .lg\:focus\:border-bulma-black:focus{
@@ -141182,13 +141182,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .lg\:focus\:border-flatui-black:focus{
-  }
-
   .lg\:focus\:border-flatui-maroon:focus{
   }
 
   .lg\:focus\:border-flatui-olive:focus{
+  }
+
+  .lg\:focus\:border-flatui-black:focus{
   }
 
   .lg\:focus\:border-flatui-white:focus{
@@ -147542,21 +147542,6 @@ html {
   .lg\:placeholder-bootstrap-aqua::placeholder{
   }
 
-  .lg\:placeholder-bootstrap-black::-webkit-input-placeholder{
-  }
-
-  .lg\:placeholder-bootstrap-black::-moz-placeholder{
-  }
-
-  .lg\:placeholder-bootstrap-black:-ms-input-placeholder{
-  }
-
-  .lg\:placeholder-bootstrap-black::-ms-input-placeholder{
-  }
-
-  .lg\:placeholder-bootstrap-black::placeholder{
-  }
-
   .lg\:placeholder-bootstrap-fuchsia::-webkit-input-placeholder{
   }
 
@@ -147645,6 +147630,21 @@ html {
   }
 
   .lg\:placeholder-bootstrap-silver::placeholder{
+  }
+
+  .lg\:placeholder-bootstrap-black::-webkit-input-placeholder{
+  }
+
+  .lg\:placeholder-bootstrap-black::-moz-placeholder{
+  }
+
+  .lg\:placeholder-bootstrap-black:-ms-input-placeholder{
+  }
+
+  .lg\:placeholder-bootstrap-black::-ms-input-placeholder{
+  }
+
+  .lg\:placeholder-bootstrap-black::placeholder{
   }
 
   .lg\:placeholder-bulma-black::-webkit-input-placeholder{
@@ -148587,21 +148587,6 @@ html {
     color: #95A5A6;
   }
 
-  .lg\:placeholder-flatui-black::-webkit-input-placeholder{
-  }
-
-  .lg\:placeholder-flatui-black::-moz-placeholder{
-  }
-
-  .lg\:placeholder-flatui-black:-ms-input-placeholder{
-  }
-
-  .lg\:placeholder-flatui-black::-ms-input-placeholder{
-  }
-
-  .lg\:placeholder-flatui-black::placeholder{
-  }
-
   .lg\:placeholder-flatui-maroon::-webkit-input-placeholder{
   }
 
@@ -148630,6 +148615,21 @@ html {
   }
 
   .lg\:placeholder-flatui-olive::placeholder{
+  }
+
+  .lg\:placeholder-flatui-black::-webkit-input-placeholder{
+  }
+
+  .lg\:placeholder-flatui-black::-moz-placeholder{
+  }
+
+  .lg\:placeholder-flatui-black:-ms-input-placeholder{
+  }
+
+  .lg\:placeholder-flatui-black::-ms-input-placeholder{
+  }
+
+  .lg\:placeholder-flatui-black::placeholder{
   }
 
   .lg\:placeholder-flatui-white::-webkit-input-placeholder{
@@ -157297,21 +157297,6 @@ html {
   .lg\:focus\:placeholder-bootstrap-aqua:focus::placeholder{
   }
 
-  .lg\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
-  }
-
-  .lg\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-bootstrap-black:focus::placeholder{
-  }
-
   .lg\:focus\:placeholder-bootstrap-fuchsia:focus::-webkit-input-placeholder{
   }
 
@@ -157400,6 +157385,21 @@ html {
   }
 
   .lg\:focus\:placeholder-bootstrap-silver:focus::placeholder{
+  }
+
+  .lg\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
+  }
+
+  .lg\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-bootstrap-black:focus::placeholder{
   }
 
   .lg\:focus\:placeholder-bulma-black:focus::-webkit-input-placeholder{
@@ -158342,21 +158342,6 @@ html {
     color: #95A5A6;
   }
 
-  .lg\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
-  }
-
-  .lg\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
-  }
-
-  .lg\:focus\:placeholder-flatui-black:focus::placeholder{
-  }
-
   .lg\:focus\:placeholder-flatui-maroon:focus::-webkit-input-placeholder{
   }
 
@@ -158385,6 +158370,21 @@ html {
   }
 
   .lg\:focus\:placeholder-flatui-olive:focus::placeholder{
+  }
+
+  .lg\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
+  }
+
+  .lg\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
+  }
+
+  .lg\:focus\:placeholder-flatui-black:focus::placeholder{
   }
 
   .lg\:focus\:placeholder-flatui-white:focus::-webkit-input-placeholder{
@@ -165683,9 +165683,6 @@ html {
   .lg\:text-bootstrap-aqua{
   }
 
-  .lg\:text-bootstrap-black{
-  }
-
   .lg\:text-bootstrap-fuchsia{
   }
 
@@ -165702,6 +165699,9 @@ html {
   }
 
   .lg\:text-bootstrap-silver{
+  }
+
+  .lg\:text-bootstrap-black{
   }
 
   .lg\:text-bulma-black{
@@ -165892,13 +165892,13 @@ html {
     color: #95A5A6;
   }
 
-  .lg\:text-flatui-black{
-  }
-
   .lg\:text-flatui-maroon{
   }
 
   .lg\:text-flatui-olive{
+  }
+
+  .lg\:text-flatui-black{
   }
 
   .lg\:text-flatui-white{
@@ -167634,9 +167634,6 @@ html {
   .lg\:hover\:text-bootstrap-aqua:hover{
   }
 
-  .lg\:hover\:text-bootstrap-black:hover{
-  }
-
   .lg\:hover\:text-bootstrap-fuchsia:hover{
   }
 
@@ -167653,6 +167650,9 @@ html {
   }
 
   .lg\:hover\:text-bootstrap-silver:hover{
+  }
+
+  .lg\:hover\:text-bootstrap-black:hover{
   }
 
   .lg\:hover\:text-bulma-black:hover{
@@ -167843,13 +167843,13 @@ html {
     color: #95A5A6;
   }
 
-  .lg\:hover\:text-flatui-black:hover{
-  }
-
   .lg\:hover\:text-flatui-maroon:hover{
   }
 
   .lg\:hover\:text-flatui-olive:hover{
+  }
+
+  .lg\:hover\:text-flatui-black:hover{
   }
 
   .lg\:hover\:text-flatui-white:hover{
@@ -169585,9 +169585,6 @@ html {
   .lg\:focus\:text-bootstrap-aqua:focus{
   }
 
-  .lg\:focus\:text-bootstrap-black:focus{
-  }
-
   .lg\:focus\:text-bootstrap-fuchsia:focus{
   }
 
@@ -169604,6 +169601,9 @@ html {
   }
 
   .lg\:focus\:text-bootstrap-silver:focus{
+  }
+
+  .lg\:focus\:text-bootstrap-black:focus{
   }
 
   .lg\:focus\:text-bulma-black:focus{
@@ -169794,13 +169794,13 @@ html {
     color: #95A5A6;
   }
 
-  .lg\:focus\:text-flatui-black:focus{
-  }
-
   .lg\:focus\:text-flatui-maroon:focus{
   }
 
   .lg\:focus\:text-flatui-olive:focus{
+  }
+
+  .lg\:focus\:text-flatui-black:focus{
   }
 
   .lg\:focus\:text-flatui-white:focus{
@@ -174483,9 +174483,6 @@ html {
   .xl\:bg-bootstrap-aqua{
   }
 
-  .xl\:bg-bootstrap-black{
-  }
-
   .xl\:bg-bootstrap-fuchsia{
   }
 
@@ -174502,6 +174499,9 @@ html {
   }
 
   .xl\:bg-bootstrap-silver{
+  }
+
+  .xl\:bg-bootstrap-black{
   }
 
   .xl\:bg-bulma-black{
@@ -174692,13 +174692,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .xl\:bg-flatui-black{
-  }
-
   .xl\:bg-flatui-maroon{
   }
 
   .xl\:bg-flatui-olive{
+  }
+
+  .xl\:bg-flatui-black{
   }
 
   .xl\:bg-flatui-white{
@@ -176434,9 +176434,6 @@ html {
   .xl\:hover\:bg-bootstrap-aqua:hover{
   }
 
-  .xl\:hover\:bg-bootstrap-black:hover{
-  }
-
   .xl\:hover\:bg-bootstrap-fuchsia:hover{
   }
 
@@ -176453,6 +176450,9 @@ html {
   }
 
   .xl\:hover\:bg-bootstrap-silver:hover{
+  }
+
+  .xl\:hover\:bg-bootstrap-black:hover{
   }
 
   .xl\:hover\:bg-bulma-black:hover{
@@ -176643,13 +176643,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .xl\:hover\:bg-flatui-black:hover{
-  }
-
   .xl\:hover\:bg-flatui-maroon:hover{
   }
 
   .xl\:hover\:bg-flatui-olive:hover{
+  }
+
+  .xl\:hover\:bg-flatui-black:hover{
   }
 
   .xl\:hover\:bg-flatui-white:hover{
@@ -178385,9 +178385,6 @@ html {
   .xl\:focus\:bg-bootstrap-aqua:focus{
   }
 
-  .xl\:focus\:bg-bootstrap-black:focus{
-  }
-
   .xl\:focus\:bg-bootstrap-fuchsia:focus{
   }
 
@@ -178404,6 +178401,9 @@ html {
   }
 
   .xl\:focus\:bg-bootstrap-silver:focus{
+  }
+
+  .xl\:focus\:bg-bootstrap-black:focus{
   }
 
   .xl\:focus\:bg-bulma-black:focus{
@@ -178594,13 +178594,13 @@ html {
     background-color: #95A5A6;
   }
 
-  .xl\:focus\:bg-flatui-black:focus{
-  }
-
   .xl\:focus\:bg-flatui-maroon:focus{
   }
 
   .xl\:focus\:bg-flatui-olive:focus{
+  }
+
+  .xl\:focus\:bg-flatui-black:focus{
   }
 
   .xl\:focus\:bg-flatui-white:focus{
@@ -180416,9 +180416,6 @@ html {
   .xl\:border-bootstrap-aqua{
   }
 
-  .xl\:border-bootstrap-black{
-  }
-
   .xl\:border-bootstrap-fuchsia{
   }
 
@@ -180435,6 +180432,9 @@ html {
   }
 
   .xl\:border-bootstrap-silver{
+  }
+
+  .xl\:border-bootstrap-black{
   }
 
   .xl\:border-bulma-black{
@@ -180625,13 +180625,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .xl\:border-flatui-black{
-  }
-
   .xl\:border-flatui-maroon{
   }
 
   .xl\:border-flatui-olive{
+  }
+
+  .xl\:border-flatui-black{
   }
 
   .xl\:border-flatui-white{
@@ -182367,9 +182367,6 @@ html {
   .xl\:hover\:border-bootstrap-aqua:hover{
   }
 
-  .xl\:hover\:border-bootstrap-black:hover{
-  }
-
   .xl\:hover\:border-bootstrap-fuchsia:hover{
   }
 
@@ -182386,6 +182383,9 @@ html {
   }
 
   .xl\:hover\:border-bootstrap-silver:hover{
+  }
+
+  .xl\:hover\:border-bootstrap-black:hover{
   }
 
   .xl\:hover\:border-bulma-black:hover{
@@ -182576,13 +182576,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .xl\:hover\:border-flatui-black:hover{
-  }
-
   .xl\:hover\:border-flatui-maroon:hover{
   }
 
   .xl\:hover\:border-flatui-olive:hover{
+  }
+
+  .xl\:hover\:border-flatui-black:hover{
   }
 
   .xl\:hover\:border-flatui-white:hover{
@@ -184318,9 +184318,6 @@ html {
   .xl\:focus\:border-bootstrap-aqua:focus{
   }
 
-  .xl\:focus\:border-bootstrap-black:focus{
-  }
-
   .xl\:focus\:border-bootstrap-fuchsia:focus{
   }
 
@@ -184337,6 +184334,9 @@ html {
   }
 
   .xl\:focus\:border-bootstrap-silver:focus{
+  }
+
+  .xl\:focus\:border-bootstrap-black:focus{
   }
 
   .xl\:focus\:border-bulma-black:focus{
@@ -184527,13 +184527,13 @@ html {
     border-color: #95A5A6;
   }
 
-  .xl\:focus\:border-flatui-black:focus{
-  }
-
   .xl\:focus\:border-flatui-maroon:focus{
   }
 
   .xl\:focus\:border-flatui-olive:focus{
+  }
+
+  .xl\:focus\:border-flatui-black:focus{
   }
 
   .xl\:focus\:border-flatui-white:focus{
@@ -190887,21 +190887,6 @@ html {
   .xl\:placeholder-bootstrap-aqua::placeholder{
   }
 
-  .xl\:placeholder-bootstrap-black::-webkit-input-placeholder{
-  }
-
-  .xl\:placeholder-bootstrap-black::-moz-placeholder{
-  }
-
-  .xl\:placeholder-bootstrap-black:-ms-input-placeholder{
-  }
-
-  .xl\:placeholder-bootstrap-black::-ms-input-placeholder{
-  }
-
-  .xl\:placeholder-bootstrap-black::placeholder{
-  }
-
   .xl\:placeholder-bootstrap-fuchsia::-webkit-input-placeholder{
   }
 
@@ -190990,6 +190975,21 @@ html {
   }
 
   .xl\:placeholder-bootstrap-silver::placeholder{
+  }
+
+  .xl\:placeholder-bootstrap-black::-webkit-input-placeholder{
+  }
+
+  .xl\:placeholder-bootstrap-black::-moz-placeholder{
+  }
+
+  .xl\:placeholder-bootstrap-black:-ms-input-placeholder{
+  }
+
+  .xl\:placeholder-bootstrap-black::-ms-input-placeholder{
+  }
+
+  .xl\:placeholder-bootstrap-black::placeholder{
   }
 
   .xl\:placeholder-bulma-black::-webkit-input-placeholder{
@@ -191932,21 +191932,6 @@ html {
     color: #95A5A6;
   }
 
-  .xl\:placeholder-flatui-black::-webkit-input-placeholder{
-  }
-
-  .xl\:placeholder-flatui-black::-moz-placeholder{
-  }
-
-  .xl\:placeholder-flatui-black:-ms-input-placeholder{
-  }
-
-  .xl\:placeholder-flatui-black::-ms-input-placeholder{
-  }
-
-  .xl\:placeholder-flatui-black::placeholder{
-  }
-
   .xl\:placeholder-flatui-maroon::-webkit-input-placeholder{
   }
 
@@ -191975,6 +191960,21 @@ html {
   }
 
   .xl\:placeholder-flatui-olive::placeholder{
+  }
+
+  .xl\:placeholder-flatui-black::-webkit-input-placeholder{
+  }
+
+  .xl\:placeholder-flatui-black::-moz-placeholder{
+  }
+
+  .xl\:placeholder-flatui-black:-ms-input-placeholder{
+  }
+
+  .xl\:placeholder-flatui-black::-ms-input-placeholder{
+  }
+
+  .xl\:placeholder-flatui-black::placeholder{
   }
 
   .xl\:placeholder-flatui-white::-webkit-input-placeholder{
@@ -200642,21 +200642,6 @@ html {
   .xl\:focus\:placeholder-bootstrap-aqua:focus::placeholder{
   }
 
-  .xl\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
-  }
-
-  .xl\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-bootstrap-black:focus::placeholder{
-  }
-
   .xl\:focus\:placeholder-bootstrap-fuchsia:focus::-webkit-input-placeholder{
   }
 
@@ -200745,6 +200730,21 @@ html {
   }
 
   .xl\:focus\:placeholder-bootstrap-silver:focus::placeholder{
+  }
+
+  .xl\:focus\:placeholder-bootstrap-black:focus::-webkit-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-bootstrap-black:focus::-moz-placeholder{
+  }
+
+  .xl\:focus\:placeholder-bootstrap-black:focus:-ms-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-bootstrap-black:focus::-ms-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-bootstrap-black:focus::placeholder{
   }
 
   .xl\:focus\:placeholder-bulma-black:focus::-webkit-input-placeholder{
@@ -201687,21 +201687,6 @@ html {
     color: #95A5A6;
   }
 
-  .xl\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
-  }
-
-  .xl\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
-  }
-
-  .xl\:focus\:placeholder-flatui-black:focus::placeholder{
-  }
-
   .xl\:focus\:placeholder-flatui-maroon:focus::-webkit-input-placeholder{
   }
 
@@ -201730,6 +201715,21 @@ html {
   }
 
   .xl\:focus\:placeholder-flatui-olive:focus::placeholder{
+  }
+
+  .xl\:focus\:placeholder-flatui-black:focus::-webkit-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-flatui-black:focus::-moz-placeholder{
+  }
+
+  .xl\:focus\:placeholder-flatui-black:focus:-ms-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-flatui-black:focus::-ms-input-placeholder{
+  }
+
+  .xl\:focus\:placeholder-flatui-black:focus::placeholder{
   }
 
   .xl\:focus\:placeholder-flatui-white:focus::-webkit-input-placeholder{
@@ -209028,9 +209028,6 @@ html {
   .xl\:text-bootstrap-aqua{
   }
 
-  .xl\:text-bootstrap-black{
-  }
-
   .xl\:text-bootstrap-fuchsia{
   }
 
@@ -209047,6 +209044,9 @@ html {
   }
 
   .xl\:text-bootstrap-silver{
+  }
+
+  .xl\:text-bootstrap-black{
   }
 
   .xl\:text-bulma-black{
@@ -209237,13 +209237,13 @@ html {
     color: #95A5A6;
   }
 
-  .xl\:text-flatui-black{
-  }
-
   .xl\:text-flatui-maroon{
   }
 
   .xl\:text-flatui-olive{
+  }
+
+  .xl\:text-flatui-black{
   }
 
   .xl\:text-flatui-white{
@@ -210979,9 +210979,6 @@ html {
   .xl\:hover\:text-bootstrap-aqua:hover{
   }
 
-  .xl\:hover\:text-bootstrap-black:hover{
-  }
-
   .xl\:hover\:text-bootstrap-fuchsia:hover{
   }
 
@@ -210998,6 +210995,9 @@ html {
   }
 
   .xl\:hover\:text-bootstrap-silver:hover{
+  }
+
+  .xl\:hover\:text-bootstrap-black:hover{
   }
 
   .xl\:hover\:text-bulma-black:hover{
@@ -211188,13 +211188,13 @@ html {
     color: #95A5A6;
   }
 
-  .xl\:hover\:text-flatui-black:hover{
-  }
-
   .xl\:hover\:text-flatui-maroon:hover{
   }
 
   .xl\:hover\:text-flatui-olive:hover{
+  }
+
+  .xl\:hover\:text-flatui-black:hover{
   }
 
   .xl\:hover\:text-flatui-white:hover{
@@ -212930,9 +212930,6 @@ html {
   .xl\:focus\:text-bootstrap-aqua:focus{
   }
 
-  .xl\:focus\:text-bootstrap-black:focus{
-  }
-
   .xl\:focus\:text-bootstrap-fuchsia:focus{
   }
 
@@ -212949,6 +212946,9 @@ html {
   }
 
   .xl\:focus\:text-bootstrap-silver:focus{
+  }
+
+  .xl\:focus\:text-bootstrap-black:focus{
   }
 
   .xl\:focus\:text-bulma-black:focus{
@@ -213139,13 +213139,13 @@ html {
     color: #95A5A6;
   }
 
-  .xl\:focus\:text-flatui-black:focus{
-  }
-
   .xl\:focus\:text-flatui-maroon:focus{
   }
 
   .xl\:focus\:text-flatui-olive:focus{
+  }
+
+  .xl\:focus\:text-flatui-black:focus{
   }
 
   .xl\:focus\:text-flatui-white:focus{
