@@ -1,0 +1,37 @@
+{
+  "name": "@webcolors/flatui",
+  "description": "FlatUI color palette",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Zaim Bakar",
+    "url": "https://zbr.works)"
+  },
+  "contributors": [
+    "Kevin Yang (http://dribbble.com/eatsleepvector)",
+    "Kate Hoolahan (http://dribbble.com/hoolah)",
+    "Jan Losert (http://dribbble.com/janlosert)",
+    "Dmitri Litvinov (http://dribbble.com/dmitrilitvinov)",
+    "Wenjun (http://dribbble.com/wenjunliao)",
+    "Jeroen Van Eerden (http://dribbble.com/jeroenvaneerden)",
+    "Léa Poisson (http://dribbble.com/goldfishlife)",
+    "Martin David (http://dribbble.com/srioz)",
+    "Ranganath Krishnamani (http://dribbble.com/rkrishnamani)",
+    "Alexander Zaytsev (http://dribbble.com/anwaltzzz)",
+    "Miguel Camacho (http://dribbble.com/miguelcm)",
+    "Jesper Dahlqvist (http://dribbble.com/yehsper)",
+    "Tamer Köseli (http://dribbble.com/tamerkoseli)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzzaim/webcolors.git"
+  },
+  "files": [
+    "*.js",
+    "*.json",
+    "*.css",
+    "*.less",
+    "*.scss",
+    "*.styl"
+  ]
+}

@@ -1,99 +1,21 @@
 {
   "name": "webcolors",
-  "version": "1.2.2",
-  "description": "All the colors of the web",
-  "keywords": [
-    "colors",
-    "colours",
-    "css",
-    "design",
-    "flatui",
-    "material"
-  ],
-  "homepage": "https://github.com/zzzaim/webcolors",
-  "bugs": "https://github.com/zzzaim/webcolors/issues",
+  "version": "2.0.0-monorepo",
+  "description": "Color palettes",
   "license": "MIT",
+  "private": true,
   "author": {
     "name": "Zaim Bakar",
     "url": "https://zbr.works"
   },
-  "contributors": [
-    {
-      "name": "The Bootstrap Authors",
-      "url": "https://github.com/twbs/bootstrap/graphs/contributors"
-    },
-    {
-      "name": "Jeremy Thomas",
-      "email": "bbxdesign@gmail.com",
-      "url": "https://jgthms.com"
-    },
-    {
-      "name": "Kevin Yang",
-      "url": "http://dribbble.com/eatsleepvector"
-    },
-    {
-      "name": "Kate Hoolahan",
-      "url": "http://dribbble.com/hoolah"
-    },
-    {
-      "name": "Jan Losert",
-      "url": "http://dribbble.com/janlosert"
-    },
-    {
-      "name": "Dmitri Litvinov",
-      "url": "http://dribbble.com/dmitrilitvinov"
-    },
-    {
-      "name": "Wenjun",
-      "url": "http://dribbble.com/wenjunliao"
-    },
-    {
-      "name": "Jeroen Van Eerden",
-      "url": "http://dribbble.com/jeroenvaneerden"
-    },
-    {
-      "name": "Léa Poisson",
-      "url": "http://dribbble.com/goldfishlife"
-    },
-    {
-      "name": "Martin David",
-      "url": "http://dribbble.com/srioz"
-    },
-    {
-      "name": "Ranganath Krishnamani",
-      "url": "http://dribbble.com/rkrishnamani"
-    },
-    {
-      "name": "Alexander Zaytsev",
-      "url": "http://dribbble.com/anwaltzzz"
-    },
-    {
-      "name": "Miguel Camacho",
-      "url": "http://dribbble.com/miguelcm"
-    },
-    {
-      "name": "Jesper Dahlqvist",
-      "url": "http://dribbble.com/yehsper"
-    },
-    {
-      "name": "Tamer Köseli",
-      "url": "http://dribbble.com/tamerkoseli"
-    },
-    {
-      "name": "@mrmrs",
-      "email": "hi@mrmrs.cc",
-      "url": "http://mrmrs.cc"
-    }
-  ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/zzzaim/webcolors.git"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "true",
     "build": "make",
-    "start": "src/serve.sh"
+    "start": "lib/serve.sh"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

@@ -1,0 +1,28 @@
+{
+  "name": "@webcolors/material",
+  "description": "Material color palette",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Zaim Bakar",
+    "url": "https://zbr.works)"
+  },
+  "contributors": [
+    {
+      "name": "Google Inc.",
+      "url": "https://material.io/design"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzzaim/webcolors.git"
+  },
+  "files": [
+    "*.js",
+    "*.json",
+    "*.css",
+    "*.less",
+    "*.scss",
+    "*.styl"
+  ]
+}

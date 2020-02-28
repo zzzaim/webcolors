@@ -1,3 +1,13 @@
-node_modules
-logs
+# Palette files are auto-generated during pre-pack/publish,
+# so they are not checked into the git repo.
+packages/*/index.js
+packages/*/index.json
+packages/*/*.css
+packages/*/*.less
+packages/*/*.scss
+packages/*/*.styl
+
+.cache/
+node_modules/
+logs/
 *.log

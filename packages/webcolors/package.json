@@ -1,0 +1,23 @@
+{
+  "name": "webcolors",
+  "description": "Color palettes",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Zaim Bakar",
+    "url": "https://zbr.works)"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzzaim/webcolors.git"
+  },
+  "files": [
+    "*.js",
+    "*.json",
+    "*.css",
+    "*.less",
+    "*.scss",
+    "*.styl"
+  ]
+}

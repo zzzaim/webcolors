@@ -1,94 +1,109 @@
-# Find all palette source .js files in "src/palettes/*" directories
-palette-js = $(shell find src/palettes -type f -name '*.js')
-palette-dirs = $(shell find src/palettes -mindepth 1 -maxdepth 1 -type d)
-pals = $(notdir $(palette-dirs))
+js = $(shell find packages -type f -path 'packages/*/src/*.js')
 
-# Find all available output templates (css, less, scss, style, etc.)
-templates = $(wildcard src/template/*.mustache)
-tpls  = $(notdir $(basename $(templates)))
-tpls := $(filter-out %.js,$(tpls))
+targets = $(subst /src/,/,$(js))
+targets-json := $(targets:.js=.json)
+targets-css  := $(targets:.js=.css)
+targets-less := $(targets:.js=.less)
+targets-scss := $(targets:.js=.scss)
+targets-scss := $(targets-scss:index.scss=_index.scss)
+targets-styl := $(targets:.js=.styl)
 
-# Generate all target filenames
-target-js   = $(palette-js:src/palettes/%=%)
-target-json = $(palette-js:src/palettes/%.js=%.json)
-target-tpl  = $(foreach t,$(tpls),$(target-js:%.js=%.$(t)))
-target-tpl := $(target-tpl:%/index.scss=%/_index.scss)
-target-all  = $(pals) $(target-js) $(target-json) $(target-tpl)
+targets += $(targets-json)
+targets += $(targets-css)
+targets += $(targets-less)
+targets += $(targets-scss)
+targets += $(targets-styl)
+targets := $(targets) $(targets:packages/%=packages/webcolors/%)
+targets += packages/webcolors/index.js
 
-# Generate all doc targets
-target-docs  = $(shell find src/docs -type f -name '*.pug')
-target-docs := $(target-docs:src/%.pug=%.html)
+target-docs  = $(shell find docs/src -type f -name '*.pug')
+target-docs := $(target-docs:docs/src/%.pug=docs/%.html)
 target-docs += docs/styles.css
+deps-docs  = $(wildcard .*rc.js)
+deps-docs += $(js)
 
-# PostHTML dependenceis
-posthtml-deps = $(palette-js) .posthtmlrc.js
-
-# PostCSS dependencies
-postcss-deps  = $(shell node -p 'require.resolve("tailwindcss/package.json")')
-postcss-deps += $(palette-js) .postcssrc.js .tailwindrc.js
-
-# [1] Recipe for <palette>/_index.scss files
-define sass-recipe=
-$(1)/_index.scss: src/palettes/$(1)/index.js src/template/scss.mustache
-	node src/render $$^ > $$@
+define mustache=
+	npx --no-install mustache $^ > $@
 endef
 
-# [2] Recipe for <pallete>/*.{css,less,scss,styl} files
-define tpl-recipe=
-$(1)/%.$(2): src/palettes/$(1)/%.js src/template/$(2).mustache
-	node src/render $$^ > $$@
+define copy=
+	@mkdir -p $(@D)
+	cp $< $@
 endef
 
-# [3] Recipe <palette>/*.js files
-define js-recipe=
-$(1)/%.js: src/palettes/$(1)/%.js
-	node src/render --js $$^ > $$@
-endef
-
-# [4] Recipe for <palette>/*.json files
 define json-recipe=
-$(1)/%.json: src/palettes/$(1)/%.js
-	node src/render --json $$^ > $$@
+$(1): $(dir $(1))src/$(notdir $(1:.json=.js))
+	node lib/json $$< > $$@
 endef
 
-all: $(target-all) index.js package.json
+
+all: $(targets)
+
+clean:
+	rm -rf .cache
+	rm -rfd $(targets)
 
 docs: $(target-docs)
 
-clean:
-	rm -rf $(pals) docs
-
-index.js: src/index.js src/template/index.js.mustache $(palette-js)
-	npx mustache $(wordlist 1,2,$^) > $@
-
-package.json: $(palette-js)
-	node src/contributors
-
-docs/%.html: src/docs/%.pug $(posthtml-deps)
+docs/%.html: docs/src/%.pug $(deps-docs)
 	@mkdir -p $(@D)
 	npx posthtml $< -o $@
 
-docs/styles.css: src/docs/styles/index.css $(postcss-deps)
+docs/styles.css: docs/src/styles/index.css $(deps-docs)
 	@mkdir -p $(@D)
 	npx postcss $< -o $@
 
-# Palette directories
-$(pals):
-	mkdir -p $@
 
-# [1] Generate <palette>/_index.scss receipes
-$(foreach p,$(pals),$(eval $(call sass-recipe,$(p))))
+packages/webcolors/index.js: lib/index.js templates/index.js.mustache
+	$(mustache)
 
-# [2] Generate <pallete>/*.{css,less,scss,styl} recipes
-$(foreach p,$(pals),$(foreach t,$(tpls),$(eval $(call tpl-recipe,$(p),$(t)))))
+packages/webcolors/%.json: packages/%.json
+	$(copy)
 
-# [3] Generate <palette>/*.js recipes
-$(foreach p,$(pals),$(eval $(call js-recipe,$(p))))
+packages/webcolors/%.js: packages/%.js
+	$(copy)
 
-# [4] Generate <palette>/*.json recipes
-$(foreach p,$(pals),$(eval $(call json-recipe,$(p))))
+packages/webcolors/%.css: packages/%.css
+	$(copy)
+
+packages/webcolors/%.less: packages/%.less
+	$(copy)
+
+packages/webcolors/%.scss: packages/%.scss
+	$(copy)
+
+packages/webcolors/%.styl: packages/%.styl
+	$(copy)
+
+
+$(foreach f,$(targets-json),$(eval $(call json-recipe,$(f))))
+
+packages/%.js: .cache/%.json templates/js.mustache
+	$(mustache)
+
+packages/%.css: .cache/%.json templates/css.mustache
+	$(mustache)
+
+packages/%.less: .cache/%.json templates/less.mustache
+	$(mustache)
+
+packages/%/_index.scss: .cache/%/index.json templates/scss.mustache
+	$(mustache)
+
+packages/%.scss: .cache/%.json templates/scss.mustache
+	$(mustache)
+
+packages/%.styl: .cache/%.json templates/styl.mustache
+	$(mustache)
+
+
+.cache/%.json: lib/view.js packages/%.json
+	@mkdir -p $(@D)
+	@node $^ > $@
+
 
 print-%:
-	@echo "$* = $($*)"
+	@echo $($*)
+
 
 .PHONY: all docs clean
