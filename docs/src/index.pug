@@ -1,21 +1,105 @@
 doctype html
+
 html
+
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title webcolors | all the colors of the web
     link(rel="stylesheet" href="styles.css")
-  body.bg-purple-800.text-white
+
+  body.bg-purple-800.text-gray-100
+
     div.container.mx-auto.my-8
-      header.mb-8
-        h1.font-bold.text-xl.ml-4 webcolors
-      section.grid.grid-cols-3.gap-12
+
+      header.my-8.mb-10.mx-4.flex.items-center
+        div.pr-4.flex-grow
+          h1.font-bold.text-2xl webcolors
+          code > npm install webcolors
+        div.mr-4.text-lg.border-b-4.border-purple-500
+          a(href="https://github.com/zzzaim/webcolors").no-underline GitHub
+        div.mr-4.text-lg.border-b-4.border-purple-500
+          a(href="https://twitter.com/zzzaim").no-underline Twitter
+
+      section.my-8.text-lg.grid.grid-cols-1.md_grid-cols-2.gap-12
+        div.px-4
+          h1.font-bold.text-xl.mb-2 What?
+          p.
+            A collection of packages containing default color palettes of
+            popular CSS frameworks. All palettes are then normalized to use
+            only CSS Level 2 color keywords (no custom color names).
+        div.px-4
+          h1.font-bold.text-xl.mb-2 Why?
+          p.
+            By extracting color palettes into separate packages, we can use
+            any palette on it's own, without being tied to any frameworks. By
+            using only CSS2 color keywords, we can interchange the palettes
+            easily.
+
+      section.mt-8.mb-16.grid.grid-cols-1.md_grid-cols-3.gap-12
         each paletteColors, palette in palettes
           div.p-4.bg-white.text-black.rounded.shadow-xl
             h2.font-bold.mb-3= palette
-            div.grid.grid-cols-5
+            div.mb-4.grid.grid-cols-5
               each color in colors
                 - var key = paletteColors[color] ? palette : defaultPalette
                 span(class=`block h-12 bg-${key}-${color}` title=color).
                   &nbsp;
+            p
+              code > npm install @webcolors/#{palette}
+
+      section.my-8.text-lg.grid.grid-cols-1.md_grid-cols-2.gap-12
+        div.px-4
+          h1.font-bold.text-xl.mb-2 How?
+          p.
+            Once installed, the palettes are available as CSS,
+            LESS, SCSS and Stylus stylesheets. Configure your stylesheet
+            pre-processor or parser to enable import of NodeJS modules.
+
+      section.my-8
+        div.grid.grid-cols-1.md_grid-cols-2.gap-12
+          div.p-4.bg-white.text-black.rounded.shadow-xl
+            h2.font-bold.mb-3 CSS
+            pre.bg-gray-200.p-4.
+              @import "@webcolors/bootstrap";
+
+              body {
+                background-color: var(--aqua);
+                color: var(--blue);
+              }
+          div.p-4.bg-white.text-black.rounded.shadow-xl
+            h2.font-bold.mb-3 LESS
+            pre.bg-gray-200.p-4.
+              @import "@webcolors/bulma";
+
+              body {
+                background-color: @fuchsia;
+                color: @gray;
+              }
+          div.p-4.bg-white.text-black.rounded.shadow-xl
+            h2.font-bold.mb-3 SCSS
+            pre.bg-gray-200.p-4.
+              @import "@webcolors/flatui"
+
+              // Or @use with scope:
+              @use "@webcolors/material" as material;
+              @use "@webcolors/mrmrs" as mrmrs;
+
+              body {
+                background-color: material.$green;
+                border: 1px solid $lime;
+                color: flatui.$maroon;
+              }
+          div.p-4.bg-white.text-black.rounded.shadow-xl
+            h2.font-bold.mb-3 Stylus
+            pre.bg-gray-200.p-4.
+              @import "@webcolors/tailwind"
+
+              body
+                background-color navy
+                color olive
+
+      footer.my-8.mt-32.text-center.text-gray-400
+        p Made with ♥ by #[a(href="https://twitter.com/zzzaim") @zzzaim]
+

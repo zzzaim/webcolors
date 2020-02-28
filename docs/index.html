@@ -7,43 +7,132 @@
     <title>webcolors | all the colors of the web</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="bg-purple-800 text-white">
+  <body class="bg-purple-800 text-gray-100">
     <div class="container mx-auto my-8">
-      <header class="mb-8">
-        <h1 class="font-bold text-xl ml-4">webcolors</h1>
+      <header class="my-8 mb-10 mx-4 flex items-center">
+        <div class="pr-4 flex-grow">
+          <h1 class="font-bold text-2xl">webcolors</h1><code>> npm install webcolors</code>
+        </div>
+        <div class="mr-4 text-lg border-b-4 border-purple-500"><a class="no-underline" href="https://github.com/zzzaim/webcolors">GitHub</a></div>
+        <div class="mr-4 text-lg border-b-4 border-purple-500"><a class="no-underline" href="https://twitter.com/zzzaim">Twitter</a></div>
       </header>
-      <section class="grid grid-cols-3 gap-12">
+      <section class="my-8 text-lg grid grid-cols-1 md_grid-cols-2 gap-12">
+        <div class="px-4">
+          <h1 class="font-bold text-xl mb-2">What?</h1>
+          <p>
+            A collection of packages containing default color palettes of
+            popular CSS frameworks. All palettes are then normalized to use
+            only CSS Level 2 color keywords (no custom color names).
+          </p>
+        </div>
+        <div class="px-4">
+          <h1 class="font-bold text-xl mb-2">Why?</h1>
+          <p>
+            By extracting color palettes into separate packages, we can use
+            any palette on it's own, without being tied to any frameworks. By
+            using only CSS2 color keywords, we can interchange the palettes
+            easily.
+            
+          </p>
+        </div>
+      </section>
+      <section class="mt-8 mb-16 grid grid-cols-1 md_grid-cols-3 gap-12">
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">bootstrap</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-bootstrap-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-bootstrap-gray" title="gray">&nbsp;</span><span class="block h-12 bg-bootstrap-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-bootstrap-orange" title="orange">&nbsp;</span><span class="block h-12 bg-bootstrap-purple" title="purple">&nbsp;</span><span class="block h-12 bg-bootstrap-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-bootstrap-teal" title="teal">&nbsp;</span><span class="block h-12 bg-bootstrap-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-bootstrap-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-bootstrap-gray" title="gray">&nbsp;</span><span class="block h-12 bg-bootstrap-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-bootstrap-orange" title="orange">&nbsp;</span><span class="block h-12 bg-bootstrap-purple" title="purple">&nbsp;</span><span class="block h-12 bg-bootstrap-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-bootstrap-teal" title="teal">&nbsp;</span><span class="block h-12 bg-bootstrap-yellow" title="yellow">&nbsp;</span>
           </div>
+          <p><code>> npm install @webcolors/bootstrap</code></p>
         </div>
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">bulma</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-bulma-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-bulma-gray" title="gray">&nbsp;</span><span class="block h-12 bg-bulma-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-bulma-orange" title="orange">&nbsp;</span><span class="block h-12 bg-bulma-purple" title="purple">&nbsp;</span><span class="block h-12 bg-bulma-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-mrmrs-teal" title="teal">&nbsp;</span><span class="block h-12 bg-bulma-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-bulma-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-bulma-gray" title="gray">&nbsp;</span><span class="block h-12 bg-bulma-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-bulma-orange" title="orange">&nbsp;</span><span class="block h-12 bg-bulma-purple" title="purple">&nbsp;</span><span class="block h-12 bg-bulma-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-mrmrs-teal" title="teal">&nbsp;</span><span class="block h-12 bg-bulma-yellow" title="yellow">&nbsp;</span>
           </div>
+          <p><code>> npm install @webcolors/bulma</code></p>
         </div>
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">flatui</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-flatui-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-flatui-blue" title="blue">&nbsp;</span><span class="block h-12 bg-flatui-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-flatui-gray" title="gray">&nbsp;</span><span class="block h-12 bg-flatui-green" title="green">&nbsp;</span><span class="block h-12 bg-flatui-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-flatui-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-flatui-orange" title="orange">&nbsp;</span><span class="block h-12 bg-flatui-purple" title="purple">&nbsp;</span><span class="block h-12 bg-flatui-red" title="red">&nbsp;</span><span class="block h-12 bg-flatui-silver" title="silver">&nbsp;</span><span class="block h-12 bg-flatui-teal" title="teal">&nbsp;</span><span class="block h-12 bg-flatui-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-flatui-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-flatui-blue" title="blue">&nbsp;</span><span class="block h-12 bg-flatui-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-flatui-gray" title="gray">&nbsp;</span><span class="block h-12 bg-flatui-green" title="green">&nbsp;</span><span class="block h-12 bg-flatui-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-flatui-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-flatui-orange" title="orange">&nbsp;</span><span class="block h-12 bg-flatui-purple" title="purple">&nbsp;</span><span class="block h-12 bg-flatui-red" title="red">&nbsp;</span><span class="block h-12 bg-flatui-silver" title="silver">&nbsp;</span><span class="block h-12 bg-flatui-teal" title="teal">&nbsp;</span><span class="block h-12 bg-flatui-yellow" title="yellow">&nbsp;</span>
           </div>
+          <p><code>> npm install @webcolors/flatui</code></p>
         </div>
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">material</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-material-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-material-blue" title="blue">&nbsp;</span><span class="block h-12 bg-material-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-material-gray" title="gray">&nbsp;</span><span class="block h-12 bg-material-green" title="green">&nbsp;</span><span class="block h-12 bg-material-lime" title="lime">&nbsp;</span><span class="block h-12 bg-material-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-material-navy" title="navy">&nbsp;</span><span class="block h-12 bg-material-olive" title="olive">&nbsp;</span><span class="block h-12 bg-material-orange" title="orange">&nbsp;</span><span class="block h-12 bg-material-purple" title="purple">&nbsp;</span><span class="block h-12 bg-material-red" title="red">&nbsp;</span><span class="block h-12 bg-material-silver" title="silver">&nbsp;</span><span class="block h-12 bg-material-teal" title="teal">&nbsp;</span><span class="block h-12 bg-material-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-material-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-material-blue" title="blue">&nbsp;</span><span class="block h-12 bg-material-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-material-gray" title="gray">&nbsp;</span><span class="block h-12 bg-material-green" title="green">&nbsp;</span><span class="block h-12 bg-material-lime" title="lime">&nbsp;</span><span class="block h-12 bg-material-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-material-navy" title="navy">&nbsp;</span><span class="block h-12 bg-material-olive" title="olive">&nbsp;</span><span class="block h-12 bg-material-orange" title="orange">&nbsp;</span><span class="block h-12 bg-material-purple" title="purple">&nbsp;</span><span class="block h-12 bg-material-red" title="red">&nbsp;</span><span class="block h-12 bg-material-silver" title="silver">&nbsp;</span><span class="block h-12 bg-material-teal" title="teal">&nbsp;</span><span class="block h-12 bg-material-yellow" title="yellow">&nbsp;</span>
           </div>
+          <p><code>> npm install @webcolors/material</code></p>
         </div>
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">mrmrs</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-mrmrs-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-mrmrs-gray" title="gray">&nbsp;</span><span class="block h-12 bg-mrmrs-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-mrmrs-orange" title="orange">&nbsp;</span><span class="block h-12 bg-mrmrs-purple" title="purple">&nbsp;</span><span class="block h-12 bg-mrmrs-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-mrmrs-teal" title="teal">&nbsp;</span><span class="block h-12 bg-mrmrs-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-mrmrs-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-mrmrs-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-mrmrs-gray" title="gray">&nbsp;</span><span class="block h-12 bg-mrmrs-green" title="green">&nbsp;</span><span class="block h-12 bg-mrmrs-lime" title="lime">&nbsp;</span><span class="block h-12 bg-mrmrs-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-mrmrs-navy" title="navy">&nbsp;</span><span class="block h-12 bg-mrmrs-olive" title="olive">&nbsp;</span><span class="block h-12 bg-mrmrs-orange" title="orange">&nbsp;</span><span class="block h-12 bg-mrmrs-purple" title="purple">&nbsp;</span><span class="block h-12 bg-mrmrs-red" title="red">&nbsp;</span><span class="block h-12 bg-mrmrs-silver" title="silver">&nbsp;</span><span class="block h-12 bg-mrmrs-teal" title="teal">&nbsp;</span><span class="block h-12 bg-mrmrs-yellow" title="yellow">&nbsp;</span>
           </div>
+          <p><code>> npm install @webcolors/mrmrs</code></p>
         </div>
         <div class="p-4 bg-white text-black rounded shadow-xl">
           <h2 class="font-bold mb-3">tailwind</h2>
-          <div class="grid grid-cols-5"><span class="block h-12 bg-tailwind-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-tailwind-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-tailwind-gray" title="gray">&nbsp;</span><span class="block h-12 bg-tailwind-green" title="green">&nbsp;</span><span class="block h-12 bg-tailwind-lime" title="lime">&nbsp;</span><span class="block h-12 bg-tailwind-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-tailwind-navy" title="navy">&nbsp;</span><span class="block h-12 bg-tailwind-olive" title="olive">&nbsp;</span><span class="block h-12 bg-tailwind-orange" title="orange">&nbsp;</span><span class="block h-12 bg-tailwind-purple" title="purple">&nbsp;</span><span class="block h-12 bg-tailwind-red" title="red">&nbsp;</span><span class="block h-12 bg-tailwind-silver" title="silver">&nbsp;</span><span class="block h-12 bg-tailwind-teal" title="teal">&nbsp;</span><span class="block h-12 bg-tailwind-yellow" title="yellow">&nbsp;</span>
+          <div class="mb-4 grid grid-cols-5"><span class="block h-12 bg-tailwind-aqua" title="aqua">&nbsp;</span><span class="block h-12 bg-tailwind-blue" title="blue">&nbsp;</span><span class="block h-12 bg-mrmrs-fuchsia" title="fuchsia">&nbsp;</span><span class="block h-12 bg-tailwind-gray" title="gray">&nbsp;</span><span class="block h-12 bg-tailwind-green" title="green">&nbsp;</span><span class="block h-12 bg-tailwind-lime" title="lime">&nbsp;</span><span class="block h-12 bg-tailwind-maroon" title="maroon">&nbsp;</span><span class="block h-12 bg-tailwind-navy" title="navy">&nbsp;</span><span class="block h-12 bg-tailwind-olive" title="olive">&nbsp;</span><span class="block h-12 bg-tailwind-orange" title="orange">&nbsp;</span><span class="block h-12 bg-tailwind-purple" title="purple">&nbsp;</span><span class="block h-12 bg-tailwind-red" title="red">&nbsp;</span><span class="block h-12 bg-tailwind-silver" title="silver">&nbsp;</span><span class="block h-12 bg-tailwind-teal" title="teal">&nbsp;</span><span class="block h-12 bg-tailwind-yellow" title="yellow">&nbsp;</span>
+          </div>
+          <p><code>> npm install @webcolors/tailwind</code></p>
+        </div>
+      </section>
+      <section class="my-8 text-lg grid grid-cols-1 md_grid-cols-2 gap-12">
+        <div class="px-4">
+          <h1 class="font-bold text-xl mb-2">How?</h1>
+          <p>
+            Once installed, the palettes are available as CSS,
+            LESS, SCSS and Stylus stylesheets. Configure your stylesheet
+            pre-processor or parser to enable import of NodeJS modules.
+            
+          </p>
+        </div>
+      </section>
+      <section class="my-8">
+        <div class="grid grid-cols-1 md_grid-cols-2 gap-12">
+          <div class="p-4 bg-white text-black rounded shadow-xl">
+            <h2 class="font-bold mb-3">CSS</h2>
+            <pre class="bg-gray-200 p-4">@import "@webcolors/bootstrap";
+
+body {
+  background-color: var(--aqua);
+  color: var(--blue);
+}</pre>
+          </div>
+          <div class="p-4 bg-white text-black rounded shadow-xl">
+            <h2 class="font-bold mb-3">LESS</h2>
+            <pre class="bg-gray-200 p-4">@import "@webcolors/bulma";
+
+body {
+  background-color: @fuchsia;
+  color: @gray;
+}</pre>
+          </div>
+          <div class="p-4 bg-white text-black rounded shadow-xl">
+            <h2 class="font-bold mb-3">SCSS</h2>
+            <pre class="bg-gray-200 p-4">@import "@webcolors/flatui"
+
+// Or @use with scope:
+@use "@webcolors/material" as material;
+@use "@webcolors/mrmrs" as mrmrs;
+
+body {
+  background-color: material.$green;
+  border: 1px solid $lime;
+  color: flatui.$maroon;
+}</pre>
+          </div>
+          <div class="p-4 bg-white text-black rounded shadow-xl">
+            <h2 class="font-bold mb-3">Stylus</h2>
+            <pre class="bg-gray-200 p-4">@import "@webcolors/tailwind"
+
+body
+  background-color navy
+  color olive
+</pre>
           </div>
         </div>
       </section>
+      <footer class="my-8 mt-32 text-center text-gray-400">
+        <p>Made with ♥ by <a href="https://twitter.com/zzzaim">@zzzaim</a></p>
+      </footer>
     </div>
   </body>
 </html>

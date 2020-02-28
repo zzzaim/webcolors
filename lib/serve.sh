@@ -5,10 +5,10 @@ trap "kill 0" EXIT
 npx='npx --no-install'
 
 $npx onchange \
-  'src/docs/**/*.pug' \
-  'src/docs/**/*.svg' \
-  'src/docs/**/*.css' \
-  'src/docs/**/*.js' \
+  'docs/src/**/*.pug' \
+  'docs/src/**/*.svg' \
+  'docs/src/**/*.css' \
+  'docs/src/**/*.js' \
   '.*rc.js' \
   --initial \
   --delay 250 \
