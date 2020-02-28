@@ -1,5 +1,25 @@
 const Color = require("color");
-const colors = require("./colors");
+
+const colors = [
+  ["aqua"],
+  ["blue"],
+  ["fuchsia"],
+  ["gray", "grey"],
+  ["green"],
+  ["lime"],
+  ["maroon"],
+  ["navy"],
+  ["olive"],
+  ["orange"],
+  ["purple"],
+  ["red"],
+  ["silver"],
+  ["teal"],
+  ["yellow"],
+  ["black"],
+  ["white"]
+];
+
 const keywords = new Set(colors.flat());
 
 function mapToObject(map) {
@@ -53,6 +73,7 @@ function normalizePalette(map) {
 }
 
 module.exports = exports = {
+  colors,
   keywords,
   mapToObject,
   objectToMap,
