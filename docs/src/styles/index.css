@@ -10,10 +10,6 @@ html {
   font-family: Rubik, sans-serif;
 }
 
-a {
-  @apply text-white underline;
-}
-
 code,
 pre {
   font-family: "Roboto Mono", monospace;

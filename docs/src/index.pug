@@ -1,5 +1,17 @@
 doctype html
 
+- var github  = "https://github.com/zzzaim/webcolors"
+- var twitter = "https://twitter.com/zzzaim"
+
+mixin navItem
+  li.text-lg.font-bold(class=attributes.class)
+    a(href=attributes.href).text-gray-100.hover_text-purple-300
+      block
+
+mixin a
+  a(href=attributes.href class=attributes.class).text-purple-700.hover_text-black
+    block
+
 html
 
   head
@@ -8,27 +20,50 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title webcolors | all the colors of the web
     link(rel="stylesheet" href="styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css")
 
-  body.bg-purple-800.text-gray-100
+  body.bg-gray-100
 
-    div.container.mx-auto.my-8
+    header.py-20.pb-24.bg-dark.bg-purple-800.text-gray-100
 
-      header.my-8.mb-10.mx-4.flex.items-center
-        div.pr-4.flex-grow
-          h1.font-bold.text-2xl webcolors
-          code > npm install webcolors
-        div.mr-4.text-lg.border-b-4.border-purple-500
-          a(href="https://github.com/zzzaim/webcolors").no-underline GitHub
-        div.mr-4.text-lg.border-b-4.border-purple-500
-          a(href="https://twitter.com/zzzaim").no-underline Twitter
+      div.container.mx-auto
 
-      section.my-8.text-lg.grid.grid-cols-1.md_grid-cols-2.gap-12
+        section.mb-12.px-4.flex.flex-col.md_flex-row.md_items-center
+          div.mb-4.md_flex-grow
+            h1.font-bold.text-4xl webcolors
+            p.text-xl.
+              A collection of color palette packages from popular
+              CSS frameworks.
+          nav
+            ul.flex
+              +navItem(href="#about").mr-4 About
+              +navItem(href=github).mr-4 GitHub
+              +navItem(href=twitter).mr-4 Twitter
+
+        section.grid.grid-cols-1.md_grid-cols-3.gap-12
+          each paletteColors, palette in palettes
+            div.p-4.bg-white.text-black.rounded.shadow-xl
+              h2.mb-4.flex.justify-between.items-center
+                span.font-bold= palette
+              div.mb-4.grid.grid-cols-5
+                each color in colors
+                  - var key = paletteColors[color] ? palette : defaultPalette
+                  span(class=`block h-12 bg-${key}-${color}` title=color).
+                    &nbsp;
+              p
+                code > npm install @webcolors/#{palette}
+
+    div.container.mx-auto.py-20#about
+
+      section.mb-16.text-lg.grid.grid-cols-1.md_grid-cols-3.gap-12
+
         div.px-4
           h1.font-bold.text-xl.mb-2 What?
           p.
             A collection of packages containing default color palettes of
             popular CSS frameworks. All palettes are then normalized to use
             only CSS Level 2 color keywords (no custom color names).
+
         div.px-4
           h1.font-bold.text-xl.mb-2 Why?
           p.
@@ -37,19 +72,6 @@ html
             using only CSS2 color keywords, we can interchange the palettes
             easily.
 
-      section.mt-8.mb-16.grid.grid-cols-1.md_grid-cols-3.gap-12
-        each paletteColors, palette in palettes
-          div.p-4.bg-white.text-black.rounded.shadow-xl
-            h2.font-bold.mb-3= palette
-            div.mb-4.grid.grid-cols-5
-              each color in colors
-                - var key = paletteColors[color] ? palette : defaultPalette
-                span(class=`block h-12 bg-${key}-${color}` title=color).
-                  &nbsp;
-            p
-              code > npm install @webcolors/#{palette}
-
-      section.my-8.text-lg.grid.grid-cols-1.md_grid-cols-2.gap-12
         div.px-4
           h1.font-bold.text-xl.mb-2 How?
           p.
@@ -57,49 +79,80 @@ html
             LESS, SCSS and Stylus stylesheets. Configure your stylesheet
             pre-processor or parser to enable import of NodeJS modules.
 
-      section.my-8
-        div.grid.grid-cols-1.md_grid-cols-2.gap-12
-          div.p-4.bg-white.text-black.rounded.shadow-xl
-            h2.font-bold.mb-3 CSS
-            pre.bg-gray-200.p-4.
-              @import "@webcolors/bootstrap";
+      section.grid.grid-cols-1.md_grid-cols-2.gap-12
 
-              body {
-                background-color: var(--aqua);
-                color: var(--blue);
-              }
-          div.p-4.bg-white.text-black.rounded.shadow-xl
-            h2.font-bold.mb-3 LESS
-            pre.bg-gray-200.p-4.
-              @import "@webcolors/bulma";
+        mixin codeSample
+          div.p-4.bg-white.text-black.rounded.shadow-xl.flex.flex-col
+            h2.font-bold.mb-3= attributes.title
+            block
 
-              body {
-                background-color: @fuchsia;
-                color: @gray;
-              }
-          div.p-4.bg-white.text-black.rounded.shadow-xl
-            h2.font-bold.mb-3 SCSS
-            pre.bg-gray-200.p-4.
-              @import "@webcolors/flatui"
+        +codeSample(title="CSS")
+          pre.flex-grow
+            code.language-css
+              | @import "@webcolors/bootstrap";
+              |
+              | body {
+              |   background-color: var(--aqua);
+              |   color: var(--blue);
+              | }
 
-              // Or @use with scope:
-              @use "@webcolors/material" as material;
-              @use "@webcolors/mrmrs" as mrmrs;
+        +codeSample(title="LESS")
+          pre.flex-grow
+            code.language-less
+              | @import "@webcolors/bulma";
+              |
+              | body {
+              |   background-color: @fuchsia;
+              |   color: @gray;
+              | }
 
-              body {
-                background-color: material.$green;
-                border: 1px solid $lime;
-                color: flatui.$maroon;
-              }
-          div.p-4.bg-white.text-black.rounded.shadow-xl
-            h2.font-bold.mb-3 Stylus
-            pre.bg-gray-200.p-4.
-              @import "@webcolors/tailwind"
+        +codeSample(title="SCSS")
+          pre.flex-grow
+            code.language-scss
+              | @import "@webcolors/flatui"
+              |
+              | // Or @use with scope:
+              | @use "@webcolors/material" as material;
+              | @use "@webcolors/mrmrs" as mrmrs;
+              |
+              | body {
+              |   background-color: material.$green;
+              |   border: 1px solid $lime;
+              |   color: flatui.$maroon;
+              | }
 
-              body
-                background-color navy
-                color olive
+        +codeSample(title="Stylus")
+          pre.flex-grow
+            code.language-stylus
+              | @import "@webcolors/tailwind"
+              |
+              | body
+              |   background-color navy
+              |   color olive
 
-      footer.my-8.mt-32.text-center.text-gray-400
-        p Made with ♥ by #[a(href="https://twitter.com/zzzaim") @zzzaim]
+    footer.py-20.mt-16.bg-light.bg-gray-400.text-gray-800
 
+      div.container.mx-auto.px-4.text-sm.flex.flex-col.md_flex-row.justify-between.text-center.md_text-left
+
+        div.order-last.my-2
+          p.mb-2
+            | Made with ♥ by
+            |
+            +a(href=twitter) @zzzaim
+          p
+            | Copyright &copy; 2020 Zaim Bakar and Contributors.
+            br
+            | Released under the
+            |
+            +a(href=`${github}/blob/master/LICENSE`) MIT license.
+
+        ul.font-bold.flex.my-2.justify-center.md_flex-col
+          li.mr-2.md_mb-2
+            +a(href="#about") About
+          li.mr-2.md_mb-2
+            +a(href=github) GitHub
+          li.mr-2.md_mb-2
+            +a(href=twitter) Twitter
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js")
