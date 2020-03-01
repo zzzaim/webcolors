@@ -36,10 +36,6 @@ function objectToMap(object) {
   return new Map(Object.keys(object).map(k => [k, object[k]]));
 }
 
-function createPalette() {
-  return new Map(colors.map(k => [k[0], null]));
-}
-
 function colorKeysOnly(map) {
   if (!(map instanceof Map)) {
     map = objectToMap(map);
@@ -77,7 +73,6 @@ module.exports = exports = {
   keywords,
   mapToObject,
   objectToMap,
-  createPalette,
   colorKeysOnly,
   normalizePalette
 };
