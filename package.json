@@ -15,7 +15,7 @@
   "scripts": {
     "test": "true",
     "build": "make",
-    "start": "lib/serve.sh"
+    "start": "tasks/serve.sh"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

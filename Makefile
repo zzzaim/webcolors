@@ -33,7 +33,7 @@ endef
 
 define json-recipe=
 $(1): $(dir $(1))src/$(notdir $(1:.json=.js))
-	node lib/json $$< > $$@
+	node tasks/json $$< > $$@
 endef
 
 
@@ -54,7 +54,7 @@ docs/styles.css: docs/src/styles/index.css $(deps-docs)
 	npx postcss $< -o $@
 
 
-packages/webcolors/index.js: lib/index.js templates/index.js.mustache
+packages/webcolors/index.js: tasks/index.js templates/index.js.mustache
 	$(mustache)
 
 packages/webcolors/%.json: packages/%.json
@@ -97,7 +97,7 @@ packages/%.styl: .cache/%.json templates/styl.mustache
 	$(mustache)
 
 
-.cache/%.json: lib/view.js packages/%.json
+.cache/%.json: tasks/view.js packages/%.json
 	@mkdir -p $(@D)
 	@node $^ > $@
 
