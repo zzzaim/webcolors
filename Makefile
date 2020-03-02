@@ -54,7 +54,7 @@ docs/%.html: docs/src/%.pug $(deps-docs)
 	@mkdir -p $(@D)
 	npx posthtml $< -o $@
 
-docs/styles.css: docs/src/styles/index.css $(deps-docs)
+docs/styles.css: docs/src/styles.css $(deps-docs)
 	@mkdir -p $(@D)
 	npx postcss $< -o $@
 
