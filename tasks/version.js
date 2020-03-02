@@ -7,7 +7,7 @@ const dryRunFlag = new Set(["-n", "--dry-run"]);
 async function main(dryRun = false) {
   console.log(`Version: ${version}`);
 
-  const stdout = process.stdout;
+  const stdout = process.stderr;
   const pkgPath = Path.resolve(__dirname, "..", "packages");
 
   Fs.readdirSync(pkgPath).forEach(p => {
