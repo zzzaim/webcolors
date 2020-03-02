@@ -1,6 +1,6 @@
 const sass = require("sass");
 const exportVariables = require("postcss-export-custom-variables");
-const { colorKeysOnly } = require("../../../lib/util");
+const { colorKeysOnly } = require("../../../tasks/util");
 
 const options = {
   from: require.resolve("bootstrap/scss/bootstrap.scss"),

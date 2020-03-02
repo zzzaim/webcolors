@@ -31,9 +31,14 @@ define copy=
 	cp $< $@
 endef
 
+define node=
+	@mkdir -p $(@D)
+	node $^ > $@
+endef
+
 define json-recipe=
-$(1): $(dir $(1))src/$(notdir $(1:.json=.js))
-	node tasks/json $$< > $$@
+$(1): tasks/json.js $(dir $(1))src/$(notdir $(1:.json=.js))
+	$$(node)
 endef
 
 
@@ -41,7 +46,7 @@ all: $(targets)
 
 clean:
 	rm -rf .cache
-	rm -rfd $(targets)
+	rm -rf $(targets)
 
 docs: $(target-docs)
 
@@ -98,8 +103,7 @@ packages/%.styl: .cache/%.json templates/styl.mustache
 
 
 .cache/%.json: tasks/view.js packages/%.json
-	@mkdir -p $(@D)
-	@node $^ > $@
+	$(node)
 
 
 print-%:

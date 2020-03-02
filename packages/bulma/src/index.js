@@ -2,7 +2,7 @@ const Fs = require("fs");
 const postcss = require("postcss");
 const sass = require("postcss-sass");
 const getVariables = require("postcss-get-sass-variables");
-const { colorKeysOnly } = require("../../../lib/util");
+const { colorKeysOnly } = require("../../../tasks/util");
 
 const bulma = require.resolve("bulma/sass/utilities/initial-variables.sass");
 const css = Fs.readFileSync(bulma, "utf-8");
