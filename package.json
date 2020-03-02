@@ -15,7 +15,8 @@
   "scripts": {
     "test": "true",
     "build": "make",
-    "start": "tasks/serve.sh"
+    "start": "tasks/serve.sh",
+    "release": "standard-version -a"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
@@ -59,7 +60,9 @@
   },
   "standard-version": {
     "scripts": {
-      "precommit": "node tasks/version && git add packages"
+      "prerelease": "make",
+      "postbump": "node tasks/version",
+      "precommit": "git add packages"
     }
   }
 }
