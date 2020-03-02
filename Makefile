@@ -15,6 +15,7 @@ targets += $(targets-scss)
 targets += $(targets-styl)
 targets := $(targets) $(targets:packages/%=packages/webcolors/%)
 targets += packages/webcolors/index.js
+targets += packages/webcolors/README.md
 
 target-docs  = $(shell find docs/src -type f -name '*.pug' -or -name '*.svg')
 target-docs := $(target-docs:docs/src/%=docs/%)
@@ -63,6 +64,9 @@ docs/styles.css: docs/src/styles.css $(deps-docs)
 	@mkdir -p $(@D)
 	npx postcss $< -o $@
 
+
+packages/webcolors/README.md: README.md
+	cp $< $@
 
 packages/webcolors/index.js: tasks/index.js templates/index.js.mustache
 	$(mustache)
