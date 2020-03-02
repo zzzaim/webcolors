@@ -13,9 +13,12 @@
       "url": "https://material.io/design"
     }
   ],
+  "homepage": "https://github.com/zzzaim/webcolors",
+  "bugs": "https://github.com/zzzaim/webcolors/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zzzaim/webcolors.git"
+    "url": "https://github.com/zzzaim/webcolors.git",
+    "directory": "packages/material"
   },
   "files": [
     "*.js",
@@ -24,5 +27,8 @@
     "*.less",
     "*.scss",
     "*.styl"
-  ]
+  ],
+  "webcolors": {
+    "homepage": "https://material.io/design"
+  }
 }

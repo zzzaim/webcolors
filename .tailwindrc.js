@@ -2,7 +2,7 @@ module.exports = {
   separator: "_",
   theme: {
     extend: {
-      colors: require("./packages/webcolors"),
+      colors: require("./tasks/doc").palettes,
       zIndex: {
         bg: "-1024"
       }

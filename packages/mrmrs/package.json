@@ -14,9 +14,12 @@
       "url": "http://mrmrs.cc"
     }
   ],
+  "homepage": "https://github.com/zzzaim/webcolors",
+  "bugs": "https://github.com/zzzaim/webcolors/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zzzaim/webcolors.git"
+    "url": "https://github.com/zzzaim/webcolors.git",
+    "directory": "packages/mrmrs"
   },
   "files": [
     "*.js",
@@ -25,5 +28,8 @@
     "*.less",
     "*.scss",
     "*.styl"
-  ]
+  ],
+  "webcolors": {
+    "homepage": "http://clrs.cc/"
+  }
 }

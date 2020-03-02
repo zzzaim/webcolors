@@ -3,18 +3,20 @@
 const Path = require("path");
 const { keywords } = require("./util");
 
-const palette = require(Path.resolve(process.cwd(), process.argv[2]));
+function main(file) {
+  const palette = require(Path.resolve(process.cwd(), file));
 
-const colors = Object.keys(palette)
-  .map(name => ({
-    name,
-    value: palette[name] || (keywords.has(name) ? name : null)
-  }))
-  .filter(o => o.value);
-
-console.log(
-  JSON.stringify({
+  return {
     source: JSON.stringify(palette, null, 2),
-    colors
-  })
-);
+    colors: Object.keys(palette)
+      .map(name => ({
+        name,
+        value: palette[name] || (keywords.has(name) ? name : null)
+      }))
+      .filter(o => o.value)
+  };
+}
+
+if (require.main === module) {
+  console.log(JSON.stringify(main(process.argv[2])));
+}

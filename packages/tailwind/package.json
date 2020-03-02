@@ -21,9 +21,12 @@
       "email": "davidlee.hemphill@gmail.com"
     }
   ],
+  "homepage": "https://github.com/zzzaim/webcolors",
+  "bugs": "https://github.com/zzzaim/webcolors/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zzzaim/webcolors.git"
+    "url": "https://github.com/zzzaim/webcolors.git",
+    "directory": "packages/tailwind"
   },
   "files": [
     "*.js",
@@ -32,5 +35,8 @@
     "*.less",
     "*.scss",
     "*.styl"
-  ]
+  ],
+  "webcolors": {
+    "homepage": "http://tailwindcss.com/"
+  }
 }

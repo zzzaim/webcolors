@@ -10,12 +10,15 @@
   "contributors": [
     {
       "name": "The Bootstrap Authors",
-      "url": "https://github.com/twbs/bootstrap/graphs/contributors)"
+      "url": "https://github.com/twbs/bootstrap/graphs/contributors"
     }
   ],
+  "homepage": "https://github.com/zzzaim/webcolors",
+  "bugs": "https://github.com/zzzaim/webcolors/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zzzaim/webcolors.git"
+    "url": "https://github.com/zzzaim/webcolors.git",
+    "directory": "packages/bootstrap"
   },
   "files": [
     "*.js",
@@ -24,5 +27,8 @@
     "*.less",
     "*.scss",
     "*.styl"
-  ]
+  ],
+  "webcolors": {
+    "homepage": "https://getbootstrap.com"
+  }
 }

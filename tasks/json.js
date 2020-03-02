@@ -13,6 +13,11 @@ async function main(file) {
   return mapToObject(normalizePalette(palette));
 }
 
-main(process.argv[2])
-  .then(o => console.log(JSON.stringify(o, null, 2)))
-  .catch(console.error);
+if (require.main === module) {
+  main(process.argv[2])
+    .then(o => console.log(JSON.stringify(o, null, 2)))
+    .catch(e => {
+      console.error(e);
+      process.exit(1);
+    });
+}

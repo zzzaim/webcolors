@@ -1,5 +1,3 @@
-doctype html
-
 - var github  = "https://github.com/zzzaim/webcolors"
 - var twitter = "https://twitter.com/zzzaim"
 
@@ -9,8 +7,15 @@ mixin navItem
       block
 
 mixin a
-  a(href=attributes.href class=attributes.class).text-purple-700.hover_text-black
+  a&attributes(attributes).text-purple-700.hover_text-black
     block
+
+mixin icon(src)
+  icon(
+    src=`node_modules/@fortawesome/fontawesome-free/svgs/${src}.svg`
+  )&attributes(attributes)
+
+doctype html
 
 html
 
@@ -30,8 +35,8 @@ html
 
         section.mb-12.px-4.flex.flex-col.md_flex-row.md_items-center
           div.mb-4.md_flex-grow
-            h1.font-bold.text-4xl webcolors
-            p.text-xl.
+            h1.font-bold.text-3xl webcolors
+            p.text-lg.
               A collection of color palette packages from popular
               CSS frameworks.
           nav
@@ -41,14 +46,15 @@ html
               +navItem(href=twitter).mr-4 Twitter
 
         section.grid.grid-cols-1.md_grid-cols-3.gap-12
-          each paletteColors, palette in palettes
+          each info, palette in paletteInfo
             div.p-4.bg-white.text-black.rounded.shadow-xl
-              h2.mb-4.flex.justify-between.items-center
+              h2.mb-4.flex.justify-between.items-baseline
                 span.font-bold= palette
+                +a(href=info.homepage).block
+                  +icon("solid/external-link-alt")(width="1rem").fill-current
               div.mb-4.grid.grid-cols-5
                 each color in colors
-                  - var key = paletteColors[color] ? palette : defaultPalette
-                  span(class=`block h-12 bg-${key}-${color}` title=color).
+                  span(class=`block h-12 bg-${palette}-${color}` title=color).
                     &nbsp;
               p
                 code > npm install @webcolors/#{palette}
@@ -81,12 +87,12 @@ html
 
       section.grid.grid-cols-1.md_grid-cols-2.gap-12
 
-        mixin codeSample
+        mixin codeSample(title)
           div.p-4.bg-white.text-black.rounded.shadow-xl.flex.flex-col
-            h2.font-bold.mb-3= attributes.title
+            h2.font-bold.mb-3= title
             block
 
-        +codeSample(title="CSS")
+        +codeSample("CSS")
           pre.flex-grow
             code.language-css
               | @import "@webcolors/bootstrap";
@@ -96,7 +102,7 @@ html
               |   color: var(--blue);
               | }
 
-        +codeSample(title="LESS")
+        +codeSample("LESS")
           pre.flex-grow
             code.language-less
               | @import "@webcolors/bulma";
@@ -106,7 +112,7 @@ html
               |   color: @gray;
               | }
 
-        +codeSample(title="SCSS")
+        +codeSample("SCSS")
           pre.flex-grow
             code.language-scss
               | @import "@webcolors/flatui"
@@ -121,7 +127,7 @@ html
               |   color: flatui.$maroon;
               | }
 
-        +codeSample(title="Stylus")
+        +codeSample("Stylus")
           pre.flex-grow
             code.language-stylus
               | @import "@webcolors/tailwind"
