@@ -15,11 +15,11 @@
     "directory": "packages/webcolors"
   },
   "files": [
-    "*.js",
-    "*.json",
-    "*.css",
-    "*.less",
-    "*.scss",
-    "*.styl"
+    "**/*.js",
+    "**/*.json",
+    "**/*.css",
+    "**/*.less",
+    "**/*.scss",
+    "**/*.styl"
   ]
 }
