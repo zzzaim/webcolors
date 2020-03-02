@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/zzzaim/webcolors/compare/v2.0.0...v2.0.1) (2020-03-02)
+
+
+### Bug Fixes
+
+* correctly include webcolors package files ([4cd1e48](https://github.com/zzzaim/webcolors/commit/4cd1e48212e81c10f66c1285e37c66df9b6ea05b))
+
 ## [2.0.0](https://github.com/zzzaim/webcolors/compare/v1.2.2...v2.0.0) (2020-03-02)
 
 
