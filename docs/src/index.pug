@@ -15,6 +15,17 @@ mixin icon(src)
     src=`node_modules/@fortawesome/fontawesome-free/svgs/${src}.svg`
   )&attributes(attributes)
 
+mixin codeSample(title)
+  div.p-4.m-6.bg-white.text-black.rounded.shadow-xl.flex.flex-col
+    h2.font-bold.mb-3= title
+    block
+
+mixin infoBox(title)
+  div.m-4
+    h1.font-bold.text-xl.mb-2= title
+    p
+      block
+
 doctype html
 
 html
@@ -29,12 +40,12 @@ html
 
   body.bg-gray-100
 
-    header.py-20.pb-24.bg-dark.bg-purple-800.text-gray-100
+    header.py-20.bg-dark.bg-purple-800.text-gray-100#hero
 
       div.container.mx-auto
 
-        section.mb-12.px-4.flex.flex-col.md_flex-row.md_items-center
-          div.mb-4.md_flex-grow
+        section.mb-10.px-10.flex.flex-col.md_flex-row.md_items-end
+          div.mb-4.md_mb-0.md_flex-grow
             h1.font-bold.text-3xl webcolors
             p.text-lg.
               A collection of color palette packages from popular
@@ -45,9 +56,9 @@ html
               +navItem(href=github).mr-4 GitHub
               +navItem(href=twitter).mr-4 Twitter
 
-        section.grid.grid-cols-1.md_grid-cols-3.gap-12
+        section.grid.grid-cols-1.md_grid-cols-3
           each info, palette in paletteInfo
-            div.p-4.bg-white.text-black.rounded.shadow-xl
+            div.p-4.m-6.bg-white.text-black.rounded.shadow-xl
               h2.mb-4.flex.justify-between.items-baseline
                 span.font-bold= palette
                 +a(href=info.homepage).block
@@ -59,38 +70,27 @@ html
               p
                 code > npm install @webcolors/#{palette}
 
-    div.container.mx-auto.py-20#about
+    div.py-20.container.mx-auto#about
 
-      section.mb-16.text-lg.grid.grid-cols-1.md_grid-cols-3.gap-12
+      section.px-6.mb-10.text-lg.grid.grid-cols-1.md_grid-cols-3
 
-        div.px-4
-          h1.font-bold.text-xl.mb-2 What?
-          p.
-            A collection of packages containing default color palettes of
-            popular CSS frameworks. All palettes are then normalized to use
-            only CSS Level 2 color keywords (no custom color names).
+        +infoBox("What?").
+          A collection of packages containing default color palettes of
+          popular CSS frameworks. All palettes are then normalized to use
+          only CSS Level 2 color keywords (no custom color names).
 
-        div.px-4
-          h1.font-bold.text-xl.mb-2 Why?
-          p.
-            By extracting color palettes into separate packages, we can use
-            any palette on it's own, without being tied to any frameworks. By
-            using only CSS2 color keywords, we can interchange the palettes
-            easily.
+        +infoBox("Why?").
+          By extracting color palettes into separate packages, we can use
+          any palette on it's own, without being tied to any frameworks. By
+          using only CSS2 color keywords, we can interchange the palettes
+          easily.
 
-        div.px-4
-          h1.font-bold.text-xl.mb-2 How?
-          p.
-            Once installed, the palettes are available as CSS,
-            LESS, SCSS and Stylus stylesheets. Configure your stylesheet
-            pre-processor or parser to enable import of NodeJS modules.
+        +infoBox("How?").
+          Once installed, the palettes are available as CSS,
+          LESS, SCSS and Stylus stylesheets. Configure your stylesheet
+          pre-processor or parser to enable import of NodeJS modules.
 
-      section.grid.grid-cols-1.md_grid-cols-2.gap-12
-
-        mixin codeSample(title)
-          div.p-4.bg-white.text-black.rounded.shadow-xl.flex.flex-col
-            h2.font-bold.mb-3= title
-            block
+      section.grid.grid-cols-1.md_grid-cols-2
 
         +codeSample("CSS")
           pre.flex-grow
@@ -136,12 +136,12 @@ html
               |   background-color navy
               |   color olive
 
-    footer.py-20.mt-16.bg-light.bg-gray-400.text-gray-800
+    footer.py-20.bg-light.bg-gray-400.text-gray-800
 
-      div.container.mx-auto.px-4.text-sm.flex.flex-col.md_flex-row.justify-between.text-center.md_text-left
+      div.px-10.container.mx-auto.text-sm.flex.flex-col.md_flex-row.justify-between.text-center.md_text-left
 
-        div.order-last.my-2
-          p.mb-2
+        div.order-last
+          p.mb-4
             | Made with ♥ by
             |
             +a(href=twitter) @zzzaim
@@ -152,7 +152,7 @@ html
             |
             +a(href=`${github}/blob/master/LICENSE`) MIT license.
 
-        ul.font-bold.flex.my-2.justify-center.md_flex-col
+        ul.mb-4.font-bold.flex.justify-center.md_flex-col
           li.mr-2.md_mb-2
             +a(href="#about") About
           li.mr-2.md_mb-2

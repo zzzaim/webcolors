@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
   </head>
   <body class="bg-gray-100">
-    <header class="py-20 pb-24 bg-dark bg-purple-800 text-gray-100">
+    <header class="py-20 bg-dark bg-purple-800 text-gray-100" id="hero">
       <div class="container mx-auto">
-        <section class="mb-12 px-4 flex flex-col md_flex-row md_items-center">
-          <div class="mb-4 md_flex-grow">
+        <section class="mb-10 px-10 flex flex-col md_flex-row md_items-end">
+          <div class="mb-4 md_mb-0 md_flex-grow">
             <h1 class="font-bold text-3xl">webcolors</h1>
             <p class="text-lg">
               A collection of color palette packages from popular
@@ -27,8 +27,8 @@
             </ul>
           </nav>
         </section>
-        <section class="grid grid-cols-1 md_grid-cols-3 gap-12">
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+        <section class="grid grid-cols-1 md_grid-cols-3">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">bootstrap</span><a class="text-purple-700 hover_text-black block" href="https://getbootstrap.com">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -36,7 +36,7 @@
             </div>
             <p><code>> npm install @webcolors/bootstrap</code></p>
           </div>
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">bulma</span><a class="text-purple-700 hover_text-black block" href="https://bulma.io">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -44,7 +44,7 @@
             </div>
             <p><code>> npm install @webcolors/bulma</code></p>
           </div>
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">flatui</span><a class="text-purple-700 hover_text-black block" href="https://flatuicolors.com">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -52,7 +52,7 @@
             </div>
             <p><code>> npm install @webcolors/flatui</code></p>
           </div>
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">material</span><a class="text-purple-700 hover_text-black block" href="https://material.io/design">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -60,7 +60,7 @@
             </div>
             <p><code>> npm install @webcolors/material</code></p>
           </div>
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">mrmrs</span><a class="text-purple-700 hover_text-black block" href="http://clrs.cc/">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -68,7 +68,7 @@
             </div>
             <p><code>> npm install @webcolors/mrmrs</code></p>
           </div>
-          <div class="p-4 bg-white text-black rounded shadow-xl">
+          <div class="p-4 m-6 bg-white text-black rounded shadow-xl">
             <h2 class="mb-4 flex justify-between items-baseline"><span class="font-bold">tailwind</span><a class="text-purple-700 hover_text-black block" href="http://tailwindcss.com/">
                 <svg viewBox="0 0 512 512" class="fill-current" width="1rem"><path d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z"></path></svg></a>
             </h2>
@@ -79,9 +79,9 @@
         </section>
       </div>
     </header>
-    <div class="container mx-auto py-20" id="about">
-      <section class="mb-16 text-lg grid grid-cols-1 md_grid-cols-3 gap-12">
-        <div class="px-4">
+    <div class="py-20 container mx-auto" id="about">
+      <section class="px-6 mb-10 text-lg grid grid-cols-1 md_grid-cols-3">
+        <div class="m-4">
           <h1 class="font-bold text-xl mb-2">What?</h1>
           <p>
             A collection of packages containing default color palettes of
@@ -90,7 +90,7 @@
             
           </p>
         </div>
-        <div class="px-4">
+        <div class="m-4">
           <h1 class="font-bold text-xl mb-2">Why?</h1>
           <p>
             By extracting color palettes into separate packages, we can use
@@ -100,7 +100,7 @@
             
           </p>
         </div>
-        <div class="px-4">
+        <div class="m-4">
           <h1 class="font-bold text-xl mb-2">How?</h1>
           <p>
             Once installed, the palettes are available as CSS,
@@ -110,28 +110,28 @@
           </p>
         </div>
       </section>
-      <section class="grid grid-cols-1 md_grid-cols-2 gap-12">
-                <div class="p-4 bg-white text-black rounded shadow-xl flex flex-col">
-                  <h2 class="font-bold mb-3">CSS</h2>
-                  <pre class="flex-grow"><code class="language-css">@import "@webcolors/bootstrap";
+      <section class="grid grid-cols-1 md_grid-cols-2">
+        <div class="p-4 m-6 bg-white text-black rounded shadow-xl flex flex-col">
+          <h2 class="font-bold mb-3">CSS</h2>
+          <pre class="flex-grow"><code class="language-css">@import "@webcolors/bootstrap";
 
 body {
   background-color: var(--aqua);
   color: var(--blue);
 }</code></pre>
-                </div>
-                <div class="p-4 bg-white text-black rounded shadow-xl flex flex-col">
-                  <h2 class="font-bold mb-3">LESS</h2>
-                  <pre class="flex-grow"><code class="language-less">@import "@webcolors/bulma";
+        </div>
+        <div class="p-4 m-6 bg-white text-black rounded shadow-xl flex flex-col">
+          <h2 class="font-bold mb-3">LESS</h2>
+          <pre class="flex-grow"><code class="language-less">@import "@webcolors/bulma";
 
 body {
   background-color: @fuchsia;
   color: @gray;
 }</code></pre>
-                </div>
-                <div class="p-4 bg-white text-black rounded shadow-xl flex flex-col">
-                  <h2 class="font-bold mb-3">SCSS</h2>
-                  <pre class="flex-grow"><code class="language-scss">@import "@webcolors/flatui"
+        </div>
+        <div class="p-4 m-6 bg-white text-black rounded shadow-xl flex flex-col">
+          <h2 class="font-bold mb-3">SCSS</h2>
+          <pre class="flex-grow"><code class="language-scss">@import "@webcolors/flatui"
 
 // Or @use with scope:
 @use "@webcolors/material" as material;
@@ -142,21 +142,21 @@ body {
   border: 1px solid $lime;
   color: flatui.$maroon;
 }</code></pre>
-                </div>
-                <div class="p-4 bg-white text-black rounded shadow-xl flex flex-col">
-                  <h2 class="font-bold mb-3">Stylus</h2>
-                  <pre class="flex-grow"><code class="language-stylus">@import "@webcolors/tailwind"
+        </div>
+        <div class="p-4 m-6 bg-white text-black rounded shadow-xl flex flex-col">
+          <h2 class="font-bold mb-3">Stylus</h2>
+          <pre class="flex-grow"><code class="language-stylus">@import "@webcolors/tailwind"
 
 body
   background-color navy
   color olive</code></pre>
-                </div>
+        </div>
       </section>
     </div>
-    <footer class="py-20 mt-16 bg-light bg-gray-400 text-gray-800">
-      <div class="container mx-auto px-4 text-sm flex flex-col md_flex-row justify-between text-center md_text-left">
-        <div class="order-last my-2">
-          <p class="mb-2">
+    <footer class="py-20 bg-light bg-gray-400 text-gray-800">
+      <div class="px-10 container mx-auto text-sm flex flex-col md_flex-row justify-between text-center md_text-left">
+        <div class="order-last">
+          <p class="mb-4">
             Made with ♥ by
             <a class="text-purple-700 hover_text-black" href="https://twitter.com/zzzaim">@zzzaim</a>
           </p>
@@ -164,7 +164,7 @@ body
             <a class="text-purple-700 hover_text-black" href="https://github.com/zzzaim/webcolors/blob/master/LICENSE">MIT license.</a>
           </p>
         </div>
-        <ul class="font-bold flex my-2 justify-center md_flex-col">
+        <ul class="mb-4 font-bold flex justify-center md_flex-col">
           <li class="mr-2 md_mb-2"><a class="text-purple-700 hover_text-black" href="#about">About</a>
           </li>
           <li class="mr-2 md_mb-2"><a class="text-purple-700 hover_text-black" href="https://github.com/zzzaim/webcolors">GitHub</a>

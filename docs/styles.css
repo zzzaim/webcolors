@@ -44382,6 +44382,12 @@ pre {
   font-family: "Roboto Mono", monospace;
 }
 
+#hero {
+  background-image: url("./dot.svg");
+  background-size: 68px 68px;
+  background-blend-mode: overlay;
+}
+
 @media (min-width: 640px){
   .sm_sr-only{
     position: absolute;

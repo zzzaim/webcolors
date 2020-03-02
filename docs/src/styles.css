@@ -14,3 +14,9 @@ code,
 pre {
   font-family: "Roboto Mono", monospace;
 }
+
+#hero {
+  background-image: url("./dot.svg");
+  background-size: 68px 68px;
+  background-blend-mode: overlay;
+}

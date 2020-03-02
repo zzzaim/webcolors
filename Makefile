@@ -16,8 +16,9 @@ targets += $(targets-styl)
 targets := $(targets) $(targets:packages/%=packages/webcolors/%)
 targets += packages/webcolors/index.js
 
-target-docs  = $(shell find docs/src -type f -name '*.pug')
-target-docs := $(target-docs:docs/src/%.pug=docs/%.html)
+target-docs  = $(shell find docs/src -type f -name '*.pug' -or -name '*.svg')
+target-docs := $(target-docs:docs/src/%=docs/%)
+target-docs := $(target-docs:.pug=.html)
 target-docs += docs/styles.css
 deps-docs  = $(wildcard .*rc.js)
 deps-docs += $(js)
@@ -53,6 +54,10 @@ docs: $(target-docs)
 docs/%.html: docs/src/%.pug $(deps-docs)
 	@mkdir -p $(@D)
 	npx posthtml $< -o $@
+
+docs/%.svg: docs/src/%.svg
+	@mkdir -p $(@D)
+	npx svgo $< -o $@
 
 docs/styles.css: docs/src/styles.css $(deps-docs)
 	@mkdir -p $(@D)
