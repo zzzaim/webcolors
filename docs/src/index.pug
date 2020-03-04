@@ -28,7 +28,10 @@ mixin infoBox(title)
       block
 
 mixin favicon(size)
-  link(rel="icon" href=`images/favicon-${size}.png` sizes=`${size}x${size}`)
+  link(
+    rel="icon"
+    href=uri(`images/favicon-${size}.png`) sizes=`${size}x${size}`
+  )
 
 doctype html
 
@@ -39,7 +42,7 @@ html
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title webcolors | all the colors of the web
-    link(rel="stylesheet" href="styles.css")
+    link(rel="stylesheet" href=uri("styles.css"))
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css")
 
     for size in faviconSizes
@@ -48,7 +51,7 @@ html
     meta(property="og:title" content="webcolors")
     meta(property="og:type" content="website")
     meta(property="og:description" content="A collection of color palette packages from popular CSS frameworks")
-    meta(property="og:image" content="images/og-square.png")
+    meta(property="og:image" content=uri("images/og-square.png"))
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="1200")
 

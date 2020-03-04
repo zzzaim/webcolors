@@ -17,12 +17,17 @@ targets := $(targets) $(targets:packages/%=packages/webcolors/%)
 targets += packages/webcolors/index.js
 targets += packages/webcolors/README.md
 
-target-docs  = $(shell find docs/src -type f -name '*.pug' -or -name '*.svg')
+target-docs += $(wildcard docs/src/*.svg)
+target-docs += $(wildcard docs/src/*.css)
+target-docs += $(wildcard docs/src/*.pug)
 target-docs := $(target-docs:docs/src/%=docs/%)
 target-docs := $(target-docs:.pug=.html)
-target-docs += docs/styles.css
+
 deps-docs  = $(wildcard .*rc.js)
 deps-docs += $(js)
+
+export \
+	git_head = $(shell git rev-parse --short HEAD)
 
 define mustache=
 	npx --no-install mustache $^ > $@
@@ -54,7 +59,10 @@ docs: $(target-docs)
 
 docs/%.html: docs/src/%.pug $(deps-docs)
 	@mkdir -p $(@D)
-	npx posthtml $< -o $@
+	doc_dir=$(@D) \
+	doc_source=$< \
+	doc_output=$@ \
+		npx posthtml $< -o $@
 
 docs/%.svg: docs/src/%.svg
 	@mkdir -p $(@D)
@@ -117,6 +125,9 @@ packages/%.styl: .cache/%.json templates/styl.mustache
 
 print-%:
 	@echo $($*)
+
+env-%:
+	@echo $${$*}
 
 
 .PHONY: all docs clean
