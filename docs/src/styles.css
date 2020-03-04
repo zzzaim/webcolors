@@ -16,7 +16,7 @@ pre {
 }
 
 #hero {
-  background-image: url("./dot.svg");
+  background-image: url("./images/dot.svg");
   background-size: 68px 68px;
   background-blend-mode: overlay;
 }

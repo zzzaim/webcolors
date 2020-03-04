@@ -17,7 +17,7 @@ targets := $(targets) $(targets:packages/%=packages/webcolors/%)
 targets += packages/webcolors/index.js
 targets += packages/webcolors/README.md
 
-target-docs += $(wildcard docs/src/*.svg)
+target-docs += $(wildcard docs/src/images/*.svg)
 target-docs += $(wildcard docs/src/*.css)
 target-docs += $(wildcard docs/src/*.pug)
 target-docs := $(target-docs:docs/src/%=docs/%)
