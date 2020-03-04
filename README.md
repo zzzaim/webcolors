@@ -1,6 +1,10 @@
 # webcolors
 
-> All the colors of the web
+[![npm](https://img.shields.io/npm/v/webcolors?style=flat-square)](https://npmjs.com/package/webcolors)
+[![npm](https://img.shields.io/npm/dm/webcolors?style=flat-square)](https://npmjs.com/package/webcolors)
+[![GitHub](https://img.shields.io/github/license/zzzaim/webcolors?style=flat-square)](LICENSE)
+
+A collection of color palette packages from popular CSS frameworks.
 
 ## Palettes
 
