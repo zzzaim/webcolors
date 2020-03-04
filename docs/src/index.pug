@@ -33,6 +33,9 @@ mixin favicon(size)
     href=uri(`images/favicon-${size}.png`) sizes=`${size}x${size}`
   )
 
+mixin badge(src)
+  img(src=src).inline-block.mr-2
+
 doctype html
 
 html
@@ -162,12 +165,13 @@ html
             | Made with ♥ by
             |
             +a(href=twitter) @zzzaim
+          p.mb-4.
+            Copyright &copy; 2020 Zaim Bakar and Contributors.
           p
-            | Copyright &copy; 2020 Zaim Bakar and Contributors.
-            br
-            | Released under the
-            |
-            +a(href=`${github}/blob/master/LICENSE`) MIT license.
+            +badge("https://img.shields.io/npm/v/webcolors?style=flat-square")
+            +badge("https://img.shields.io/npm/dm/webcolors?style=flat-square")
+            +badge("https://img.shields.io/github/license/zzzaim/webcolors?style=flat-square")
+
 
         ul.mb-4.font-bold.flex.justify-center.md_flex-col
           li.mr-2.md_mb-2
