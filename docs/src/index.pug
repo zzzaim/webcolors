@@ -1,5 +1,6 @@
 - var github  = "https://github.com/zzzaim/webcolors"
 - var twitter = "https://twitter.com/zzzaim"
+- var faviconSizes = [196, 192, 180, 167, 152, 128, 32]
 
 mixin navItem
   li.text-lg.font-bold(class=attributes.class)
@@ -26,6 +27,9 @@ mixin infoBox(title)
     p
       block
 
+mixin favicon(size)
+  link(rel="icon" href=`images/favicon-${size}.png` sizes=`${size}x${size}`)
+
 doctype html
 
 html
@@ -37,6 +41,16 @@ html
     title webcolors | all the colors of the web
     link(rel="stylesheet" href="styles.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css")
+
+    for size in faviconSizes
+      +favicon(size)
+
+    meta(property="og:title" content="webcolors")
+    meta(property="og:type" content="website")
+    meta(property="og:description" content="A collection of color palette packages from popular CSS frameworks")
+    meta(property="og:image:url" content="images/og-square.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="1200")
 
   body.bg-gray-100
 
