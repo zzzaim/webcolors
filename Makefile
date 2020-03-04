@@ -26,9 +26,6 @@ target-docs := $(target-docs:.pug=.html)
 deps-docs  = $(wildcard .*rc.js)
 deps-docs += $(js)
 
-export \
-	git_head = $(shell git rev-parse --short HEAD)
-
 define mustache=
 	npx --no-install mustache $^ > $@
 endef

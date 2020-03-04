@@ -1,9 +1,14 @@
 const Path = require("path");
 const Proc = require("child_process");
+const rc = require("../docs/.docsrc");
 const palettes = require("../packages/webcolors");
 const { colors, keywords } = require("./util");
 
 const docsDir = process.env.doc_dir || "docs";
+const docsEnv = process.env.doc_env || "dev";
+const config = rc[docsEnv] || {};
+const baseURL = config.baseURL || "";
+
 const colorSkip = new Set(["black", "white"]);
 const colorList = colors.map(keys => keys[0]).filter(k => !colorSkip.has(k));
 const allPalettes = {};
@@ -42,5 +47,5 @@ function uri(path) {
   const gitHash = hash(path);
   const query = gitHash ? `?${gitHash}` : "";
 
-  return `${path}${query}`;
+  return `${baseURL}${path}${query}`;
 }
