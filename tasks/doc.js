@@ -1,5 +1,6 @@
+const Fs = require("fs");
 const Path = require("path");
-const Proc = require("child_process");
+const Crypto = require("crypto");
 const rc = require("../docs/.docsrc");
 const palettes = require("../packages/webcolors");
 const { colors, keywords } = require("./util");
@@ -19,13 +20,6 @@ for (let key of Object.keys(palettes)) {
   paletteInfo[key] = require(`../packages/${key}/package.json`).webcolors;
 }
 
-module.exports = {
-  colors: colorList,
-  palettes: allPalettes,
-  paletteInfo,
-  uri
-};
-
 function fillPalette(object) {
   return Object.keys(object).reduce((acc, key) => {
     acc[key] = object[key] || (keywords.has(key) ? key : null);
@@ -36,11 +30,12 @@ function fillPalette(object) {
 function hash(path) {
   path = Path.join(docsDir, path);
 
-  return Proc.execSync(
-    `git rev-list --max-count=1 --abbrev-commit HEAD -- ${path}`
-  )
-    .toString()
-    .trim();
+  const sha = Crypto.createHash("sha256");
+  const content = Fs.readFileSync(path, "utf-8");
+
+  sha.update(content);
+
+  return sha.digest("hex").substring(0, 7);
 }
 
 function uri(path) {
@@ -49,3 +44,10 @@ function uri(path) {
 
   return `${baseURL}${path}${query}`;
 }
+
+module.exports = {
+  colors: colorList,
+  palettes: allPalettes,
+  paletteInfo,
+  uri
+};
