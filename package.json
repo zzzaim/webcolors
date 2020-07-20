@@ -19,7 +19,7 @@
     "release": "standard-version -a"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "autoprefixer": "^9.7.4",
     "bootstrap": "^4.4.1",
     "bulma": "^0.8.0",
