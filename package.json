@@ -45,7 +45,7 @@
     "posthtml-cli": "^0.5.4",
     "posthtml-inline-svg": "^0.1.0",
     "posthtml-pug": "^1.0.2",
-    "prettier": "^1.19.1",
+    "prettier": "^2.2.1",
     "reload": "^3.0.4",
     "sass": "^1.26.1",
     "standard-version": "^7.1.0",
