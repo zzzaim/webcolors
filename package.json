@@ -33,7 +33,7 @@
     "material-ui-colors": "^1.0.0",
     "minimist": "^1.2.2",
     "mocha": "^7.0.1",
-    "mustache": "^4.0.0",
+    "mustache": "^4.2.0",
     "onchange": "^6.1.0",
     "parse-author": "^2.0.0",
     "postcss": "^7.0.27",
