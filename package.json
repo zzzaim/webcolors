@@ -40,7 +40,7 @@
     "postcss-cli": "^7.1.0",
     "postcss-export-custom-variables": "^1.0.0",
     "postcss-get-sass-variables": "^1.1.0",
-    "postcss-sass": "^0.4.2",
+    "postcss-sass": "^0.5.0",
     "posthtml": "^0.12.0",
     "posthtml-cli": "^0.5.4",
     "posthtml-inline-svg": "^0.1.0",
