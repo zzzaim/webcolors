@@ -36,7 +36,7 @@
     "mustache": "^4.0.0",
     "onchange": "^6.1.0",
     "parse-author": "^2.0.0",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.36",
     "postcss-cli": "^7.1.0",
     "postcss-export-custom-variables": "^1.0.0",
     "postcss-get-sass-variables": "^1.1.0",
